@@ -94,10 +94,10 @@ export const preferences = {
 
        Paths are relative to the site root, i.e. files inside public/. */
     imageSrcListForCarousel: [                                   // TODO:CLIENT
-      'https://tmc-gallery.pages.dev/jayashree-x-rajesh/full/jayashree-rajesh-outdoor-145.jpg',
-      'https://tmc-gallery.pages.dev/jayashree-x-rajesh/full/jayashree-rajesh-outdoor-132.jpg',
-      'https://tmc-gallery.pages.dev/sheena-x-daniel/full/sheena-daniel-outdoor-17.jpg',
-      'https://tmc-gallery.pages.dev/nivedha-x-ajit/full/n-x-a-tmc-13.jpg',
+      'https://tmc-gallery-6jk.pages.dev/jayashree-x-rajesh/full/jayashree-rajesh-outdoor-145.jpg',
+      'https://tmc-gallery-6jk.pages.dev/jayashree-x-rajesh/full/jayashree-rajesh-outdoor-132.jpg',
+      'https://tmc-gallery-6jk.pages.dev/sheena-x-daniel/full/sheena-daniel-outdoor-17.jpg',
+      'https://tmc-gallery-6jk.pages.dev/nivedha-x-ajit/full/n-x-a-tmc-13.jpg',
     ],
 
     /* -------------------------------------------------------------------------

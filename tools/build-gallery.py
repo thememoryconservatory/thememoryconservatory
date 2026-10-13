@@ -14,7 +14,7 @@ lightbox. The originals are only ever read.
 
 The output folder is what gets uploaded to Cloudflare Pages, so the URLs are:
 
-    https://tmc-gallery.pages.dev/sheena-x-daniel/full/photo-135.jpg
+    https://tmc-gallery-6jk.pages.dev/sheena-x-daniel/full/photo-135.jpg
 
 manifest.json lists every wedding and photograph with its aspect ratio, so the
 gallery page can reserve the right space before an image loads and the layout
