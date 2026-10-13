@@ -1,0 +1,24 @@
+{
+  "name": "memory-conservatory",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The Memory Conservatory \u2014 wedding photography. Static site: HTML, CSS, JS, Tailwind. Deployed on Netlify.",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./public/assets/css/site.css --minify",
+    "build:html": "node build.js",
+    "build": "npm run build:css && npm run build:gallery && npm run build:html",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./public/assets/css/site.css --watch",
+    "watch:html": "node build.js --watch",
+    "serve": "serve public -l 3000",
+    "dev": "npm run build && concurrently -n css,html,serve -c cyan,magenta,green \"npm:watch:css\" \"npm:watch:html\" \"npm:serve\"",
+    "md2pdf": "node tools/md2pdf/index.js",
+    "build:gallery": "node gallery.js"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "concurrently": "^9.1.2",
+    "marked": "^15.0.12",
+    "serve": "^14.2.4",
+    "tailwindcss": "^4.1.11"
+  }
+}

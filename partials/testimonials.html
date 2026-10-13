@@ -1,0 +1,246 @@
+<!-- Testimonials.
+
+     The client asked for these on the home page and at the end of every gallery
+     page, so they live in a partial: the reviews exist once, and a gallery page
+     adds them with a single include line.
+
+     Every review below is the client's own, verbatim. Mechanical corrections
+     only — see PRELAUNCH-CHECKLIST.md for the list.
+
+     Usage, on its own line:   @include testimonials   (wrapped in an HTML comment)
+-->
+<section class="section section--cream" id="testimonials">
+  <div class="shell">
+
+    <div style="max-width:var(--container-prose)" class="reveal">
+      <p class="eyebrow eyebrow--ruled">Notes from the experiences</p>
+      <!-- TODO:CLIENT this heading is ours; the reviews are theirs. -->
+      <h2 class="section__title">Client <em>testimonials</em></h2>
+    </div>
+
+    <div class="testimonials reveal" data-testimonials>
+
+      <!-- A real scroll container. tabindex makes it keyboard-scrollable, which
+           a scrollable region needs in order to be reachable without a mouse. -->
+      <div class="testimonial-track" data-testimonial-track
+           tabindex="0" role="group" aria-label="Client testimonials, scrollable">
+
+        <blockquote class="testimonial">
+          <!-- A real button, not a click handler on the blockquote: this is
+               what gives keyboard focus, Enter/Space and an announced label. -->
+          <button class="testimonial__open" type="button" data-testimonial-open>
+            <span class="sr-only">Read the full review from Hema Gowri</span>
+          </button>
+          <p class="testimonial__mark" aria-hidden="true">&ldquo;</p>
+          <p class="testimonial__body">
+            I booked The Memory Conservatory team for my wedding. Super friendly
+            team! They made us feel relaxed and guided us with poses, which made a
+            huge difference. The entire experience was fun and stress free. And they
+            didn&rsquo;t just take photos&mdash;they captured feelings. Both the
+            photography and videography were exceptional. The wedding film was
+            emotional and beautiful, especially thanks to Narayanaswamy and team.
+          </p>
+          <footer class="testimonial__by">Hema Gowri</footer>
+          <p class="testimonial__cue" aria-hidden="true">Read full review</p>
+        </blockquote>
+        <blockquote class="testimonial">
+          <!-- A real button, not a click handler on the blockquote: this is
+               what gives keyboard focus, Enter/Space and an announced label. -->
+          <button class="testimonial__open" type="button" data-testimonial-open>
+            <span class="sr-only">Read the full review from Divya</span>
+          </button>
+          <p class="testimonial__mark" aria-hidden="true">&ldquo;</p>
+          <p class="testimonial__body">
+            Extremely talented and no nonsense person who will deliver exactly to
+            your needs. I am very happy with my brother&rsquo;s marriage album and my
+            parents&rsquo; 60th marriage function album. He gives a lot of space and
+            time for the bride and groom to settle in which is a rarity among
+            photographers. Cost efficiency is another boom. Thanks to the team for
+            being very polite and creative catering to all our expectations.
+            Professionalism at its best.
+          </p>
+          <footer class="testimonial__by">Divya</footer>
+          <p class="testimonial__cue" aria-hidden="true">Read full review</p>
+        </blockquote>
+        <blockquote class="testimonial">
+          <!-- A real button, not a click handler on the blockquote: this is
+               what gives keyboard focus, Enter/Space and an announced label. -->
+          <button class="testimonial__open" type="button" data-testimonial-open>
+            <span class="sr-only">Read the full review from Aakash</span>
+          </button>
+          <p class="testimonial__mark" aria-hidden="true">&ldquo;</p>
+          <p class="testimonial__body">
+            We had the pleasure of working with The Memory Conservatory for our
+            wedding, and he did an outstanding job covering all our events. He was
+            incredibly understanding and flexible, ensuring both the bride and groom
+            were comfortable throughout the day. His work was exceptional across the
+            board, from the pre-wedding shoot to candid shots and the live stream.
+            Additionally, he was punctual and professional in every aspect. Highly
+            recommended!
+          </p>
+          <footer class="testimonial__by">Aakash</footer>
+          <p class="testimonial__cue" aria-hidden="true">Read full review</p>
+        </blockquote>
+        <blockquote class="testimonial">
+          <!-- A real button, not a click handler on the blockquote: this is
+               what gives keyboard focus, Enter/Space and an announced label. -->
+          <button class="testimonial__open" type="button" data-testimonial-open>
+            <span class="sr-only">Read the full review from Thiviia</span>
+          </button>
+          <p class="testimonial__mark" aria-hidden="true">&ldquo;</p>
+          <p class="testimonial__body">
+            We flew in from Canada, and Narayana was incredibly accommodating with
+            our schedule and the entire booking process. He was so easy-going and
+            made us feel comfortable right away, which made working with him such a
+            great experience. He guided us naturally with posing and truly listened
+            to our ideas, asking for inspiration and making sure our vision was
+            captured. The picture quality and edits were exactly what we were
+            looking for&mdash;absolutely beautiful. He was super professional and
+            delivered everything within the timeframe he promised. We truly had such
+            an amazing experience and couldn&rsquo;t be happier with the results!
+          </p>
+          <footer class="testimonial__by">Thiviia</footer>
+          <p class="testimonial__cue" aria-hidden="true">Read full review</p>
+        </blockquote>
+        <blockquote class="testimonial">
+          <!-- A real button, not a click handler on the blockquote: this is
+               what gives keyboard focus, Enter/Space and an announced label. -->
+          <button class="testimonial__open" type="button" data-testimonial-open>
+            <span class="sr-only">Read the full review from Priyanka</span>
+          </button>
+          <p class="testimonial__mark" aria-hidden="true">&ldquo;</p>
+          <p class="testimonial__body">
+            I booked Narayana Swamy to cover photos and videos for my engagement in
+            Chennai. His team is very kind, patient, humble and talented. They take
+            extreme care about planning for the event and are very accommodative of
+            our wishes for the special day. They delivered the photos and videos as
+            promised on the correct date and the output is fabulous. I&rsquo;m
+            extremely satisfied with his work. I recommend Narayana Swamy and his
+            team for all your special events, including weddings.
+          </p>
+          <footer class="testimonial__by">Priyanka</footer>
+          <p class="testimonial__cue" aria-hidden="true">Read full review</p>
+        </blockquote>
+        <blockquote class="testimonial">
+          <!-- A real button, not a click handler on the blockquote: this is
+               what gives keyboard focus, Enter/Space and an announced label. -->
+          <button class="testimonial__open" type="button" data-testimonial-open>
+            <span class="sr-only">Read the full review from Niveditha</span>
+          </button>
+          <p class="testimonial__mark" aria-hidden="true">&ldquo;</p>
+          <p class="testimonial__body">
+            We never had any big expectations with the wedding photography&hellip;
+            All I said to Narayana Swamy was that this is going to be a celebration
+            and I want the photos to radiate that celebration&hellip; Right from the
+            pre wedding he made us feel comfortable, he was particular that the
+            photos shouldn&rsquo;t be an artificially choreographed one but should
+            flow, something that will speak what we naturally are&hellip; He gave us
+            that time and never rushed for the sake of completing the shoot&hellip;
+            He was very patient and tried to give us the best shots&hellip; When it
+            comes to candids, very few photographers capture the moments that you
+            know or you would have thought it would be nice if someone captures and
+            freezes this particular moment&hellip; Because moments and emotions
+            connected with it are very subjective&hellip; The Memory Conservatory is
+            one of the fews who does that with his genuine efforts&hellip; His team
+            is another bonus&hellip; He and his team reproduce what we exactly
+            need&hellip;
+          </p>
+          <footer class="testimonial__by">Niveditha</footer>
+          <p class="testimonial__cue" aria-hidden="true">Read full review</p>
+        </blockquote>
+        <blockquote class="testimonial">
+          <!-- A real button, not a click handler on the blockquote: this is
+               what gives keyboard focus, Enter/Space and an announced label. -->
+          <button class="testimonial__open" type="button" data-testimonial-open>
+            <span class="sr-only">Read the full review from Tejas</span>
+          </button>
+          <p class="testimonial__mark" aria-hidden="true">&ldquo;</p>
+          <p class="testimonial__body">
+            There&rsquo;s something special about looking back at photographs and
+            reliving the moments. When it&rsquo;s something as special as your
+            wedding that becomes even more apparent. The photos that were taken were
+            not only immaculate but it captured the moments perfectly. The
+            professionalism was on point and it never felt like a chore being
+            photographed. I would highly recommend it!
+          </p>
+          <footer class="testimonial__by">Tejas</footer>
+          <p class="testimonial__cue" aria-hidden="true">Read full review</p>
+        </blockquote>
+        <blockquote class="testimonial">
+          <!-- A real button, not a click handler on the blockquote: this is
+               what gives keyboard focus, Enter/Space and an announced label. -->
+          <button class="testimonial__open" type="button" data-testimonial-open>
+            <span class="sr-only">Read the full review from Tarun</span>
+          </button>
+          <p class="testimonial__mark" aria-hidden="true">&ldquo;</p>
+          <p class="testimonial__body">
+            The TMC team has done a stellar job with the photography for our event!
+            We were really happy with what they had delivered, especially with the
+            portrait solo and couple shots. The team is very understanding of the
+            event timelines and adapt quickly to meet our needs based on the changing
+            timelines. All in all, I would definitely recommend it!
+          </p>
+          <footer class="testimonial__by">Tarun</footer>
+          <p class="testimonial__cue" aria-hidden="true">Read full review</p>
+        </blockquote>
+        <blockquote class="testimonial">
+          <!-- A real button, not a click handler on the blockquote: this is
+               what gives keyboard focus, Enter/Space and an announced label. -->
+          <button class="testimonial__open" type="button" data-testimonial-open>
+            <span class="sr-only">Read the full review from Shanmuga Raja</span>
+          </button>
+          <p class="testimonial__mark" aria-hidden="true">&ldquo;</p>
+          <p class="testimonial__body">
+            Narayana Swamy is a multi-talented, warm and professional gem. A
+            must-have for making your special moments immortal. Exceeded all
+            expectations! Possesses an innate talent to show up the most outstanding
+            shots. You won&rsquo;t ever regret having to call them to capture your
+            special moments.
+          </p>
+          <footer class="testimonial__by">Shanmuga Raja</footer>
+          <p class="testimonial__cue" aria-hidden="true">Read full review</p>
+        </blockquote>
+
+      </div>
+
+      <!-- The full review. Native <dialog>: showModal() supplies the focus
+           trap, the inert background, Esc-to-close and focus return, all of
+           which a hand-rolled div gets wrong. Filled by main.js from whichever
+           card was clicked, so the reviews are never duplicated in the markup. -->
+      <dialog class="testimonial-dialog" data-testimonial-dialog aria-label="Full review">
+        <button class="testimonial-dialog__close" type="button"
+                data-testimonial-close aria-label="Close">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <path d="M3 3l10 10M13 3L3 13" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <p class="testimonial-dialog__mark" aria-hidden="true">&ldquo;</p>
+        <div class="testimonial-dialog__body" data-testimonial-dialog-body></div>
+        <p class="testimonial-dialog__by" data-testimonial-dialog-by></p>
+      </dialog>
+
+      <!-- Enhancement only. Without main.js the track is still a working
+           horizontal scroller, so these are hidden until they are wired up. -->
+      <div class="testimonials__nav" data-testimonial-nav hidden>
+        <button class="testimonials__arrow testimonials__arrow--prev" type="button"
+                data-testimonial-prev aria-label="Previous testimonials">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <path d="M10 2 4 8l6 6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <p class="testimonials__count">
+          <span data-testimonial-current>1</span> / <span data-testimonial-total>3</span>
+        </p>
+
+        <button class="testimonials__arrow testimonials__arrow--next" type="button"
+                data-testimonial-next aria-label="More testimonials">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <path d="m6 2 6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>

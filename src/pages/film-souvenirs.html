@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- @include head title="Film Souvenirs" description="Film and analog wedding photography by The Memory Conservatory — an on-demand offering, shot alongside our digital coverage." -->
+
+  <noscript>
+    <style>.reveal { opacity: 1 !important; transform: none !important; }</style>
+  </noscript>
+</head>
+
+<body>
+
+  <!-- @include header active="film" -->
+
+  <main id="main">
+
+    <!-- =====================================================================
+         PAGE HERO
+
+         TODO:CLIENT the page name is not settled — the corrections document
+         says "Film Souvenirs or Analog Method (Yet to finalise the exact
+         name)". "Film Souvenirs" is used throughout for now; changing it means
+         this file, its filename, and the two nav lists in partials/.
+         ================================================================== -->
+    <section class="page-hero" aria-label="Film souvenirs">
+      <img class="page-hero__img" src="https://tmc-gallery.pages.dev/nivedha-x-ajit/full/n-x-a-tmc-13.jpg"
+           alt="" style="--focal:50% 40%" fetchpriority="high" decoding="async">
+
+      <div class="page-hero__scrim" aria-hidden="true"></div>
+      <div class="hero__grain" aria-hidden="true"></div>
+
+      <div class="shell page-hero__inner">
+        <p class="eyebrow eyebrow--ruled">On Request</p>
+        <h1 class="page-hero__title">Film <em>souvenirs</em></h1>
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         WHAT IT IS
+         ================================================================== -->
+    <section class="section section--white section--tight">
+      <div class="shell">
+        <div class="reveal" style="max-width:var(--container-prose)">
+          <p class="eyebrow eyebrow--ruled">The Offering</p>
+          <h2 class="section__title">Shot on <em>film</em>, on request</h2>
+          <!-- TODO:CLIENT this description is ours, written from the two lines
+               in the corrections document. Replace with the client's own copy. -->
+          <p class="lede" style="margin-top:clamp(1.5rem,3vw,2rem)">
+            Film is one of the few things we offer that cannot be rushed, repeated
+            or previewed on the back of a camera. It is an on-demand service, shot
+            alongside our digital coverage for couples who want a handful of frames
+            that exist the older way.
+          </p>
+          <p style="margin-top:1.25rem">
+            An assortment of thirty to fifty photographs, developed after the
+            wedding and delivered as a set of their own.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         THE GALLERY — awaiting the developed film
+
+         TODO:CLIENT the corrections document says "Photos for this page will be
+         provided during the last iteration as we are awaiting the current batch
+         of film to be developed." Until they arrive this section states that
+         plainly rather than standing in with digital photographs, which would
+         misrepresent the offering.
+
+         When the scans arrive: run them through tools/build-gallery.py, upload
+         with wrangler, and this section becomes a .shot-grid exactly like a
+         wedding gallery page.
+         ================================================================== -->
+    <section class="section section--cream">
+      <div class="shell">
+        <div class="reveal" style="max-width:var(--container-prose)">
+          <p class="eyebrow eyebrow--ruled">The Frames</p>
+          <h2 class="section__title">Currently in <em>development</em></h2>
+          <p class="lede" style="margin-top:clamp(1.5rem,3vw,2rem)">
+            The current batch of film is still at the lab. This page will show a
+            selection of thirty to fifty frames once they are scanned.
+          </p>
+        </div>
+
+        <p class="reveal" style="margin-top:clamp(2rem,4vw,3rem)">
+          <!-- @include enquiry-link -->
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- @include footer -->
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

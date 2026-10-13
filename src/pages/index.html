@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- @include head title="Wedding Photography in Chennai" description="The Memory Conservatory — wedding photography from Chennai, across South India and beyond. Weddings preserved as heirlooms, not just photographed." -->
+
+  <!-- If JavaScript never runs, nothing may stay invisible. -->
+  <noscript>
+    <style>
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .hero__noscript { display: block !important; }
+    </style>
+  </noscript>
+</head>
+
+<body>
+
+  <!-- @include header active="home" -->
+
+  <main id="main">
+
+    <!-- =====================================================================
+         HERO
+         The image(s), colour mode and carousel timing all come from
+         preferences.js — see public/assets/js/preferences.js. The markup below
+         is only the frame; hero.js fills the media layer.
+         ================================================================== -->
+    <section class="hero" data-hero aria-label="Introduction">
+
+      <div class="hero__media" data-hero-media>
+        <!-- Slides are inserted here from preferences.imageSrcListForCarousel.
+             This static fallback shows only when JavaScript is unavailable. -->
+        <noscript>
+          <div class="hero__slide is-active">
+            <img class="hero__img" src="https://tmc-gallery.pages.dev/jayashree-x-rajesh/full/jayashree-rajesh-outdoor-145.jpg" alt="">
+          </div>
+        </noscript>
+      </div>
+
+      <div class="hero__scrim" aria-hidden="true"></div>
+      <div class="hero__grain" aria-hidden="true"></div>
+      <!-- Last layer before the content: a flat black veil sitting directly
+           beneath the headline, buttons and carousel controls. -->
+      <div class="hero__veil" aria-hidden="true"></div>
+
+      <div class="shell hero__inner">
+        <div class="hero__copy">
+          <h1 class="hero__title">
+            Where a wedding day becomes an <em>heirloom</em>
+          </h1>
+
+          <p class="hero__lede">
+            <!-- TODO:CLIENT this line is ours, written from the client's own
+                 About Us essay. Replace with his wording if he has a preference. -->
+            Wedding photography for couples in Chennai, across India, and
+            wherever the day takes us &mdash; made to be lived with, not just
+            looked at once.          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn-cream" href="/gallery">View the Gallery</a>
+            <a class="btn btn-outline" href="/contact">Enquire for your date</a>
+          </div>
+        </div>
+
+        <!-- Carousel controls. In the normal flow, directly after the copy, so
+             they can never overlap the buttons above no matter how tall the
+             text runs. Being inside .shell they also inherit the page gutter,
+             which is what keeps them aligned with the headline and buttons.
+             Hidden until hero.js confirms more than one image is configured;
+             removed from the DOM entirely when only one is. -->
+        <div class="hero__controls" data-hero-controls hidden>
+          <ul class="hero__dots" data-hero-dots></ul>
+
+          <div class="hero__arrows">
+            <button class="hero__arrow" type="button" data-hero-prev>
+              <span class="sr-only">Previous image</span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                <path d="M10 2 4 8l6 6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button class="hero__arrow" type="button" data-hero-next>
+              <span class="sr-only">Next image</span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+                <path d="m6 2 6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <p class="hero__counter">
+            <strong data-hero-current>01</strong> &nbsp;/&nbsp; <span data-hero-total>01</span>
+          </p>
+        </div>
+      </div>
+
+      <a class="hero__cue" href="#statement" aria-label="Scroll to continue">Scroll</a>
+
+    </section>
+
+
+    <!-- =====================================================================
+         ABOUT — editorial spread
+         Two portrait images bleeding off opposite edges at different vertical
+         offsets, a caps display headline with an italic connector, and a
+         narrow serif column between them. The asymmetry is the whole effect:
+         a symmetric version of this layout reads as a template.
+         ================================================================== -->
+    <section class="section section--white about" id="statement">
+      <div class="about__grid">
+
+        <figure class="about__figure about__figure--right reveal">
+          <img src="https://tmc-gallery.pages.dev/nivedha-x-ajit/full/n-x-a-tmc-1.jpg"
+               alt="A quiet moment between the couple before the ceremony"
+               loading="lazy" decoding="async">
+        </figure>
+
+        <header class="about__head reveal">
+          <!-- Same treatment as every other section title: one size
+               throughout, italic gilt on the emphasis, and a single explicit
+               break so it always sets as two lines. -->
+          <h2 class="section__title about__title">
+            Some days become memories.<br>Some memories become <em>heirlooms</em>.
+          </h2>
+        </header>
+
+        <figure class="about__figure about__figure--left reveal">
+          <img src="https://tmc-gallery.pages.dev/sharmilan-x-thiviia/full/s-x-t-tmc-13.jpg"
+               alt="The groom kissing the bride on the forehead"
+               loading="lazy" decoding="async">
+        </figure>
+
+        <div class="about__body reveal">
+          <p>
+            There is something quietly remarkable about the way a photograph
+            changes with time. What feels familiar today can become deeply
+            personal years from now; what once seemed small can gather meaning
+            with distance. Wedding photography, at its most lasting, is not
+            simply about preserving how a day looked&mdash;it is about creating
+            a way for its meaning to deepen and unfold over the years.
+          </p>
+          <p>
+            The photographs we hold onto become part of the lives around them,
+            carrying the weight of everything that came before and everything
+            that followed. Kept close, revisited often, and eventually handed
+            on, they become more than photographs.
+            <strong>They give permanence to what was always passing.</strong>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         COLLAGE
+
+         Built to the client's mockup: a 7 x 5 checkerboard of photographs with
+         the "Preserving love, frame by frame" lockup holding the middle three
+         cells. Empty cells, not gutters, make the white space — so the images
+         carry no border of their own.
+
+         There are more photographs than cells. The surplus are not dropped:
+         main.js swaps one cell at a time for a photograph that is not
+         currently on screen, so the whole set is seen over time.
+         ================================================================== -->
+    <section class="section section--white collage-section">
+      <div class="collage" data-collage
+           data-pool='[{"src":"/assets/img/collage/collage-1.jpg","alt":"A couple standing forehead to forehead beneath trees"},{"src":"/assets/img/collage/collage-2.jpg","alt":"Guests throwing a garland during the ceremony"},{"src":"/assets/img/collage/collage-3.jpg","alt":"A couple facing each other, both in gold"},{"src":"/assets/img/collage/collage-4.jpg","alt":"The couple leaving the church among their guests"},{"src":"/assets/img/collage/collage-5.jpg","alt":"A couple on a white staircase"},{"src":"/assets/img/collage/collage-6.jpg","alt":"A couple on a staircase beneath a chandelier"},{"src":"/assets/img/collage/collage-7.jpg","alt":"A couple holding their cat"},{"src":"/assets/img/collage/collage-8.jpg","alt":"A couple walking together, the groom in black tie"},{"src":"/assets/img/collage/collage-9.jpg","alt":"A couple among flowers in a garden"},{"src":"/assets/img/collage/collage-10.jpg","alt":"A couple in a darkened lounge beside a piano"},{"src":"/assets/img/collage/collage-11.jpg","alt":"A couple embracing in a field of tall grass"},{"src":"/assets/img/collage/collage-12.jpg","alt":"A portrait against deep red drapes"},{"src":"/assets/img/collage/collage-13.jpg","alt":"A portrait seated against a brick wall"},{"src":"/assets/img/collage/collage-14.jpg","alt":"A couple lying together on the grass"},{"src":"/assets/img/collage/collage-15.jpg","alt":"Garlands exchanged above the crowd"},{"src":"/assets/img/collage/collage-16.jpg","alt":"Bride and groom in flower garlands"},{"src":"/assets/img/collage/chad-jahnavi-109.jpg","alt":"A couple in a blue doorway, the groom laughing"},{"src":"/assets/img/collage/orange-couple.jpg","alt":"A couple in orange, walking together"}]'>
+        <figure class="collage__cell" style="--col:2;--row:1">
+          <img data-collage-img src="/assets/img/collage/collage-1.jpg" alt="A couple standing forehead to forehead beneath trees"
+               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+        </figure>
+        <figure class="collage__cell" style="--col:4;--row:1">
+          <img data-collage-img src="/assets/img/collage/collage-11.jpg" alt="A couple embracing in a field of tall grass"
+               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+        </figure>
+        <figure class="collage__cell" style="--col:6;--row:1">
+          <img data-collage-img src="/assets/img/collage/collage-5.jpg" alt="A couple on a white staircase"
+               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+        </figure>
+        <figure class="collage__cell" style="--col:1;--row:2">
+          <img data-collage-img src="/assets/img/collage/collage-8.jpg" alt="A couple walking together, the groom in black tie"
+               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+        </figure>
+        <figure class="collage__cell" style="--col:3;--row:2">
+          <img data-collage-img src="/assets/img/collage/collage-3.jpg" alt="A couple facing each other, both in gold"
+               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+        </figure>
+        <figure class="collage__cell" style="--col:5;--row:2">
+          <img data-collage-img src="/assets/img/collage/collage-16.jpg" alt="Bride and groom in flower garlands"
+               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+        </figure>
+        <figure class="collage__cell" style="--col:7;--row:2">
+          <img data-collage-img src="/assets/img/collage/collage-4.jpg" alt="The couple leaving the church among their guests"
+               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+        </figure>
+        <figure class="collage__cell" style="--col:2;--row:3">
+          <img data-collage-img src="/assets/img/collage/collage-2.jpg" alt="Guests throwing a garland during the ceremony"
+               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+        </figure>
+        <figure class="collage__cell" style="--col:6;--row:3">
+          <img data-collage-img src="/assets/img/collage/collage-6.jpg" alt="A couple on a staircase beneath a chandelier"
+               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+        </figure>
+        <figure class="collage__cell" style="--col:1;--row:4">
+          <img data-collage-img src="/assets/img/collage/collage-10.jpg" alt="A couple in a darkened lounge beside a piano"
+               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+        </figure>
+        <figure class="collage__cell" style="--col:3;--row:4">
+          <img data-collage-img src="/assets/img/collage/chad-jahnavi-109.jpg" alt="A couple in a blue doorway, the groom laughing"
+               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+        </figure>
+        <figure class="collage__cell" style="--col:5;--row:4">
+          <img data-collage-img src="/assets/img/collage/collage-14.jpg" alt="A couple lying together on the grass"
+               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+        </figure>
+        <figure class="collage__cell" style="--col:7;--row:4">
+          <img data-collage-img src="/assets/img/collage/collage-15.jpg" alt="Garlands exchanged above the crowd"
+               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+        </figure>
+        <figure class="collage__cell" style="--col:2;--row:5">
+          <img data-collage-img src="/assets/img/collage/collage-7.jpg" alt="A couple holding their cat"
+               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+        </figure>
+        <figure class="collage__cell" style="--col:4;--row:5">
+          <img data-collage-img src="/assets/img/collage/orange-couple.jpg" alt="A couple in orange, walking together"
+               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+        </figure>
+        <figure class="collage__cell" style="--col:6;--row:5">
+          <img data-collage-img src="/assets/img/collage/collage-9.jpg" alt="A couple among flowers in a garden"
+               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+        </figure>
+
+        <p class="collage__tagline">
+          <img src="/assets/brand/preserving-love-black.png"
+               alt="Preserving love, frame by frame." width="1600" height="536">
+        </p>
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         SIGNATURE WORK
+         ================================================================== -->
+    <section class="section section--white">
+      <div class="shell-wide">
+
+        <div style="max-width:var(--container-prose)" class="reveal">
+          <p class="eyebrow eyebrow--ruled">Selected Work</p>
+          <h2 class="section__title">The Memory of <em>Things</em></h2>
+        </div>
+
+        <div class="work-grid work-grid--three" style="margin-top:clamp(2.5rem,5vw,4rem)">
+          <a class="work-card reveal" href="/gallery/sharmilan-x-thiviia">
+            <img src="https://tmc-gallery.pages.dev/sharmilan-x-thiviia/full/s-x-t-tmc-31.jpg"
+                 alt="A couple close together, foreheads almost touching" loading="lazy" decoding="async">
+            <span class="work-card__veil" aria-hidden="true"></span>
+            <span class="work-card__caption">
+              <span class="work-card__place">Sharmilan &amp; Thiviia</span>
+              <span class="work-card__meta">Portraiture</span>
+            </span>
+          </a>
+
+          <a class="work-card reveal" href="/gallery/nivedha-x-ajit" style="--reveal-delay:100ms">
+            <img src="https://tmc-gallery.pages.dev/nivedha-x-ajit/full/n-x-a-tmc-82.jpg"
+                 alt="Flower garlands held during the ceremony" loading="lazy" decoding="async">
+            <span class="work-card__veil" aria-hidden="true"></span>
+            <span class="work-card__caption">
+              <span class="work-card__place">Nivedha &amp; Ajit</span>
+              <span class="work-card__meta">Tamil Wedding</span>
+            </span>
+          </a>
+
+          <a class="work-card reveal" href="/gallery/shreya-x-rikhabh" style="--reveal-delay:200ms">
+            <img src="https://tmc-gallery.pages.dev/shreya-x-rikhabh/full/tmc-rik-shr02894.jpg"
+                 alt="A couple embracing in a field at dusk" loading="lazy" decoding="async">
+            <span class="work-card__veil" aria-hidden="true"></span>
+            <span class="work-card__caption">
+              <span class="work-card__place">Shreya &amp; Rikhabh</span>
+              <span class="work-card__meta">Portraiture</span>
+            </span>
+          </a>
+        </div>
+
+        <p class="reveal" style="margin-top:clamp(2rem,4vw,3rem)">
+          <a class="btn btn-blue" href="/gallery">See the full gallery</a>
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         PROCESS TEASER
+         ================================================================== -->
+    <section class="section section--white" id="process">
+      <div class="shell">
+
+        <div style="max-width:var(--container-prose)" class="reveal">
+          <p class="eyebrow eyebrow--ruled">How It Works</p>
+          <h2 class="section__title">Our <em>process</em></h2>
+        </div>
+
+        <!-- The client's five steps, his words, unchanged. His correction asked
+             for the process "displayed in full details whether it's on the home
+             page or on the about us page", and said the About page's treatment
+             could be reused here — so this is the same .process-list component,
+             not a shortened teaser. -->
+        <ol class="process-list">
+          <li class="process-step reveal">
+            <p class="process-step__num">01</p>
+            <h3 class="process-step__title">Get in Touch</h3>
+            <p class="process-step__body">
+              Fill out our contact form with a few details about your wedding. This
+              helps us understand your plans and how we can best be a part of your day.
+            </p>
+          </li>
+
+          <li class="process-step reveal">
+            <p class="process-step__num">02</p>
+            <h3 class="process-step__title">Let&rsquo;s Connect</h3>
+            <p class="process-step__body">
+              We&rsquo;ll have a quick call to get to know each other, talk through your
+              plans, answer your questions, and make sure we&rsquo;re the right fit for
+              your wedding.
+            </p>
+          </li>
+
+          <li class="process-step reveal">
+            <p class="process-step__num">03</p>
+            <h3 class="process-step__title">You&rsquo;re Booked</h3>
+            <p class="process-step__body">
+              Once your date is confirmed with a 50% advance, you&rsquo;re officially on
+              board. From here, we&rsquo;ll stay in touch and help you prepare for the day.
+            </p>
+          </li>
+
+          <li class="process-step reveal">
+            <p class="process-step__num">04</p>
+            <h3 class="process-step__title">You&rsquo;re On Board</h3>
+            <p class="process-step__body">
+              We&rsquo;ll be there to photograph your wedding as it
+              unfolds&mdash;capturing the celebrations, emotions, people, and all the
+              little moments in between.
+            </p>
+          </li>
+
+          <li class="process-step reveal">
+            <p class="process-step__num">05</p>
+            <h3 class="process-step__title">Delivery</h3>
+            <p class="process-step__body">
+              Once the celebrations are over, we get to work curating and editing your
+              photographs. Your finished images will be delivered in high resolution,
+              ready to relive and share for years to come.
+            </p>
+          </li>
+        </ol>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         TESTIMONIALS
+         The client asked for these on the home page and at the end of every
+         gallery page, so they live in partials/testimonials.html.
+         ================================================================== -->
+    <!-- @include testimonials -->
+
+
+    <!-- =====================================================================
+         CLOSING CALL TO ACTION
+         ================================================================== -->
+    <section class="section cta">
+      <img class="cta__bg" src="https://tmc-gallery.pages.dev/jayashree-x-rajesh/full/jayashree-rajesh-outdoor-23.jpg" alt=""
+           loading="lazy" decoding="async" aria-hidden="true">
+      <div class="shell cta__inner">
+        <p class="eyebrow eyebrow--ruled eyebrow--centred reveal">Enquiries</p>
+        <h2 class="section__title reveal" style="color:var(--color-white)">
+          Tell us about <em>your day</em>
+        </h2>
+        <p class="lede reveal" style="margin:1.5rem auto 0; color:color-mix(in srgb, var(--color-white) 78%, transparent)">
+          <!-- TODO:CLIENT this line is ours. -->
+          Tell us your dates and a little about the day you have in mind. We
+          reply to every enquiry within 48 hours.
+        </p>
+        <p class="reveal" style="margin-top:2.25rem">
+          <a class="btn btn-cream" href="/contact">Start an enquiry</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- @include footer -->
+
+  <script type="module" src="/assets/js/main.js"></script>
+  <script type="module" src="/assets/js/hero.js"></script>
+</body>
+</html>

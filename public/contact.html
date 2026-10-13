@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>Enquiry Form — The Memory Conservatory</title>
+  <meta name="description" content="Tell us about your wedding. Share your plans with The Memory Conservatory and we will be in touch within 48 hours to talk about your vision and check availability.">
+
+  <!-- Icons are the official TMC monogram on the Deep Blue brand ground. -->
+  <link rel="icon" href="/assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/brand/favicon-512.png" sizes="512x512" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+  <meta name="theme-color" content="#144c78">
+
+  <!-- Open Graph — TODO:CLIENT replace og:image with the client's own artwork -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Memory Conservatory">
+  <meta property="og:title" content="Enquiry Form — The Memory Conservatory">
+  <meta property="og:description" content="Tell us about your wedding. Share your plans with The Memory Conservatory and we will be in touch within 48 hours to talk about your vision and check availability.">
+  <meta property="og:image" content="https://tmc-gallery.pages.dev/jayashree-x-rajesh/full/jayashree-rajesh-outdoor-145.jpg"><!-- TODO:CLIENT -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Self-hosted fonts: preloaded so the display face is ready before first
+       paint, which matters most on the hero headline. -->
+  <link rel="preload" href="/assets/fonts/hanken-grotesk-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/sorts-mill-goudy-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+
+  <noscript>
+    <style>.reveal { opacity: 1 !important; transform: none !important; }</style>
+  </noscript>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="siteHeader" data-scrolled="false">
+    <div class="shell site-header__inner">
+
+      <!-- OFFICIAL LOGO — supplied by the client. Do not recolour, redraw or
+           letterspace this; the guidelines forbid altering the logo. The cream
+           cut is used here because the bar sits on the hero photograph and, once
+           scrolled, on Deep Blue. public/assets/brand/wordmark-blue.png is the
+           cut for light grounds. -->
+      <a class="brand" href="/" aria-label="The Memory Conservatory — home">
+        <img class="brand__logo" src="/assets/brand/wordmark-blue.png"
+             alt="The Memory Conservatory" width="900" height="217">
+      </a>
+
+      <nav class="site-nav" data-nav-active="contact" aria-label="Primary">
+        <!-- The six pages the client's corrections document retains. The Process
+             and Testimonials are sections of the home page now, not pages and not
+             nav items — the document is explicit that they "doesn't require
+             separate pages". -->
+        <div class="nav-desktop">
+          <a class="nav-desktop__link" data-nav="home"    href="/">Home</a>
+          <a class="nav-desktop__link" data-nav="gallery" href="/gallery">Gallery</a>
+          <a class="nav-desktop__link" data-nav="film"    href="/film-souvenirs">Film Souvenirs</a>
+          <a class="nav-desktop__link" data-nav="about"   href="/about">About Us</a>
+          <a class="nav-desktop__link" data-nav="faq"     href="/faq">FAQs</a>
+          <a class="btn btn-outline" href="/contact">Enquire Now</a>
+        </div>
+
+        <!-- The label is an attribute, not a child element: the bars are targeted
+             with :nth-child(), and an extra span in here silently shifts every
+             index by one and breaks the close icon. -->
+        <button class="nav-toggle" id="navToggle" type="button"
+                aria-expanded="false" aria-controls="navMobile" aria-label="Menu">
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="nav-mobile" id="navMobile" data-open="false" aria-label="Primary" role="dialog" aria-modal="true">
+    <ul class="nav-mobile__list">
+      <li><a class="nav-mobile__link" href="/"><span class="nav-mobile__index">01</span>Home</a></li>
+      <li><a class="nav-mobile__link" href="/gallery"><span class="nav-mobile__index">02</span>Gallery</a></li>
+      <li><a class="nav-mobile__link" href="/film-souvenirs"><span class="nav-mobile__index">03</span>Film Souvenirs</a></li>
+      <li><a class="nav-mobile__link" href="/about"><span class="nav-mobile__index">04</span>About Us</a></li>
+      <li><a class="nav-mobile__link" href="/faq"><span class="nav-mobile__index">05</span>FAQs</a></li>
+      <li><a class="nav-mobile__link" href="/contact"><span class="nav-mobile__index">06</span>Enquire Now</a></li>
+    </ul>
+    <div class="nav-mobile__foot">
+      <p>Chennai, Tamil Nadu &middot; available across South India and beyond</p>
+      <a class="whatsapp-inline" data-whatsapp data-enabled="false" href="#" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+        Message on WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- =====================================================================
+         PAGE HERO
+         ================================================================== -->
+    <section class="page-hero" aria-label="Enquiry form">
+      <!-- TODO:CLIENT stock placeholder — replace with the studio's own work -->
+      <img class="page-hero__img" src="https://tmc-gallery.pages.dev/jayashree-x-rajesh/full/jayashree-rajesh-outdoor-40.jpg"
+           alt="A quiet moment between the couple, photographed outdoors"
+           style="--focal:50% 35%" fetchpriority="high" decoding="async">
+
+      <div class="page-hero__scrim" aria-hidden="true"></div>
+      <div class="hero__grain" aria-hidden="true"></div>
+
+      <div class="shell page-hero__inner">
+        <p class="eyebrow eyebrow--ruled">Enquiry Form</p>
+        <h1 class="page-hero__title">Tell Us About Your <em>Wedding</em></h1>
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         INTRO + DIRECT CONTACT
+         All copy below is the client's own, verbatim. The direct contact
+         details sit beside the form rather than after it: a couple who would
+         rather call should not have to scroll past eleven questions to find
+         the number.
+         ================================================================== -->
+    <section class="section section--tight section--cream">
+      <div class="shell">
+        <div class="enquiry-intro">
+
+          <div class="prose reveal">
+            <p>
+              We&rsquo;d love to learn more about your wedding day. Please share as
+              much as you like about your plans and help us create an accurate
+              price quotation.
+            </p>
+            <p>
+              We&rsquo;ll be in touch soon to talk about your vision and check
+              availability.
+            </p>
+            <p>
+              We will try to get back within 48 hours, give us a call on the number
+              below if you don&rsquo;t hear from us or if it&rsquo;s a last minute
+              enquiry.
+            </p>
+          </div>
+
+          <div class="contact-card reveal">
+            <p class="eyebrow">For enquiry</p>
+            <div class="contact-card__list">
+              <p><a href="mailto:thememoryconservatory@gmail.com">thememoryconservatory@gmail.com</a></p>
+              <p><a href="tel:+918438533169">+91 84385 33169</a></p>
+            </div>
+            <p class="contact-card__made">Made in Madras, India.</p>
+            <p class="contact-card__note">
+              Documenting weddings across India and wherever your love story takes us.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         THE FORM
+
+         Netlify Forms notes, because these are easy to break silently:
+           * data-netlify="true" is what registers the form at deploy time, and
+             Netlify only ever sees forms present in the BUILT HTML — this is
+             the whole reason build.js inlines partials instead of injecting
+             them with JavaScript.
+           * The hidden form-name input must match the form's name attribute
+             exactly, or submissions are accepted and then filed nowhere.
+           * netlify-honeypot names a field bots fill in and humans cannot see.
+           * action= is the page shown after a successful post.
+
+         Field numbering is generated by a CSS counter, so the questions can be
+         reordered here without renumbering anything.
+         ================================================================== -->
+    <section class="section section--white">
+      <div class="shell">
+
+        <form class="form"
+              name="enquiry"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              action="/thank-you">
+
+          <!-- Required by Netlify: identifies which form posted. -->
+          <input type="hidden" name="form-name" value="enquiry">
+
+          <!-- Honeypot. Hidden from people, irresistible to bots. -->
+          <p class="sr-only" aria-hidden="true">
+            <label>Do not fill this in: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </p>
+
+          <div class="form__grid">
+
+            <!-- One question, two answers. The group carries the number; the two
+                 name fields inside carry none, which is what lets "Your name"
+                 continue at 02 instead of jumping to 04. -->
+            <div class="field field--wide field-group">
+              <p class="field-group__title">Couple&rsquo;s Names</p>
+
+              <div class="field-group__grid">
+                <div class="field field--sub">
+                  <label class="field__label" for="f-bride">Bride&rsquo;s name</label>
+                  <input class="field__input" id="f-bride" name="bride-name" type="text" required>
+                </div>
+
+                <div class="field field--sub">
+                  <label class="field__label" for="f-groom">Groom&rsquo;s name</label>
+                  <input class="field__input" id="f-groom" name="groom-name" type="text" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- Two real date inputs. Note the trade-off this locks in: a couple
+                 whose dates are not yet fixed can no longer write "March 2027",
+                 and both fields are required. -->
+            <div class="field field--wide field-group">
+              <p class="field-group__title">Event Dates</p>
+
+              <div class="field-group__grid">
+                <div class="field field--sub">
+                  <label class="field__label" for="f-start">Start date</label>
+                  <input class="field__input" id="f-start" name="start-date" type="date" required>
+                </div>
+
+                <div class="field field--sub">
+                  <label class="field__label" for="f-end">End date</label>
+                  <input class="field__input" id="f-end" name="end-date" type="date" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- autocomplete="name" belongs here and not on the two above: the
+                 person filling this in is often not one of the couple, and
+                 offering to autofill their own name into "Bride's name" is
+                 exactly the wrong suggestion. -->
+            <div class="field">
+              <label class="field__label" for="f-name">Your name</label>
+              <input class="field__input" id="f-name" name="name" type="text"
+                     autocomplete="name" required>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="f-email">Email</label>
+              <input class="field__input" id="f-email" name="email" type="email"
+                     autocomplete="email" required>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="f-phone">Phone</label>
+              <input class="field__input" id="f-phone" name="phone" type="tel"
+                     autocomplete="tel" required>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="f-location">Location of the wedding</label>
+              <input class="field__input" id="f-location" name="location" type="text"
+                     placeholder="Venue, city — or the city alone" required>
+            </div>
+
+            <!-- Digits only. min=1 stops a zero or a negative from validating;
+                 no max, because "thousands of guests" is in the client's own
+                 copy and a cap would reject exactly the weddings they want. -->
+            <div class="field field--wide">
+              <label class="field__label" for="f-guests">Estimated guest count</label>
+              <input class="field__input field__input--short" id="f-guests" name="guest-count"
+                     type="number" min="1" step="1" inputmode="numeric"
+                     placeholder="e.g. 400" required>
+            </div>
+
+            <div class="field field--wide">
+              <label class="field__label" for="f-story">Tell us more about your wedding</label>
+              <textarea class="field__textarea" id="f-story" name="about-wedding" rows="6"
+                        placeholder="Your story, the flow of the events, the cultural and ritual traditions that matter to you — as much or as little as you like."
+                        required></textarea>
+            </div>
+
+            <fieldset class="field field--wide">
+              <legend>What services are you looking for?</legend>
+              <div class="choice-group">
+                <span class="choice">
+                  <input type="radio" id="s-photo" name="services" value="Photography" required>
+                  <label class="choice__label" for="s-photo">Photography</label>
+                </span>
+                <span class="choice">
+                  <input type="radio" id="s-films" name="services" value="Films">
+                  <label class="choice__label" for="s-films">Films</label>
+                </span>
+                <span class="choice">
+                  <input type="radio" id="s-both" name="services" value="Both Photography and Films">
+                  <label class="choice__label" for="s-both">Both Photography and Films</label>
+                </span>
+              </div>
+            </fieldset>
+
+            <fieldset class="field field--wide">
+              <legend>
+                How did our paths cross?
+                <span class="field__optional">Optional</span>
+              </legend>
+              <div class="choice-group">
+                <span class="choice">
+                  <input type="radio" id="h-google" name="source" value="Google">
+                  <label class="choice__label" for="h-google">Google</label>
+                </span>
+                <span class="choice">
+                  <input type="radio" id="h-instagram" name="source" value="Instagram">
+                  <label class="choice__label" for="h-instagram">Instagram</label>
+                </span>
+                <span class="choice">
+                  <input type="radio" id="h-facebook" name="source" value="Facebook">
+                  <label class="choice__label" for="h-facebook">Facebook</label>
+                </span>
+                <span class="choice">
+                  <input type="radio" id="h-referral" name="source" value="Referral">
+                  <label class="choice__label" for="h-referral">Referral</label>
+                </span>
+                <span class="choice">
+                  <input type="radio" id="h-spotted" name="source" value="Spotted the team at a wedding">
+                  <label class="choice__label" for="h-spotted">Spotted the team at a wedding</label>
+                </span>
+              </div>
+            </fieldset>
+
+            <fieldset class="field field--wide">
+              <legend>
+                Your planned investment for photography services?
+                <span class="field__optional">Optional</span>
+              </legend>
+              <div class="choice-group">
+                <span class="choice">
+                  <input type="radio" id="b-1" name="budget" value="50K-1L">
+                  <label class="choice__label" for="b-1">&#8377;50K &ndash; 1L</label>
+                </span>
+                <span class="choice">
+                  <input type="radio" id="b-2" name="budget" value="1-3L">
+                  <label class="choice__label" for="b-2">&#8377;1 &ndash; 3L</label>
+                </span>
+                <span class="choice">
+                  <input type="radio" id="b-3" name="budget" value="Above 3L">
+                  <label class="choice__label" for="b-3">Above &#8377;3L</label>
+                </span>
+              </div>
+            </fieldset>
+
+          </div>
+
+          <div class="form__foot">
+            <button class="btn btn-blue" type="submit">Enquire now</button>
+            <p class="form__note">
+              We will try to get back within 48 hours. If it is a last minute
+              enquiry, please call
+              <a href="tel:+918438533169">+91 84385 33169</a>.
+            </p>
+          </div>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       PROVISIONAL FOOTER
+       A working placeholder so pages do not end abruptly. The full footer is its
+       own build step in the plan; when it is built, this file is replaced
+       wholesale and every page picks it up with no other change.
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="shell">
+
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/" aria-label="The Memory Conservatory — home">
+            <img class="brand__logo" src="/assets/brand/wordmark-blue.png"
+                 alt="The Memory Conservatory" width="900" height="217">
+          </a>
+
+          <p style="margin-top:1.5rem; max-width:44ch;">
+            An evolving collective centred on observation, authenticity and the
+            quiet permanence of memory. Documenting weddings across India and
+            wherever your love story takes us.
+          </p>
+          <a class="whatsapp-inline" data-whatsapp data-enabled="false" href="#" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+            Message on WhatsApp
+          </a>
+        </div>
+
+        <div>
+          <h2 class="site-footer__heading">Explore</h2>
+          <ul class="site-footer__list">
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/film-souvenirs">Film Souvenirs</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/faq">FAQs</a></li>
+            <li><a href="/contact">Enquire Now</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="site-footer__heading">Studio</h2>
+          <ul class="site-footer__list">
+            <!-- Real details, from the client's brand guidelines. -->
+            <li><a href="mailto:thememoryconservatory@gmail.com">thememoryconservatory@gmail.com</a></li>
+            <li><a href="tel:+918438533169">+91 84385 33169</a></li>
+            <li style="margin-top:.5rem;"><a class="link-gilt" href="https://www.instagram.com/thememoryconservatory/" target="_blank" rel="noopener">Instagram</a></li>
+            <li style="margin-top:.5rem;">Made in Madras, India.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>&copy; <span data-year>2026</span> The Memory Conservatory. All rights reserved.</p>
+        <p>Chennai &middot; India &middot; Destination</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button (mobile only). Hidden unless enabled in
+       preferences.js — see preferences.site.whatsapp. -->
+  <a class="whatsapp-float" data-whatsapp data-enabled="false" href="#" rel="noopener"
+     aria-label="Message us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+  </a>
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

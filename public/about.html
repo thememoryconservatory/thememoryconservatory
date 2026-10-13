@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>About Us — The Memory Conservatory</title>
+  <meta name="description" content="A conservatory is a place where something precious is protected from the passing of time. The philosophy behind The Memory Conservatory — wedding photography from Chennai, across South India and beyond.">
+
+  <!-- Icons are the official TMC monogram on the Deep Blue brand ground. -->
+  <link rel="icon" href="/assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/brand/favicon-512.png" sizes="512x512" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+  <meta name="theme-color" content="#144c78">
+
+  <!-- Open Graph — TODO:CLIENT replace og:image with the client's own artwork -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Memory Conservatory">
+  <meta property="og:title" content="About Us — The Memory Conservatory">
+  <meta property="og:description" content="A conservatory is a place where something precious is protected from the passing of time. The philosophy behind The Memory Conservatory — wedding photography from Chennai, across South India and beyond.">
+  <meta property="og:image" content="https://tmc-gallery.pages.dev/jayashree-x-rajesh/full/jayashree-rajesh-outdoor-145.jpg"><!-- TODO:CLIENT -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Self-hosted fonts: preloaded so the display face is ready before first
+       paint, which matters most on the hero headline. -->
+  <link rel="preload" href="/assets/fonts/hanken-grotesk-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/sorts-mill-goudy-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+
+  <!-- If JavaScript never runs, nothing may stay invisible. -->
+  <noscript>
+    <style>.reveal { opacity: 1 !important; transform: none !important; }</style>
+  </noscript>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="siteHeader" data-scrolled="false">
+    <div class="shell site-header__inner">
+
+      <!-- OFFICIAL LOGO — supplied by the client. Do not recolour, redraw or
+           letterspace this; the guidelines forbid altering the logo. The cream
+           cut is used here because the bar sits on the hero photograph and, once
+           scrolled, on Deep Blue. public/assets/brand/wordmark-blue.png is the
+           cut for light grounds. -->
+      <a class="brand" href="/" aria-label="The Memory Conservatory — home">
+        <img class="brand__logo" src="/assets/brand/wordmark-blue.png"
+             alt="The Memory Conservatory" width="900" height="217">
+      </a>
+
+      <nav class="site-nav" data-nav-active="about" aria-label="Primary">
+        <!-- The six pages the client's corrections document retains. The Process
+             and Testimonials are sections of the home page now, not pages and not
+             nav items — the document is explicit that they "doesn't require
+             separate pages". -->
+        <div class="nav-desktop">
+          <a class="nav-desktop__link" data-nav="home"    href="/">Home</a>
+          <a class="nav-desktop__link" data-nav="gallery" href="/gallery">Gallery</a>
+          <a class="nav-desktop__link" data-nav="film"    href="/film-souvenirs">Film Souvenirs</a>
+          <a class="nav-desktop__link" data-nav="about"   href="/about">About Us</a>
+          <a class="nav-desktop__link" data-nav="faq"     href="/faq">FAQs</a>
+          <a class="btn btn-outline" href="/contact">Enquire Now</a>
+        </div>
+
+        <!-- The label is an attribute, not a child element: the bars are targeted
+             with :nth-child(), and an extra span in here silently shifts every
+             index by one and breaks the close icon. -->
+        <button class="nav-toggle" id="navToggle" type="button"
+                aria-expanded="false" aria-controls="navMobile" aria-label="Menu">
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="nav-mobile" id="navMobile" data-open="false" aria-label="Primary" role="dialog" aria-modal="true">
+    <ul class="nav-mobile__list">
+      <li><a class="nav-mobile__link" href="/"><span class="nav-mobile__index">01</span>Home</a></li>
+      <li><a class="nav-mobile__link" href="/gallery"><span class="nav-mobile__index">02</span>Gallery</a></li>
+      <li><a class="nav-mobile__link" href="/film-souvenirs"><span class="nav-mobile__index">03</span>Film Souvenirs</a></li>
+      <li><a class="nav-mobile__link" href="/about"><span class="nav-mobile__index">04</span>About Us</a></li>
+      <li><a class="nav-mobile__link" href="/faq"><span class="nav-mobile__index">05</span>FAQs</a></li>
+      <li><a class="nav-mobile__link" href="/contact"><span class="nav-mobile__index">06</span>Enquire Now</a></li>
+    </ul>
+    <div class="nav-mobile__foot">
+      <p>Chennai, Tamil Nadu &middot; available across South India and beyond</p>
+      <a class="whatsapp-inline" data-whatsapp data-enabled="false" href="#" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+        Message on WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- =====================================================================
+         PAGE HERO
+         Not the landing hero: no carousel, no preferences.js bridge, no Ken
+         Burns. Its job is to give the page a dark band at the top so the
+         transparent header stays legible before the first scroll.
+
+         The headline is the brand's official tagline from the guidelines, so
+         nothing here is invented copy.
+         ================================================================== -->
+    <section class="page-hero" aria-label="About The Memory Conservatory">
+      <!-- TODO:CLIENT stock placeholder — replace with the studio's own work -->
+      <img class="page-hero__img" src="https://tmc-gallery.pages.dev/sharmilan-x-thiviia/full/s-x-t-tmc-81.jpg"
+           alt="A couple seated on the steps before a tall wooden door"
+           style="--focal:50% 55%" fetchpriority="high" decoding="async">
+
+      <div class="page-hero__scrim" aria-hidden="true"></div>
+      <div class="hero__grain" aria-hidden="true"></div>
+
+      <div class="shell page-hero__inner">
+        <p class="eyebrow eyebrow--ruled">About Us</p>
+        <h1 class="page-hero__title">
+          Preserving love, <em>frame by frame</em>
+        </h1>
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         THE ESSAY — part one
+         All copy on this page is the client's own, verbatim. The short
+         declarative lines are theirs too; they are promoted to .statement
+         because the writing clearly uses them as breaths between sections.
+         ================================================================== -->
+    <section class="section section--white">
+      <div class="shell">
+        <div class="prose reveal">
+          <p>
+            A wedding takes months, sometimes years, to bring together and yet the
+            celebration itself passes in a matter of hours. The flowers fade, the
+            music stops, the room is cleared and everyone eventually goes home.
+          </p>
+          <p>
+            What remains are the things we carry with us. A voice. A face. A
+            gesture. A particular kind of laughter. The feeling of being surrounded
+            by the people who made you who you are.
+          </p>
+        </div>
+
+        <p class="statement reveal">We believe memories deserve to be cared for.</p>
+
+        <div class="prose reveal">
+          <p>
+            A conservatory is a place where something precious is protected from the
+            passing of time&mdash;observed closely, tended to patiently and given the
+            conditions to endure. We think photography can do something similar.
+          </p>
+          <p>
+            Memory has a curious way of working. It doesn&rsquo;t preserve everything.
+            It keeps fragments. Often, the smallest moments become the most meaningful
+            with time: your mother&rsquo;s expression across the room, your grandfather
+            watching the ceremony, friends laughing between celebrations, or a quiet
+            exchange that nobody else noticed.
+          </p>
+        </div>
+
+        <p class="statement statement--last reveal">
+          This is where we believe wedding photography becomes more than documentation.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- A breath between the two halves of the essay. -->
+    <figure class="figure-bleed">
+      <!-- TODO:CLIENT stock placeholder — replace with the studio's own work -->
+      <img src="https://tmc-gallery.pages.dev/nivedha-x-ajit/full/n-x-a-tmc-69.jpg"
+           alt="The bride among her family during the ceremony"
+           style="--focal:50% 42%" loading="lazy" decoding="async">
+    </figure>
+
+
+    <!-- =====================================================================
+         THE ESSAY — part two
+         ================================================================== -->
+    <section class="section section--white">
+      <div class="shell">
+        <div class="prose reveal">
+          <p>
+            We photograph the grandeur of a celebration, but we&rsquo;re equally drawn
+            to what happens quietly within it. The people, relationships and fleeting
+            moments that may not seem significant today, but become precious years
+            from now.
+          </p>
+          <p>
+            Whether your wedding is an intimate gathering or a celebration of
+            thousands, rooted in tradition or entirely your own, we approach it with
+            the same curiosity and care. We observe rather than orchestrate, guide
+            when needed and step back when a moment is better left untouched.
+          </p>
+        </div>
+
+        <p class="statement reveal">Because your wedding cannot be repeated.</p>
+
+        <div class="prose reveal">
+          <p>
+            The photograph of your parents may mean something entirely different
+            twenty years from now. A gathering of friends may become a record of a
+            chapter you didn&rsquo;t realise was passing. An ordinary moment may become
+            extraordinary simply because it cannot happen again.
+          </p>
+        </div>
+
+        <p class="statement reveal">That is the idea behind The Memory Conservatory.</p>
+
+        <div class="prose reveal">
+          <p>
+            An evolving collective centred on observation, authenticity and the quiet
+            permanence of memory. A way of working that looks beyond the obvious,
+            notices what might otherwise be missed, and preserves the moments that
+            become more meaningful with time.
+          </p>
+          <p>
+            We want to create photographs that are beautiful today, but become more
+            precious as the years pass. Photographs you can return to, live with,
+            pass down&mdash;and, for a moment, feel it all again.
+          </p>
+        </div>
+
+        <p class="statement statement--last reveal">That is what we hope to give you.</p>
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         CLOSING LINE
+         The last line of the client's copy, given a band of its own.
+         ================================================================== -->
+    <section class="section section--tight section--cream">
+      <div class="shell" style="text-align:center">
+        <h2 class="section__title reveal" style="margin-top:0">
+          A place for memories to <em>endure</em>.
+        </h2>
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         OUR PROCESS
+         Five steps, verbatim from the client. The home page carries the same
+         five steps in the same component: his corrections asked for the
+         process "in full details" wherever it appears, so there is no longer
+         a shortened teaser version anywhere.
+         ================================================================== -->
+    <section class="section section--cream" id="process">
+      <div class="shell">
+
+        <div style="max-width:var(--container-prose)" class="reveal">
+          <p class="eyebrow eyebrow--ruled">How It Works</p>
+          <!-- TODO:CLIENT this heading is ours; the five steps below are the
+               client's own words, unchanged. -->
+          <h2 class="section__title">Our process, from first message<br>to <em>final delivery</em></h2>
+        </div>
+
+        <ol class="process-list">
+          <li class="process-step reveal">
+            <p class="process-step__num">01</p>
+            <h3 class="process-step__title">Get in Touch</h3>
+            <p class="process-step__body">
+              Fill out our contact form with a few details about your wedding. This
+              helps us understand your plans and how we can best be a part of your day.
+            </p>
+          </li>
+
+          <li class="process-step reveal">
+            <p class="process-step__num">02</p>
+            <h3 class="process-step__title">Let&rsquo;s Connect</h3>
+            <p class="process-step__body">
+              We&rsquo;ll have a quick call to get to know each other, talk through your
+              plans, answer your questions, and make sure we&rsquo;re the right fit for
+              your wedding.
+            </p>
+          </li>
+
+          <li class="process-step reveal">
+            <p class="process-step__num">03</p>
+            <h3 class="process-step__title">You&rsquo;re Booked</h3>
+            <p class="process-step__body">
+              Once your date is confirmed with a 50% advance, you&rsquo;re officially on
+              board. From here, we&rsquo;ll stay in touch and help you prepare for the day.
+            </p>
+          </li>
+
+          <li class="process-step reveal">
+            <p class="process-step__num">04</p>
+            <h3 class="process-step__title">You&rsquo;re On Board</h3>
+            <p class="process-step__body">
+              We&rsquo;ll be there to photograph your wedding as it
+              unfolds&mdash;capturing the celebrations, emotions, people, and all the
+              little moments in between.
+            </p>
+          </li>
+
+          <li class="process-step reveal">
+            <p class="process-step__num">05</p>
+            <h3 class="process-step__title">Delivery</h3>
+            <p class="process-step__body">
+              Once the celebrations are over, we get to work curating and editing your
+              photographs. Your finished images will be delivered in high resolution,
+              ready to relive and share for years to come.
+            </p>
+          </li>
+        </ol>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         FAQ CROSS-LINK
+         The client asked for this link, in these words, at the bottom of the
+         About page. It sits before the closing call to action so the CTA keeps
+         a single action of its own.
+         ================================================================== -->
+    <section class="section section--tight section--white">
+      <div class="shell">
+        <div class="reveal">
+          <!-- Cross-link to the FAQs.
+
+               The client asked for this at the bottom of the About Us page, in these
+               words. Wording lives here so a rewording is one edit rather than one per
+               page.
+
+               Usage, on its own line:   @include faq-link   (wrapped in an HTML comment)
+          -->
+          <a class="cross-link cross-link--block" href="/faq">
+            <span class="cross-link__text">
+              We&rsquo;ve put together a few thoughtful answers to some of the questions you
+              may have. Explore our FAQs to learn more about how we work and what you can
+              expect from us.
+            </span>
+            <span class="cross-link__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         CLOSING CALL TO ACTION
+         ================================================================== -->
+    <section class="section cta">
+      <img class="cta__bg" src="https://tmc-gallery.pages.dev/jayashree-x-rajesh/full/jayashree-rajesh-outdoor-23.jpg" alt=""
+           loading="lazy" decoding="async" aria-hidden="true">
+      <div class="shell cta__inner">
+        <p class="eyebrow eyebrow--ruled eyebrow--centred reveal">Enquiries</p>
+        <!-- Echoes the client's own page heading on the enquiry form rather
+             than inventing a second one. -->
+        <h2 class="section__title reveal" style="color:var(--color-white)">
+          Tell us about <em>your wedding</em>
+        </h2>
+
+        <!-- The client asked for this link, in these words, at the bottom of
+             the About page. -->
+        <p class="reveal" style="margin-top:2.25rem">
+          <!-- Cross-link to the Enquiry Form.
+
+               The client asked for this at the bottom of the About Us page. Wording lives
+               here so a rewording is one edit rather than one edit per page.
+
+               Usage, on its own line:   @include enquiry-link   (wrapped in an HTML comment)
+          -->
+          <a class="cross-link" href="/contact">
+            Start a conversation about your wedding with us
+            <span class="cross-link__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       PROVISIONAL FOOTER
+       A working placeholder so pages do not end abruptly. The full footer is its
+       own build step in the plan; when it is built, this file is replaced
+       wholesale and every page picks it up with no other change.
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="shell">
+
+      <div class="site-footer__top">
+        <div>
+          <a class="brand brand--footer" href="/" aria-label="The Memory Conservatory — home">
+            <img class="brand__logo" src="/assets/brand/wordmark-blue.png"
+                 alt="The Memory Conservatory" width="900" height="217">
+          </a>
+
+          <p style="margin-top:1.5rem; max-width:44ch;">
+            An evolving collective centred on observation, authenticity and the
+            quiet permanence of memory. Documenting weddings across India and
+            wherever your love story takes us.
+          </p>
+          <a class="whatsapp-inline" data-whatsapp data-enabled="false" href="#" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+            Message on WhatsApp
+          </a>
+        </div>
+
+        <div>
+          <h2 class="site-footer__heading">Explore</h2>
+          <ul class="site-footer__list">
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/film-souvenirs">Film Souvenirs</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/faq">FAQs</a></li>
+            <li><a href="/contact">Enquire Now</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="site-footer__heading">Studio</h2>
+          <ul class="site-footer__list">
+            <!-- Real details, from the client's brand guidelines. -->
+            <li><a href="mailto:thememoryconservatory@gmail.com">thememoryconservatory@gmail.com</a></li>
+            <li><a href="tel:+918438533169">+91 84385 33169</a></li>
+            <li style="margin-top:.5rem;"><a class="link-gilt" href="https://www.instagram.com/thememoryconservatory/" target="_blank" rel="noopener">Instagram</a></li>
+            <li style="margin-top:.5rem;">Made in Madras, India.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>&copy; <span data-year>2026</span> The Memory Conservatory. All rights reserved.</p>
+        <p>Chennai &middot; India &middot; Destination</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button (mobile only). Hidden unless enabled in
+       preferences.js — see preferences.site.whatsapp. -->
+  <a class="whatsapp-float" data-whatsapp data-enabled="false" href="#" rel="noopener"
+     aria-label="Message us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+  </a>
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>
