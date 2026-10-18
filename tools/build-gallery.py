@@ -14,7 +14,7 @@ lightbox. The originals are only ever read.
 
 The output folder is what gets uploaded to Cloudflare Pages, so the URLs are:
 
-    https://tmc-gallery-6jk.pages.dev/sheena-x-daniel/full/photo-135.jpg
+    https://tmc-gallery-2026.pages.dev/sheena-x-daniel/full/photo-135.jpg
 
 manifest.json lists every wedding and photograph with its aspect ratio, so the
 gallery page can reserve the right space before an image loads and the layout
@@ -31,6 +31,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import sys
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -49,6 +50,11 @@ SIZES = {
     "thumb": (600, 72),
     "full": (2560, 82),
 }
+
+
+def natural_key(name: str) -> list:
+    """Sort key that compares runs of digits as numbers: img-2 < img-10."""
+    return [int(t) if t.isdigit() else t.lower() for t in re.split(r"(\d+)", name)]
 
 
 def build_one(source: Path, out_root: Path, rel: Path, sizes: dict, overwrite: bool) -> dict | None:
@@ -158,7 +164,9 @@ def main() -> int:
 
     # Group into the shape the gallery page wants: one block per wedding.
     weddings: dict[str, list[dict]] = {}
-    for item in sorted(entries, key=lambda e: (e["wedding"], e["file"])):
+    # Natural order, so -2 comes before -10. A plain string sort put -1, -10,
+    # -100, -101, -11 ... and scrambled every wedding's timeline on the page.
+    for item in sorted(entries, key=lambda e: (e["wedding"], natural_key(e["file"]))):
         weddings.setdefault(item["wedding"], []).append(
             {"file": item["file"], "ratio": item["ratio"]}
         )

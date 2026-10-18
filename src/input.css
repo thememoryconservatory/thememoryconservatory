@@ -253,6 +253,11 @@
 
     /* Constant tint over hero photography — see .hero__scrim. */
     --hero-tint-rgb: 0 0 0;
+
+    /* Neutral shade for scrims and text shadows over photographs. Never used
+       as a text or surface colour, so it does not extend the brand palette —
+       it only darkens a photograph. The client asked for no blue on photos. */
+    --color-black-ink: #000000;
   }
 
   html {
@@ -418,7 +423,10 @@
     /* 44px minimum touch target — this is a mobile-first market. */
     min-height: 2.75rem;
     padding: 0.875rem 1.75rem;
-    font-family: var(--font-sans);
+    /* Hanken Grotesk, not the serif — the client's second iteration: "the
+       font needs to be Hanken Grotesk and not Sorts Mill Goudy". Applied to
+       every button so no button on the site sets in a different face. */
+    font-family: var(--font-display);
     font-size: 0.8125rem;
     font-weight: 600;
     letter-spacing: 0.14em;
@@ -484,7 +492,9 @@
 
   .btn-blue {
     background: var(--color-blue);
-    color: var(--color-white);
+    /* Soft Cream lettering on the Deep Blue box, as the client specified for
+       "Enquire Now". Measured 7.6:1. */
+    color: var(--color-cream);
     border-color: var(--color-blue);
   }
   /* Inverts to Soft Cream rather than darkening. Darkening would need black,
@@ -494,6 +504,13 @@
     background: var(--color-cream);
     color: var(--color-blue);
     border-color: var(--color-cream);
+  }
+
+  /* On a Deep Blue ground the blue box would vanish into it, so it keeps a
+     Soft Cream hairline to hold its shape. */
+  .site-footer .btn-blue,
+  .section--blue .btn-blue {
+    border-color: color-mix(in srgb, var(--color-cream) 55%, transparent);
   }
 
   /* --- Link with a gilt underline that draws in on hover ----------------- */
@@ -887,10 +904,11 @@
   }
 
   /* --- Scrim ---------------------------------------------------------------
-     Indigo rather than neutral grey, deliberately: it pulls wildly different
-     photographs toward one house tone, which is the real reason for choosing a
-     coloured dominant in the first place. Heavier at the foot, where the words
-     sit, and heavier again on narrow screens where text covers more of the image.
+     Neutral black, not indigo. The client's second-iteration feedback: "Please
+     don't use the blue gradient on any photos." The photograph keeps its own
+     colour; the scrim only darkens it enough for the white headline to read.
+     Heavier at the foot, where the words sit, and heavier again on narrow
+     screens where text covers more of the image.
      --------------------------------------------------------------------- */
   .hero__scrim {
     position: absolute;
@@ -900,10 +918,10 @@
     background:
       linear-gradient(
         to top,
-        color-mix(in srgb, var(--color-blue) 82%, transparent) 0%,
-        color-mix(in srgb, var(--color-blue) 55%, transparent) 32%,
-        color-mix(in srgb, var(--color-blue) 26%, transparent) 62%,
-        color-mix(in srgb, var(--color-blue) 30%, transparent) 100%
+        color-mix(in srgb, var(--color-black-ink) 62%, transparent) 0%,
+        color-mix(in srgb, var(--color-black-ink) 41%, transparent) 32%,
+        color-mix(in srgb, var(--color-black-ink) 20%, transparent) 62%,
+        color-mix(in srgb, var(--color-black-ink) 22%, transparent) 100%
       );
   }
 
@@ -912,10 +930,10 @@
       background:
         linear-gradient(
           to top,
-          color-mix(in srgb, var(--color-blue) 80%, transparent) 0%,
-          color-mix(in srgb, var(--color-blue) 42%, transparent) 38%,
-          color-mix(in srgb, var(--color-blue) 8%, transparent) 70%,
-          color-mix(in srgb, var(--color-blue) 28%, transparent) 100%
+          color-mix(in srgb, var(--color-black-ink) 60%, transparent) 0%,
+          color-mix(in srgb, var(--color-black-ink) 32%, transparent) 38%,
+          color-mix(in srgb, var(--color-black-ink) 6%, transparent) 70%,
+          color-mix(in srgb, var(--color-black-ink) 21%, transparent) 100%
         ),
         /* Left-hand weighting, because the copy is left-aligned. Tuned against
            the brightest photograph in the set — a gold-lit mandap — rather than
@@ -923,8 +941,8 @@
            scrim, and the client's real photographs are an unknown. */
         linear-gradient(
           to right,
-          color-mix(in srgb, var(--color-blue) 55%, transparent) 0%,
-          color-mix(in srgb, var(--color-blue) 24%, transparent) 38%,
+          color-mix(in srgb, var(--color-black-ink) 41%, transparent) 0%,
+          color-mix(in srgb, var(--color-black-ink) 18%, transparent) 38%,
           transparent 66%
         );
     }
@@ -1044,16 +1062,19 @@
   @media (min-width: 80rem)  { .hero__copy { max-width: 52rem; } }
   @media (min-width: 120rem) { .hero__copy { max-width: 58rem; } }
 
+  /* Sorts Mill Goudy here, and Hanken Grotesk on the line beneath — the
+     client's second iteration swaps the two faces on the home hero only. */
   .hero__title {
+    font-family: var(--font-sans);
     font-size: var(--text-hero);
     line-height: var(--text-hero--line-height);
     color: var(--color-white);
-    font-weight: 300;
-    letter-spacing: -0.025em;
+    font-weight: 400;
+    letter-spacing: -0.01em;
     margin-top: 1.25rem;
     /* Photographs are unpredictable; a whisper of shadow guarantees the
        headline holds up over a bright sky or a white lehenga. */
-    text-shadow: 0 2px 40px color-mix(in srgb, var(--color-blue) 55%, transparent);
+    text-shadow: 0 2px 40px color-mix(in srgb, var(--color-black-ink) 55%, transparent);
   }
 
   /* Nothing above it now that the eyebrow is gone, so the headline leads the
@@ -1068,16 +1089,18 @@
   }
 
   .hero__copy .eyebrow {
-    text-shadow: 0 1px 18px color-mix(in srgb, var(--color-blue) 85%, transparent);
+    text-shadow: 0 1px 18px color-mix(in srgb, var(--color-black-ink) 85%, transparent);
   }
 
   .hero__lede {
+    font-family: var(--font-display);
+    font-weight: 300;
     margin-top: clamp(1.25rem, 2.5vh, 2rem);
     max-width: 46ch;
     font-size: var(--text-lede);
     line-height: var(--text-lede--line-height);
     color: color-mix(in srgb, var(--color-white) 84%, transparent);
-    text-shadow: 0 1px 24px color-mix(in srgb, var(--color-blue) 60%, transparent);
+    text-shadow: 0 1px 24px color-mix(in srgb, var(--color-black-ink) 60%, transparent);
   }
 
   .hero__actions {
@@ -1432,6 +1455,12 @@
     .about__title br { display: none; }
   }
 
+  /* "Some memories become heirlooms." on one line, as the client asked.
+     Only from tablet up: on a phone there is no width for it at this size. */
+  @media (min-width: 48rem) {
+    .about__title .nowrap { white-space: nowrap; }
+  }
+
   /* --- Body ---------------------------------------------------------------
      Set in the display serif rather than the body sans, following the
      reference. Fraunces' optical-size axis is what makes this survive at
@@ -1473,15 +1502,20 @@
        the standard section-title size, and at that size the second line needs
        far more room than the earlier three-column arrangement could give it —
        which is what made it wrap into an awkward stack. */
-    .about__head { grid-column: 2 / 12; grid-row: 1; }
+    .about__head { grid-column: 2 / 14; grid-row: 1; }
 
     /* Below it, three columns staggered downwards: right image highest, body
        next, left image lowest. The offset is plain margin rather than a row
        grid — it keeps the stagger readable in one place and lets each image
        keep its own aspect ratio. */
-    .about__figure--right { grid-column: 10 / 14; grid-row: 2; margin-top: clamp(2rem, 4vw, 3.5rem); }
-    .about__body          { grid-column: 6 / 10;  grid-row: 2; margin-top: clamp(3.5rem, 7vw, 6rem); }
-    .about__figure--left  { grid-column: 2 / 6;   grid-row: 2; margin-top: clamp(5.5rem, 12vw, 10rem); }
+    /* All three on one plane — the client's second iteration asked for the two
+       photographs level with each other rather than staggered. Same top edge,
+       same 4:5 frame, the text between them. */
+    .about__figure--left  { grid-column: 2 / 6;   grid-row: 2; }
+    .about__body          { grid-column: 6 / 10;  grid-row: 2; }
+    .about__figure--right { grid-column: 10 / 14; grid-row: 2; }
+    .about__figure,
+    .about__body { margin-top: clamp(2.5rem, 5vw, 4rem); }
 
     .about__figure img { aspect-ratio: 4 / 5; height: auto; }
   }
@@ -1620,8 +1654,8 @@
     inset: 0;
     background: linear-gradient(
       to top,
-      color-mix(in srgb, var(--color-blue) 85%, transparent) 0%,
-      color-mix(in srgb, var(--color-blue) 25%, transparent) 45%,
+      color-mix(in srgb, var(--color-black-ink) 64%, transparent) 0%,
+      color-mix(in srgb, var(--color-black-ink) 19%, transparent) 45%,
       transparent 75%
     );
     opacity: 0.85;
@@ -1761,10 +1795,10 @@
     background:
       linear-gradient(
         to bottom,
-        color-mix(in srgb, var(--color-blue) 40%, transparent) 0%,
-        color-mix(in srgb, var(--color-blue) 30%, transparent) 26%,
-        color-mix(in srgb, var(--color-blue) 58%, transparent) 66%,
-        color-mix(in srgb, var(--color-blue) 86%, transparent) 100%
+        color-mix(in srgb, var(--color-black-ink) 30%, transparent) 0%,
+        color-mix(in srgb, var(--color-black-ink) 22%, transparent) 26%,
+        color-mix(in srgb, var(--color-black-ink) 44%, transparent) 66%,
+        color-mix(in srgb, var(--color-black-ink) 64%, transparent) 100%
       );
   }
 
@@ -1786,7 +1820,7 @@
      photograph — confetti, a white lehenga — washes out completely without
      this. Same treatment the landing hero already gives its eyebrow. */
   .page-hero .eyebrow {
-    text-shadow: 0 1px 18px color-mix(in srgb, var(--color-blue) 85%, transparent);
+    text-shadow: 0 1px 18px color-mix(in srgb, var(--color-black-ink) 85%, transparent);
   }
 
   .page-hero__title {
@@ -1798,7 +1832,7 @@
     /* rem, never ch: `ch` resolves against the element's own font, and at this
        size a ch-based width collapses the column to a fraction of its intent. */
     max-width: 20rem;
-    text-shadow: 0 2px 40px color-mix(in srgb, var(--color-blue) 55%, transparent);
+    text-shadow: 0 2px 40px color-mix(in srgb, var(--color-black-ink) 55%, transparent);
     /* The line box is shorter than the glyphs at this line-height, so italic
        descenders would otherwise sit on the section below. */
     padding-bottom: 0.12em;
@@ -2018,7 +2052,12 @@
 
   .enquiry-intro .prose p + p { margin-top: 1rem; }
 
+  /* Justified, with the last line centred: "justified or center justified". */
+  .enquiry-intro .prose p { text-align-last: center; }
+
+  /* Hanken Grotesk throughout — the client's second iteration. */
   .contact-card {
+    font-family: var(--font-display);
     padding-top: clamp(1.5rem, 3vw, 2rem);
     border-top: 1px solid color-mix(in srgb, var(--color-blue) 30%, transparent);
   }
@@ -2047,15 +2086,11 @@
     color: color-mix(in srgb, var(--color-blue) 85%, transparent);
   }
 
-  /* The client's own sign-off. Set in the display face because it is a line of
-     voice, not an address. */
+  /* Same size as the address lines above it, at the client's request. */
   .contact-card__made {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: var(--text-subtitle);
-    line-height: var(--text-subtitle--line-height);
+    font-size: var(--text-lede);
     color: var(--color-blue);
-    margin-top: 1.75rem;
+    margin-top: 0.5rem;
   }
 
 
@@ -2107,85 +2142,17 @@
     color: var(--color-blue);
   }
 
-  /* The numeral is generated, so it is decoration and must not reach the
-     accessibility tree — a screen reader announcing "zero one" before every
-     question is noise. ::before on the label does exactly that. */
+  /* The bullet is generated, so it is decoration. ::before content can reach
+     the accessibility tree in some readers; a bullet is announced as nothing
+     or as "bullet", which is harmless. */
+  /* A bullet rather than a number — the client's second iteration. */
   .field__label::before,
   .field > legend::before {
-    content: counter(field, decimal-leading-zero);
-    font-size: 0.8125rem;
-    letter-spacing: 0.18em;
-    vertical-align: 0.3em;
-    margin-right: 0.75rem;
+    content: "\2022";
+    display: inline-block;
+    width: 1.1em;
     color: color-mix(in srgb, var(--color-blue) 72%, transparent);
   }
-
-  /* --- A numbered group ------------------------------------------------------
-     One question that takes two answers: "01 Couple's Names" carries the number
-     and the two name fields underneath carry none. The sub-fields set
-     counter-increment: none so they do not advance the sequence — that is what
-     lets "Your name" carry on at 02 rather than 04.
-     ----------------------------------------------------------------------- */
-
-  /* The frame. Two questions on this form take two answers each, and without
-     something to hold them the four sub-fields read as four more ordinary
-     questions that have simply lost their numbers.
-
-     A hairline frame with the title sitting ON the top rule, the way a printed
-     certificate or an engraved invitation breaks its own border for a heading.
-     It keeps the form's hairline language — no fills, no cards — and reads as
-     deliberate rather than as a UI panel dropped onto an editorial page. */
-  /* The framed treatment is gone. The client's correction: "Please retain the
-     same design for couples names and event dates. Feels like the uniformity
-     is missing if we prioritize these two questions." These two now read as
-     ordinary numbered questions that happen to hold two inputs. */
-  .field-group {
-    margin-block: clamp(0.75rem, 2vw, 1.25rem);
-  }
-
-  /* Identical to .field__label. The client asked for "the same design for
-     couples names and event dates" because giving these two a larger title
-     made them look prioritised over the other nine questions. They are now
-     the same size and weight as every other label — the only difference is
-     that two inputs sit beneath instead of one. */
-  .field-group__title {
-    display: block;
-    width: 100%;
-    padding: 0;
-    font-family: var(--font-display);
-    font-size: var(--text-subtitle);
-    line-height: var(--text-subtitle--line-height);
-    color: var(--color-blue);
-  }
-
-  .field-group__title::before {
-    content: counter(field, decimal-leading-zero);
-    font-size: 0.8125rem;
-    letter-spacing: 0.18em;
-    vertical-align: 0.3em;
-    margin-right: 0.75rem;
-    color: color-mix(in srgb, var(--color-blue) 72%, transparent);
-  }
-
-  .field-group__grid {
-    display: grid;
-    gap: clamp(2.25rem, 4vw, 3.25rem);
-    margin-top: clamp(1.25rem, 2.5vw, 2rem);
-  }
-
-  @media (min-width: 48rem) {
-    .field-group__grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      column-gap: clamp(2rem, 4vw, 4rem);
-    }
-  }
-
-  .field--sub { counter-increment: none; }
-  .field--sub .field__label::before { content: none; }
-
-  /* The fields inside the frame sit on plain white like every other field, so
-     they need no adjustment: the 42% lift here was only ever compensating for
-     the cream wash that used to be behind them. */
 
   /* A guest count is three digits. Its question sits on a full-width row so the
      rows above stay paired, but the box itself has no business being 1200px. */
@@ -2363,14 +2330,6 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 1.25rem 2rem;
-  }
-
-  .form__note {
-    font-size: var(--text-small);
-    line-height: var(--text-small--line-height);
-    /* 85%, not 72%: measured 4.31 against the 4.5 body-copy threshold. */
-    color: color-mix(in srgb, var(--color-blue) 85%, transparent);
-    max-width: 32rem;
   }
 
   /* A phone is the one place a half-width submit button reads as unfinished. */
@@ -2590,9 +2549,11 @@
     margin-top: clamp(2.5rem, 5vw, 4rem);
     /* Room for the focus ring, which would otherwise be clipped by overflow. */
     padding: 0.25rem;
-    /* The arrows and the swipe are the affordance; a scrollbar under an
-       editorial band is noise. The track stays keyboard-scrollable. */
-    scrollbar-width: none;
+    /* A thin visible scrollbar as well as the arrows: the client noted the
+       reviews were hard to find without one. */
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, var(--color-cream) 55%, transparent) transparent;
+    padding-bottom: 1.25rem;
     /* main.js sets an explicit height to match the tallest card on screen.
        hidden, not the computed `auto`, so a sub-pixel overshoot mid-transition
        cannot introduce a second scroll axis. */
@@ -2604,10 +2565,11 @@
     .testimonial-track { transition: none; }
   }
 
-  /* A dialog needs the page behind it to hold still. */
-  body:has(.testimonial-dialog[open]) { overflow: hidden; }
-
-  .testimonial-track::-webkit-scrollbar { display: none; }
+  .testimonial-track::-webkit-scrollbar { height: 6px; }
+  .testimonial-track::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--color-cream) 55%, transparent);
+    border-radius: 3px;
+  }
 
   @media (min-width: 48rem) {
     .testimonial-track { grid-auto-columns: calc((100% - clamp(1.75rem, 3vw, 3rem)) / 2); }
@@ -2692,135 +2654,26 @@
     color: var(--color-gold-ink);
   }
 
-  /* --- The whole card is the trigger ----------------------------------------
-     A real <button> laid over the card rather than a click handler on the
-     blockquote: that gives keyboard focus, Enter and Space, and an announced
-     label for free. Its own text is visually hidden; the visible cue below is
-     decoration.
-     ----------------------------------------------------------------------- */
-
-  .testimonial__open {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    background: none;
-    border: 0;
-    padding: 0;
-    cursor: pointer;
-    /* Above the text so the whole card is the target, but transparent. */
-    z-index: 1;
-  }
-
-  .testimonial__open:focus-visible {
-    outline: 2px solid var(--focus-ring, var(--color-blue));
-    outline-offset: 4px;
-  }
-
-  .testimonial__cue {
-    margin-top: 0.875rem;
-    font-family: var(--font-sans);
-    font-size: var(--text-eyebrow);
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: color-mix(in srgb, var(--color-blue) 78%, transparent);
-    transition: color 0.35s var(--ease-conservatory);
-  }
-
-  .testimonial:hover .testimonial__cue,
-  .testimonial__open:focus-visible ~ .testimonial__cue { color: var(--color-blue); }
-
   /* On the Soft Cream band the hairline needs to be blue; cream on cream is
      invisible, the same trap the .statement rule documents. */
+  /* Second iteration: the section sits on Deep Blue with Soft Cream type, and
+     each review is boxed in a cream hairline on the blue ground. */
   .section--blue .testimonial {
-    border-top-color: color-mix(in srgb, var(--color-cream) 40%, transparent);
+    background: transparent;
+    border-color: color-mix(in srgb, var(--color-cream) 45%, transparent);
+  }
+
+  .section--blue .testimonial:hover {
+    border-color: var(--color-cream);
+    box-shadow: none;
   }
 
   .section--blue .testimonial__mark { color: color-mix(in srgb, var(--color-cream) 70%, transparent); }
-  .section--blue .testimonial__body { color: color-mix(in srgb, var(--color-white) 82%, transparent); }
-  .section--blue .testimonial__cue  { color: color-mix(in srgb, var(--color-cream) 82%, transparent); }
-  .section--blue .testimonial:hover .testimonial__cue { color: var(--color-cream); }
-
-  /* --- The full review, in a dialog -----------------------------------------
-     Native <dialog> opened with showModal(). That is not a shortcut: the
-     browser supplies the focus trap, the inert background, Esc-to-close, the
-     return of focus to the card that opened it and the correct role — every
-     part of a modal that a hand-rolled div gets wrong.
-     ----------------------------------------------------------------------- */
-
-  .testimonial-dialog {
-    width: min(42rem, calc(100vw - 2.5rem));
-    max-height: min(80vh, 44rem);
-    padding: clamp(1.75rem, 4vw, 3rem);
-    border: 0;
-    /* A modal <dialog> is centred by the UA stylesheet's `inset: 0; margin:
-       auto`. Tailwind's preflight zeroes margins on everything, which quietly
-       takes the `auto` away and pins the dialog to the top-left corner.
-       Putting it back is the whole fix. */
-    margin: auto;
-    background: var(--color-white);
-    color: var(--color-blue);
-    /* The dialog paints on the top layer, above every stacking context, so a
-       shadow is the only thing separating it from the page behind. */
-    box-shadow: 0 2rem 5rem color-mix(in srgb, var(--color-blue) 30%, transparent);
-    overflow: auto;
-    overscroll-behavior: contain;
-  }
-
-  /* ::backdrop inherits from its originating element in current browsers, so
-     the palette variable resolves here rather than needing a literal hex. */
-  .testimonial-dialog::backdrop {
-    background: color-mix(in srgb, var(--color-blue) 76%, transparent);
-  }
-
-  .testimonial-dialog__mark {
-    font-family: var(--font-display);
-    font-size: 3rem;
-    line-height: 0.8;
-    color: color-mix(in srgb, var(--color-blue) 62%, transparent);
-  }
-
-  .testimonial-dialog__body {
-    margin-top: 1rem;
-    font-size: var(--text-lede);
-    line-height: 1.8;
-    color: color-mix(in srgb, var(--color-blue) 88%, transparent);
-    text-align: justify;
-    hyphens: auto;
-  }
-
-  .testimonial-dialog__by {
-    margin-top: 1.75rem;
-    font-family: var(--font-display);
-    font-size: var(--text-title);
-    line-height: var(--text-title--line-height);
-    font-style: italic;
-    color: var(--color-gold-ink);
-  }
-
-  .testimonial-dialog__close {
-    position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
-    width: 2.75rem;                      /* 44px touch target */
-    height: 2.75rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: none;
-    border: 0;
-    border-radius: 50%;
-    color: var(--color-blue);
-    cursor: pointer;
-    transition: background-color 0.3s var(--ease-conservatory);
-  }
-
-  .testimonial-dialog__close:hover {
-    background-color: color-mix(in srgb, var(--color-blue) 8%, transparent);
-  }
-
-  .testimonial-dialog__close svg { width: 1rem; height: 1rem; }
-
+  .section--blue .testimonial__body { color: var(--color-cream); }
+  /* Cream, not gold: the bright gold measures 3.7:1 on Deep Blue, short of
+     the 4.5:1 this italic needs at its size. */
+  .section--blue .testimonial__by   { color: var(--color-cream); }
+  .section--blue .section__title    { color: var(--color-cream); }
 
   /* --- Paging controls ------------------------------------------------------
      "Scroll on both sides": one arrow each side of the band. On a phone they
@@ -2920,46 +2773,79 @@
 
 
   /* =============================================================================
-     PROVISIONAL FOOTER
+     FOOTER
      -----------------------------------------------------------------------------
-     A working placeholder so no page ends abruptly. The real footer is its own
-     build step and will replace partials/footer.html wholesale.
+     Deep Blue ground, Soft Cream type. The client's second iteration swapped it
+     back from cream so the page is no longer bracketed by two identical bands.
+     Measured: Soft Cream on Deep Blue is 7.6:1, safe for body copy.
+
+     Fonts in the Explore and Studio columns are swapped from the rest of the
+     site at the client's request: the small headings take the serif, the
+     lists take Hanken Grotesk — the phone number's figures were hard to read
+     in Sorts Mill Goudy at this size.
      ========================================================================== */
 
-  /* Soft Cream ground, Deep Blue type — the client's stated first preference,
-     and the same treatment as the header so the page is bracketed by it.
-     Measured: Deep Blue on Soft Cream is 7.6:1, safe for body copy. */
   .site-footer {
-    background: var(--color-cream);
-    color: color-mix(in srgb, var(--color-blue) 82%, transparent);
+    background: var(--color-blue);
+    color: var(--color-cream);
     padding-block: clamp(3rem, 2rem + 4vw, 5rem);
+    --focus-ring: var(--color-cream);
   }
 
   .site-footer a { color: inherit; text-decoration: none; }
-  .site-footer a:hover { color: var(--color-blue); }
+  .site-footer a:hover { color: var(--color-white); }
 
   .site-footer__top {
     display: grid;
     gap: clamp(2rem, 4vw, 3.5rem);
     padding-bottom: clamp(2rem, 4vw, 3rem);
-    border-bottom: 1px solid color-mix(in srgb, var(--color-cream) 20%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-cream) 22%, transparent);
   }
 
   @media (min-width: 48rem) {
     .site-footer__top { grid-template-columns: 1.4fr 1fr 1fr; }
   }
 
+  /* Justified, as the client asked; same face and size as before. */
+  .site-footer__about {
+    margin-top: 1.5rem;
+    max-width: 44ch;
+    text-align: justify;
+    hyphens: auto;
+  }
+
   .site-footer__heading {
-    font-size: 0.6875rem;
-    font-weight: 600;
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    font-weight: 400;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    /* Cream on cream measured 1.0:1 once the footer inverted. */
-    color: var(--color-blue);
+    color: var(--color-cream);
     margin-bottom: 1.125rem;
   }
 
-  .site-footer__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.625rem; }
+  .site-footer__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    font-family: var(--font-display);
+    font-size: var(--text-small);
+    letter-spacing: 0.01em;
+  }
+
+  .site-footer__social {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-top: 0.35rem;
+  }
+
+  .site-footer__social svg { width: 1.25rem; height: 1.25rem; flex: none; }
+
+  .site-footer__made { margin-top: 0.35rem; }
 
   .site-footer__bottom {
     display: flex;
@@ -2969,16 +2855,22 @@
     align-items: center;
     padding-top: 1.75rem;
     font-size: var(--text-small);
-    /* Was white-on-blue at 55%; on cream that measured 1.1:1. 72% then
-       measured 3.96:1, still short — Deep Blue needs 78% over cream to reach
-       4.5:1, so this sits at 84% for headroom. */
-    color: color-mix(in srgb, var(--color-blue) 84%, transparent);
+    color: color-mix(in srgb, var(--color-cream) 88%, transparent);
   }
 
+  /* WhatsApp sits in a box like "Enquire Now" — it takes .btn .btn-blue in
+     the markup. This only adds the icon spacing and the hide/show hook. */
   .whatsapp-inline {
     align-items: center;
     gap: 0.625rem;
     margin-top: 1.5rem;
+  }
+
+  .whatsapp-inline svg { width: 1.125rem; height: 1.125rem; }
+
+  /* The mobile menu panel is Deep Blue too, but its WhatsApp link is plain
+     text, not a button — it keeps the old cream outline. */
+  .nav-mobile .whatsapp-inline {
     padding: 0.75rem 1.25rem;
     min-height: 2.75rem;
     border: 1px solid color-mix(in srgb, var(--color-cream) 45%, transparent);
@@ -2987,15 +2879,7 @@
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    transition: border-color 0.4s var(--ease-conservatory), background-color 0.4s var(--ease-conservatory);
   }
-
-  .whatsapp-inline:hover {
-    border-color: var(--color-cream);
-    background: color-mix(in srgb, var(--color-blue) 60%, transparent);
-  }
-
-  .whatsapp-inline svg { width: 1.125rem; height: 1.125rem; }
 }
 
 
@@ -3074,20 +2958,34 @@
     background: color-mix(in srgb, var(--color-grey) 25%, var(--color-white));
   }
 
+  /* The client's mockup draws a thin black stroke round every photograph.
+     Drawn on top as an inset ring rather than a border, so the hover zoom
+     below scales the photograph inside the frame and never the frame itself. */
+  .collage__cell::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 0 1px var(--color-black-ink);
+    pointer-events: none;
+  }
+
   .collage__cell img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Slightly above centre: cropping a tall portrait into a landscape box
-       from the middle tends to take the top off faces. */
-    object-position: 50% 38%;
+    /* Per-cell crop from the inline --focal. Each value was measured by
+       matching the client's collage mockup against the source photograph,
+       not set by eye. */
+    object-position: var(--focal, 50% 50%);
     display: block;
-    /* The swap in main.js fades the old photograph out and the new one in.
-       This duration must match COLLAGE_FADE there. */
-    transition: opacity 0.8s var(--ease-conservatory);
+    /* --zoom tightens a crop past plain "cover" where the mockup frames a
+       photograph closer in; --zoom-origin says which corner it closes on. */
+    transform: scale(var(--zoom, 1));
+    transform-origin: var(--zoom-origin, 50% 50%);
+    transition: transform 1.2s var(--ease-conservatory);
   }
 
-  .collage__cell img[data-swapping="true"] { opacity: 0; }
+  .collage__cell:hover img { transform: scale(calc(var(--zoom, 1) * 1.05)); }
 
   .collage__tagline {
     grid-column: 1 / -1;
@@ -3102,7 +3000,7 @@
 
   .collage__tagline img {
     width: 100%;
-    max-width: 34rem;
+    max-width: 28rem;
     height: auto;
     display: block;
   }
@@ -3134,7 +3032,9 @@
          Three cells wide by one row tall, where each cell is 7:5, works out
          at 3 / (5/7) = 21/5. */
       aspect-ratio: 21 / 5;
-      padding: clamp(0.35rem, 1vw, 0.9rem);
+      /* The padding is what sizes the lockup. Set between the original (too
+         large, per the client) and the first reduction (a little too small). */
+      padding: clamp(0.6rem, 1.5vw, 1.5rem) clamp(1rem, 2.75vw, 2.75rem);
     }
 
     /* Fill the cell. The lockup is height-limited here, so the only way to
@@ -3228,8 +3128,8 @@
     inset: 0;
     background: linear-gradient(
       to bottom,
-      color-mix(in srgb, var(--color-blue) 10%, transparent) 0%,
-      color-mix(in srgb, var(--color-blue) 26%, transparent) 100%
+      color-mix(in srgb, var(--color-black-ink) 8%, transparent) 0%,
+      color-mix(in srgb, var(--color-black-ink) 20%, transparent) 100%
     );
     transition: opacity 0.6s var(--ease-conservatory);
     pointer-events: none;
@@ -3272,22 +3172,38 @@
 
   /* --- One wedding -------------------------------------------------------- */
 
-  /* Columns rather than a grid: every photograph keeps its own proportions, so
-     nothing is cropped and portrait and landscape sit together the way they
-     would in a printed album. Reading order runs down each column, which for a
-     gallery is no worse than across — and the alternative crops faces. */
+  /* Justified rows: photographs run left to right, then down, in the order the
+     client curated them — so the wedding reads as a timeline. (The earlier
+     CSS-columns layout ran down each column instead, which scrambled the
+     sequence; the client's main gallery complaint.)
+
+     Each photograph grows in proportion to its own aspect ratio, so every row
+     fills the width at a common height and nothing is cropped. The ::after
+     spacer soaks up the slack on the last row, so a short final row keeps the
+     same height instead of stretching to fill. */
   .shot-grid {
-    columns: 2;
-    column-gap: clamp(0.5rem, 1.2vw, 1rem);
+    --row: 12rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(0.4rem, 1vw, 0.75rem);
     margin-top: clamp(1rem, 2vw, 2rem);
   }
 
-  @media (min-width: 36rem) { .shot-grid { columns: 3; } }
-  @media (min-width: 62rem) { .shot-grid { columns: 4; } }
+  .shot-grid::after {
+    content: "";
+    flex-grow: 1000000;
+  }
+
+  @media (min-width: 36rem) { .shot-grid { --row: 15rem; } }
+  @media (min-width: 62rem) { .shot-grid { --row: 18rem; } }
+  @media (min-width: 120rem) { .shot-grid { --row: 22rem; } }
 
   .shot {
-    margin: 0 0 clamp(0.5rem, 1.2vw, 1rem);
-    break-inside: avoid;
+    margin: 0;
+    flex-grow: calc(var(--ratio, 1) * 100);
+    flex-basis: calc(var(--ratio, 1) * var(--row));
+    /* A very wide panorama on a phone must still fit the row. */
+    max-width: 100%;
   }
 
   .shot__open {
@@ -3340,8 +3256,10 @@
     overflow: visible;
   }
 
+  /* Near-black, not Deep Blue: a coloured surround tints how the photograph
+     reads, and the client asked for no blue on photographs. */
   .lightbox::backdrop {
-    background: color-mix(in srgb, var(--color-blue) 88%, transparent);
+    background: color-mix(in srgb, var(--color-black-ink) 92%, transparent);
   }
 
   .lightbox__img {
@@ -3385,6 +3303,48 @@
   }
   .lightbox__close:focus-visible { outline: 2px solid var(--color-white); outline-offset: 2px; }
 
+  /* Previous / next — fixed to the viewport edges for the same reason as the
+     close button: the photograph's shape must not move the controls. The
+     arrow keys and a swipe do the same job; these are for the mouse. */
+  .lightbox__nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.75rem;
+    height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: color-mix(in srgb, var(--color-black-ink) 45%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-white) 38%, transparent);
+    border-radius: 50%;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: background-color 0.3s var(--ease-conservatory),
+                border-color 0.3s var(--ease-conservatory);
+  }
+
+  .lightbox__nav--prev { left: clamp(0.5rem, 2vw, 1.5rem); }
+  .lightbox__nav--next { right: clamp(0.5rem, 2vw, 1.5rem); }
+  .lightbox__nav svg { width: 1rem; height: 1rem; }
+  .lightbox__nav:hover {
+    background: color-mix(in srgb, var(--color-white) 16%, transparent);
+    border-color: var(--color-white);
+  }
+  .lightbox__nav:focus-visible { outline: 2px solid var(--color-white); outline-offset: 2px; }
+
+  .lightbox__count {
+    position: fixed;
+    left: 50%;
+    bottom: clamp(0.5rem, 2vh, 1.25rem);
+    transform: translateX(-50%);
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--text-eyebrow);
+    letter-spacing: 0.18em;
+    color: color-mix(in srgb, var(--color-white) 85%, transparent);
+  }
+
 
 
   /* Stop the page behind scrolling while the lightbox is open. */
@@ -3396,4 +3356,42 @@
     .hero__actions { flex-direction: column; align-items: stretch; }
     .hero__actions .btn { width: 100%; }
   }
+}
+
+
+/* =============================================================================
+   JUSTIFIED PARAGRAPHS
+   -----------------------------------------------------------------------------
+   The client's second iteration: "All text paragraphs must be 'justified' or
+   'left justified'". Justified with the last line left — the standard book
+   setting. Listed by class rather than a blanket `p` rule, so one-line labels,
+   eyebrows and centred lines keep their own alignment.
+
+   Hyphenation is what keeps justified text from opening rivers in a narrow
+   column; it relies on <html lang="en">, which every page sets.
+   ========================================================================== */
+
+@layer components {
+  .prose p,
+  .about__body p,
+  .process-step__body,
+  .lede,
+  .hero__lede,
+  .faq-item__body p,
+  .contact-card__note,
+  .testimonial__body {
+    text-align: justify;
+    text-align-last: left;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  /* The closing one-sentence line of the home spread stands on its own (the
+     client asked for it separately); justifying a single sentence across two
+     short lines only stretches its spaces, so it is set left. */
+  .about__body p:last-child { text-align: left; }
+
+  /* A centred block (the closing call to action) justifies its lines but keeps
+     its last line centred, so it still reads as centred. */
+  .cta__inner .lede { text-align-last: center; }
 }

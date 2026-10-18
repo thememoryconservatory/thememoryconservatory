@@ -1,5 +1,5 @@
 {
- "baseUrl": "https://tmc-gallery-6jk.pages.dev",
+ "baseUrl": "https://tmc-gallery-2026.pages.dev",
  "sizes": {
   "thumb": 600,
   "full": 2560
@@ -7,2687 +7,4344 @@
  "weddings": [
   {
    "slug": "sharmilan-x-thiviia",
-   "title": "Sharmilan & Thiviia",
-   "cover": "s-x-t-tmc-78.jpg",
+   "title": "Sharmilan & Thiviaa",
+   "genre": "Portraiture",
+   "cover": "/assets/img/covers/sharmilan-x-thiviia.jpg",
+   "hero": "/assets/img/covers/sharmilan-x-thiviia-hero.jpg",
    "photos": [
     {
-     "file": "s-x-t-tmc-1.jpg",
+     "file": "sharmilan-x-thiviia-001.jpg",
      "ratio": 1.5
     },
     {
-     "file": "s-x-t-tmc-10.jpg",
+     "file": "sharmilan-x-thiviia-002.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-100.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "s-x-t-tmc-101.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "s-x-t-tmc-11.jpg",
+     "file": "sharmilan-x-thiviia-003.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-12.jpg",
+     "file": "sharmilan-x-thiviia-004.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-13.jpg",
+     "file": "sharmilan-x-thiviia-005.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-14.jpg",
+     "file": "sharmilan-x-thiviia-006.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sharmilan-x-thiviia-007.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sharmilan-x-thiviia-008.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sharmilan-x-thiviia-009.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sharmilan-x-thiviia-010.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sharmilan-x-thiviia-011.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sharmilan-x-thiviia-012.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sharmilan-x-thiviia-013.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sharmilan-x-thiviia-014.jpg",
      "ratio": 1.5001
     },
     {
-     "file": "s-x-t-tmc-15.jpg",
+     "file": "sharmilan-x-thiviia-015.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-16.jpg",
+     "file": "sharmilan-x-thiviia-016.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-17.jpg",
+     "file": "sharmilan-x-thiviia-017.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-18.jpg",
+     "file": "sharmilan-x-thiviia-018.jpg",
      "ratio": 1.5
     },
     {
-     "file": "s-x-t-tmc-19.jpg",
+     "file": "sharmilan-x-thiviia-019.jpg",
      "ratio": 1.4999
     },
     {
-     "file": "s-x-t-tmc-2.jpg",
+     "file": "sharmilan-x-thiviia-020.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-20.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "s-x-t-tmc-21.jpg",
+     "file": "sharmilan-x-thiviia-021.jpg",
      "ratio": 1.5
     },
     {
-     "file": "s-x-t-tmc-22.jpg",
+     "file": "sharmilan-x-thiviia-022.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-23.jpg",
+     "file": "sharmilan-x-thiviia-023.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-24.jpg",
+     "file": "sharmilan-x-thiviia-024.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-25.jpg",
+     "file": "sharmilan-x-thiviia-025.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-26.jpg",
+     "file": "sharmilan-x-thiviia-026.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-27.jpg",
+     "file": "sharmilan-x-thiviia-027.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-28.jpg",
+     "file": "sharmilan-x-thiviia-028.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-29.jpg",
+     "file": "sharmilan-x-thiviia-029.jpg",
      "ratio": 0.6666
     },
     {
-     "file": "s-x-t-tmc-3.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "s-x-t-tmc-30.jpg",
+     "file": "sharmilan-x-thiviia-030.jpg",
      "ratio": 0.6666
     },
     {
-     "file": "s-x-t-tmc-31.jpg",
+     "file": "sharmilan-x-thiviia-031.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-32.jpg",
+     "file": "sharmilan-x-thiviia-032.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-33.jpg",
+     "file": "sharmilan-x-thiviia-033.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-34.jpg",
+     "file": "sharmilan-x-thiviia-034.jpg",
      "ratio": 0.6666
     },
     {
-     "file": "s-x-t-tmc-35.jpg",
+     "file": "sharmilan-x-thiviia-035.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-36.jpg",
+     "file": "sharmilan-x-thiviia-036.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-37.jpg",
+     "file": "sharmilan-x-thiviia-037.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-38.jpg",
+     "file": "sharmilan-x-thiviia-038.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-39.jpg",
+     "file": "sharmilan-x-thiviia-039.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-4.jpg",
+     "file": "sharmilan-x-thiviia-040.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-40.jpg",
+     "file": "sharmilan-x-thiviia-041.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-41.jpg",
+     "file": "sharmilan-x-thiviia-042.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-42.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "s-x-t-tmc-43.jpg",
+     "file": "sharmilan-x-thiviia-043.jpg",
      "ratio": 1.5
     },
     {
-     "file": "s-x-t-tmc-44.jpg",
+     "file": "sharmilan-x-thiviia-044.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-45.jpg",
+     "file": "sharmilan-x-thiviia-045.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-46.jpg",
+     "file": "sharmilan-x-thiviia-046.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-47.jpg",
+     "file": "sharmilan-x-thiviia-047.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-48.jpg",
+     "file": "sharmilan-x-thiviia-048.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-49.jpg",
+     "file": "sharmilan-x-thiviia-049.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-5.jpg",
+     "file": "sharmilan-x-thiviia-050.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-50.jpg",
+     "file": "sharmilan-x-thiviia-051.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-51.jpg",
+     "file": "sharmilan-x-thiviia-052.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-52.jpg",
+     "file": "sharmilan-x-thiviia-053.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-53.jpg",
+     "file": "sharmilan-x-thiviia-054.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-54.jpg",
+     "file": "sharmilan-x-thiviia-055.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-55.jpg",
+     "file": "sharmilan-x-thiviia-056.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-56.jpg",
+     "file": "sharmilan-x-thiviia-057.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-57.jpg",
+     "file": "sharmilan-x-thiviia-058.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-58.jpg",
+     "file": "sharmilan-x-thiviia-059.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-59.jpg",
+     "file": "sharmilan-x-thiviia-060.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-6.jpg",
+     "file": "sharmilan-x-thiviia-061.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-60.jpg",
+     "file": "sharmilan-x-thiviia-062.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-61.jpg",
+     "file": "sharmilan-x-thiviia-063.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-62.jpg",
+     "file": "sharmilan-x-thiviia-064.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-63.jpg",
+     "file": "sharmilan-x-thiviia-065.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-64.jpg",
+     "file": "sharmilan-x-thiviia-066.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-65.jpg",
+     "file": "sharmilan-x-thiviia-067.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-66.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "s-x-t-tmc-67.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "s-x-t-tmc-68.jpg",
+     "file": "sharmilan-x-thiviia-068.jpg",
      "ratio": 0.6666
     },
     {
-     "file": "s-x-t-tmc-69.jpg",
+     "file": "sharmilan-x-thiviia-069.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-7.jpg",
+     "file": "sharmilan-x-thiviia-070.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-70.jpg",
+     "file": "sharmilan-x-thiviia-071.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-71.jpg",
+     "file": "sharmilan-x-thiviia-072.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-72.jpg",
+     "file": "sharmilan-x-thiviia-073.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-73.jpg",
+     "file": "sharmilan-x-thiviia-074.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-74.jpg",
+     "file": "sharmilan-x-thiviia-075.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-75.jpg",
+     "file": "sharmilan-x-thiviia-076.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-76.jpg",
+     "file": "sharmilan-x-thiviia-077.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-77.jpg",
+     "file": "sharmilan-x-thiviia-078.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-78.jpg",
+     "file": "sharmilan-x-thiviia-079.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-79.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "s-x-t-tmc-8.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "s-x-t-tmc-80.jpg",
+     "file": "sharmilan-x-thiviia-080.jpg",
      "ratio": 1.5
     },
     {
-     "file": "s-x-t-tmc-81.jpg",
+     "file": "sharmilan-x-thiviia-081.jpg",
      "ratio": 1.5
     },
     {
-     "file": "s-x-t-tmc-82.jpg",
+     "file": "sharmilan-x-thiviia-082.jpg",
      "ratio": 1.6106
     },
     {
-     "file": "s-x-t-tmc-83.jpg",
+     "file": "sharmilan-x-thiviia-083.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-84.jpg",
+     "file": "sharmilan-x-thiviia-084.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-85.jpg",
+     "file": "sharmilan-x-thiviia-085.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-86.jpg",
+     "file": "sharmilan-x-thiviia-086.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-87.jpg",
+     "file": "sharmilan-x-thiviia-087.jpg",
      "ratio": 1.5001
     },
     {
-     "file": "s-x-t-tmc-88.jpg",
+     "file": "sharmilan-x-thiviia-088.jpg",
      "ratio": 1.5001
     },
     {
-     "file": "s-x-t-tmc-89.jpg",
+     "file": "sharmilan-x-thiviia-089.jpg",
      "ratio": 1.5001
     },
     {
-     "file": "s-x-t-tmc-9.jpg",
+     "file": "sharmilan-x-thiviia-090.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-90.jpg",
+     "file": "sharmilan-x-thiviia-091.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "s-x-t-tmc-91.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "s-x-t-tmc-92.jpg",
+     "file": "sharmilan-x-thiviia-092.jpg",
      "ratio": 1.5
     },
     {
-     "file": "s-x-t-tmc-93.jpg",
+     "file": "sharmilan-x-thiviia-093.jpg",
      "ratio": 1.5
     },
     {
-     "file": "s-x-t-tmc-94.jpg",
+     "file": "sharmilan-x-thiviia-094.jpg",
      "ratio": 0.6661
     },
     {
-     "file": "s-x-t-tmc-95.jpg",
+     "file": "sharmilan-x-thiviia-095.jpg",
      "ratio": 1.4999
     },
     {
-     "file": "s-x-t-tmc-96.jpg",
+     "file": "sharmilan-x-thiviia-096.jpg",
      "ratio": 1.4999
     },
     {
-     "file": "s-x-t-tmc-97.jpg",
+     "file": "sharmilan-x-thiviia-097.jpg",
      "ratio": 1.4999
     },
     {
-     "file": "s-x-t-tmc-98.jpg",
+     "file": "sharmilan-x-thiviia-098.jpg",
      "ratio": 1.4999
     },
     {
-     "file": "s-x-t-tmc-99.jpg",
+     "file": "sharmilan-x-thiviia-099.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sharmilan-x-thiviia-100.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sharmilan-x-thiviia-101.jpg",
      "ratio": 1.5
     }
-   ],
-   "genre": "Portraiture"
+   ]
+  },
+  {
+   "slug": "prajna-x-tejas",
+   "title": "Prajna & Tejas",
+   "genre": "Tamil Wedding",
+   "cover": "/assets/img/covers/prajna-x-tejas.jpg",
+   "hero": "/assets/img/covers/prajna-x-tejas-hero.jpg",
+   "photos": [
+    {
+     "file": "prajna-x-tejas-001.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-002.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-003.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-004.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-005.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-006.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-007.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-008.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-009.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-010.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-011.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-012.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-013.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-014.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-015.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-016.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-017.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-018.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-019.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-020.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-021.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-022.jpg",
+     "ratio": 0.6673
+    },
+    {
+     "file": "prajna-x-tejas-023.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-024.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-025.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-026.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-027.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-028.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-029.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-030.jpg",
+     "ratio": 0.6656
+    },
+    {
+     "file": "prajna-x-tejas-031.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-032.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-033.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-034.jpg",
+     "ratio": 0.667
+    },
+    {
+     "file": "prajna-x-tejas-035.jpg",
+     "ratio": 0.6671
+    },
+    {
+     "file": "prajna-x-tejas-036.jpg",
+     "ratio": 0.667
+    },
+    {
+     "file": "prajna-x-tejas-037.jpg",
+     "ratio": 0.667
+    },
+    {
+     "file": "prajna-x-tejas-038.jpg",
+     "ratio": 1.4993
+    },
+    {
+     "file": "prajna-x-tejas-039.jpg",
+     "ratio": 1.4991
+    },
+    {
+     "file": "prajna-x-tejas-040.jpg",
+     "ratio": 0.667
+    },
+    {
+     "file": "prajna-x-tejas-041.jpg",
+     "ratio": 0.667
+    },
+    {
+     "file": "prajna-x-tejas-042.jpg",
+     "ratio": 0.667
+    },
+    {
+     "file": "prajna-x-tejas-043.jpg",
+     "ratio": 0.667
+    },
+    {
+     "file": "prajna-x-tejas-044.jpg",
+     "ratio": 0.667
+    },
+    {
+     "file": "prajna-x-tejas-045.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-046.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-047.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-048.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-049.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-050.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-051.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-052.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-053.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-054.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-055.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-056.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-057.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-058.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-059.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-060.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-061.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-062.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-063.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-064.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-065.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-066.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-067.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-068.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-069.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-070.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "prajna-x-tejas-071.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-072.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-073.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-074.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-075.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-076.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-077.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-078.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-079.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-080.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-081.jpg",
+     "ratio": 1.4998
+    },
+    {
+     "file": "prajna-x-tejas-082.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-083.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-084.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-085.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "prajna-x-tejas-086.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-087.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-088.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-089.jpg",
+     "ratio": 0.6659
+    },
+    {
+     "file": "prajna-x-tejas-090.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-091.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-092.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-093.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-094.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-095.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-096.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-097.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-098.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-099.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-100.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-101.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-102.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-103.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-104.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-105.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-106.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-107.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-108.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-109.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-110.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-111.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-112.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "prajna-x-tejas-113.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-114.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "prajna-x-tejas-115.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-116.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-117.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-118.jpg",
+     "ratio": 1.5002
+    },
+    {
+     "file": "prajna-x-tejas-119.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-120.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-121.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-122.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "prajna-x-tejas-123.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-124.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-125.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-126.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-127.jpg",
+     "ratio": 0.667
+    },
+    {
+     "file": "prajna-x-tejas-128.jpg",
+     "ratio": 0.667
+    },
+    {
+     "file": "prajna-x-tejas-129.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-130.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "prajna-x-tejas-131.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-132.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-133.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-134.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-135.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-136.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-137.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-138.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-139.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-140.jpg",
+     "ratio": 1.4991
+    },
+    {
+     "file": "prajna-x-tejas-141.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-142.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-143.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-144.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-145.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-146.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-147.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-148.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-149.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "prajna-x-tejas-150.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-151.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-152.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-153.jpg",
+     "ratio": 1.4997
+    },
+    {
+     "file": "prajna-x-tejas-154.jpg",
+     "ratio": 1.4995
+    },
+    {
+     "file": "prajna-x-tejas-155.jpg",
+     "ratio": 1.4995
+    },
+    {
+     "file": "prajna-x-tejas-156.jpg",
+     "ratio": 0.667
+    },
+    {
+     "file": "prajna-x-tejas-157.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "prajna-x-tejas-158.jpg",
+     "ratio": 0.667
+    },
+    {
+     "file": "prajna-x-tejas-159.jpg",
+     "ratio": 0.667
+    },
+    {
+     "file": "prajna-x-tejas-160.jpg",
+     "ratio": 0.6671
+    },
+    {
+     "file": "prajna-x-tejas-161.jpg",
+     "ratio": 1.4991
+    },
+    {
+     "file": "prajna-x-tejas-162.jpg",
+     "ratio": 0.667
+    },
+    {
+     "file": "prajna-x-tejas-163.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "prajna-x-tejas-164.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "prajna-x-tejas-165.jpg",
+     "ratio": 1.4992
+    },
+    {
+     "file": "prajna-x-tejas-166.jpg",
+     "ratio": 1.4992
+    },
+    {
+     "file": "prajna-x-tejas-167.jpg",
+     "ratio": 1.4991
+    },
+    {
+     "file": "prajna-x-tejas-168.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "prajna-x-tejas-169.jpg",
+     "ratio": 1.4992
+    },
+    {
+     "file": "prajna-x-tejas-170.jpg",
+     "ratio": 1.4993
+    },
+    {
+     "file": "prajna-x-tejas-171.jpg",
+     "ratio": 1.4992
+    },
+    {
+     "file": "prajna-x-tejas-172.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-173.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-174.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "prajna-x-tejas-175.jpg",
+     "ratio": 1.5002
+    },
+    {
+     "file": "prajna-x-tejas-176.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "prajna-x-tejas-177.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "prajna-x-tejas-178.jpg",
+     "ratio": 1.5001
+    }
+   ]
+  },
+  {
+   "slug": "shreya-x-rikhabh",
+   "title": "Rikhabh & Shreya",
+   "genre": "Portraiture",
+   "cover": "/assets/img/covers/shreya-x-rikhabh.jpg",
+   "hero": "shreya-x-rikhabh-024.jpg",
+   "photos": [
+    {
+     "file": "shreya-x-rikhabh-001.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-002.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-003.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "shreya-x-rikhabh-004.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "shreya-x-rikhabh-005.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-006.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-007.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-008.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-009.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-010.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-011.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-012.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-013.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-014.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-015.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-016.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "shreya-x-rikhabh-017.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-018.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-019.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-020.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-021.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-022.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-023.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-024.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "shreya-x-rikhabh-025.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-026.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-027.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-028.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-029.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-030.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-031.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-032.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-033.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-034.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-035.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-036.jpg",
+     "ratio": 1.7778
+    },
+    {
+     "file": "shreya-x-rikhabh-037.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-038.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-039.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-040.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-041.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-042.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-043.jpg",
+     "ratio": 1.7778
+    },
+    {
+     "file": "shreya-x-rikhabh-044.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-045.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-046.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-047.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-048.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-049.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-050.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-051.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-052.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-053.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-054.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "shreya-x-rikhabh-055.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-056.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-057.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-058.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-059.jpg",
+     "ratio": 1.5004
+    },
+    {
+     "file": "shreya-x-rikhabh-060.jpg",
+     "ratio": 0.6667
+    }
+   ]
+  },
+  {
+   "slug": "pavithran-x-gowri",
+   "title": "Pavit & Gowri",
+   "genre": "Portraiture",
+   "cover": "/assets/img/covers/pavithran-x-gowri.jpg",
+   "hero": "pavithran-x-gowri-062.jpg",
+   "photos": [
+    {
+     "file": "pavithran-x-gowri-001.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-002.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-003.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-004.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-005.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-006.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-007.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-008.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-009.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-010.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-011.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-012.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-013.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-014.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-015.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-016.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-017.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-018.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-019.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-020.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-021.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-022.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-023.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-024.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "pavithran-x-gowri-025.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "pavithran-x-gowri-026.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-027.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-028.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-029.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-030.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-031.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-032.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-033.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-034.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-035.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-036.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-037.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-038.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-039.jpg",
+     "ratio": 0.6674
+    },
+    {
+     "file": "pavithran-x-gowri-040.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-041.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-042.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "pavithran-x-gowri-043.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-044.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-045.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-046.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-047.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-048.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "pavithran-x-gowri-049.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-050.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-051.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-052.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-053.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-054.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-055.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-056.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-057.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-058.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-059.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-060.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-061.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-062.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-063.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-064.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-065.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-066.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-067.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-068.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-069.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-070.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-071.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-072.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-073.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-074.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-075.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-076.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-077.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-078.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "pavithran-x-gowri-079.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-080.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "pavithran-x-gowri-081.jpg",
+     "ratio": 1.5
+    }
+   ]
+  },
+  {
+   "slug": "frankline-x-akshay",
+   "title": "Akshay & Franklin",
+   "genre": "Christian Wedding",
+   "cover": "/assets/img/covers/frankline-x-akshay.jpg",
+   "hero": "frankline-x-akshay-132.jpg",
+   "photos": [
+    {
+     "file": "frankline-x-akshay-001.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-002.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-003.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-004.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-005.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-006.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-007.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "frankline-x-akshay-008.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-009.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-010.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-011.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-012.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "frankline-x-akshay-013.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-014.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-015.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-016.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "frankline-x-akshay-017.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-018.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-019.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-020.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-021.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-022.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-023.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-024.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-025.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-026.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-027.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-028.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-029.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-030.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "frankline-x-akshay-031.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-032.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-033.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-034.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "frankline-x-akshay-035.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-036.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "frankline-x-akshay-037.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-038.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-039.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-040.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-041.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-042.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-043.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-044.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-045.jpg",
+     "ratio": 1.4996
+    },
+    {
+     "file": "frankline-x-akshay-046.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-047.jpg",
+     "ratio": 1.4823
+    },
+    {
+     "file": "frankline-x-akshay-048.jpg",
+     "ratio": 0.6746
+    },
+    {
+     "file": "frankline-x-akshay-049.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-050.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-051.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-052.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-053.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-054.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-055.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-056.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-057.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-058.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-059.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-060.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-061.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-062.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "frankline-x-akshay-063.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-064.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-065.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-066.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-067.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-068.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "frankline-x-akshay-069.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-070.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-071.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-072.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-073.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-074.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-075.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "frankline-x-akshay-076.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "frankline-x-akshay-077.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-078.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-079.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-080.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-081.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-082.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-083.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-084.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-085.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-086.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-087.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "frankline-x-akshay-088.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-089.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-090.jpg",
+     "ratio": 1.4998
+    },
+    {
+     "file": "frankline-x-akshay-091.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-092.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-093.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-094.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-095.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-096.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-097.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-098.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-099.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-100.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-101.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-102.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "frankline-x-akshay-103.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-104.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-105.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-106.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-107.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-108.jpg",
+     "ratio": 1.4442
+    },
+    {
+     "file": "frankline-x-akshay-109.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-110.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-111.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "frankline-x-akshay-112.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-113.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-114.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-115.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-116.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-117.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-118.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-119.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-120.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-121.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "frankline-x-akshay-122.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "frankline-x-akshay-123.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "frankline-x-akshay-124.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "frankline-x-akshay-125.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-126.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "frankline-x-akshay-127.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-128.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-129.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-130.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-131.jpg",
+     "ratio": 1.4
+    },
+    {
+     "file": "frankline-x-akshay-132.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-133.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-134.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-135.jpg",
+     "ratio": 1.4002
+    },
+    {
+     "file": "frankline-x-akshay-136.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-137.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-138.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "frankline-x-akshay-139.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-140.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-141.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-142.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-143.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-144.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-145.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-146.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "frankline-x-akshay-147.jpg",
+     "ratio": 0.6667
+    }
+   ]
   },
   {
    "slug": "nivedha-x-ajit",
    "title": "Nivedha & Ajit",
-   "cover": "n-x-a-tmc-13.jpg",
+   "genre": "Tamil Wedding",
+   "cover": "/assets/img/covers/nivedha-x-ajit.jpg",
+   "hero": "nivedha-x-ajit-044.jpg",
    "photos": [
     {
-     "file": "n-x-a-tmc-1.jpg",
+     "file": "nivedha-x-ajit-001.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-10.jpg",
+     "file": "nivedha-x-ajit-002.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-100.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-101.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-102.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-103.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-104.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-105.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-106.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-107.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-108.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-109.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-11.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-110.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-111.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-112.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-113.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-114.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-115.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-116.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-117.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-118.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-119.jpg",
+     "file": "nivedha-x-ajit-003.jpg",
      "ratio": 1.4999
     },
     {
-     "file": "n-x-a-tmc-12.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-120.jpg",
-     "ratio": 1.4999
-    },
-    {
-     "file": "n-x-a-tmc-121.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-122.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-123.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-124.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-125.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-126.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-127.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-128.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-129.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-13.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-130.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-131.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-132.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-133.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-134.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-135.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-136.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-137.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-138.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-139.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-14.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-140.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-141.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-142.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-143.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-144.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-145.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-146.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-147.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-148.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-149.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-15.jpg",
-     "ratio": 1.4999
-    },
-    {
-     "file": "n-x-a-tmc-150.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-151.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-152.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-153.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-154.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-155.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-156.jpg",
-     "ratio": 0.6666
-    },
-    {
-     "file": "n-x-a-tmc-157.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-158.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-159.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-16.jpg",
+     "file": "nivedha-x-ajit-004.jpg",
      "ratio": 1.5001
     },
     {
-     "file": "n-x-a-tmc-160.jpg",
+     "file": "nivedha-x-ajit-005.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-17.jpg",
+     "file": "nivedha-x-ajit-006.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-18.jpg",
+     "file": "nivedha-x-ajit-007.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-008.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-009.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-010.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-011.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-012.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-013.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-19.jpg",
+     "file": "nivedha-x-ajit-014.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-2.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-20.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-21.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-22.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-23.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-24.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-25.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-26.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-27.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-28.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-29.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-3.jpg",
+     "file": "nivedha-x-ajit-015.jpg",
      "ratio": 1.4999
     },
     {
-     "file": "n-x-a-tmc-30.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-31.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-32.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-33.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-34.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-35.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-36.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-37.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-38.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-39.jpg",
+     "file": "nivedha-x-ajit-016.jpg",
      "ratio": 1.5001
     },
     {
-     "file": "n-x-a-tmc-4.jpg",
+     "file": "nivedha-x-ajit-017.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-018.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-019.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-020.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-021.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-022.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-023.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-024.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-025.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-026.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-027.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-028.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-029.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-030.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-031.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-032.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-033.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-034.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-035.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-036.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-037.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-038.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-039.jpg",
      "ratio": 1.5001
     },
     {
-     "file": "n-x-a-tmc-40.jpg",
+     "file": "nivedha-x-ajit-040.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-41.jpg",
+     "file": "nivedha-x-ajit-041.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-42.jpg",
+     "file": "nivedha-x-ajit-042.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-43.jpg",
+     "file": "nivedha-x-ajit-043.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-44.jpg",
+     "file": "nivedha-x-ajit-044.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-45.jpg",
+     "file": "nivedha-x-ajit-045.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-46.jpg",
+     "file": "nivedha-x-ajit-046.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-47.jpg",
+     "file": "nivedha-x-ajit-047.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-48.jpg",
+     "file": "nivedha-x-ajit-048.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-49.jpg",
+     "file": "nivedha-x-ajit-049.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-5.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-50.jpg",
+     "file": "nivedha-x-ajit-050.jpg",
      "ratio": 1.7777
     },
     {
-     "file": "n-x-a-tmc-51.jpg",
+     "file": "nivedha-x-ajit-051.jpg",
      "ratio": 0.6666
     },
     {
-     "file": "n-x-a-tmc-52.jpg",
+     "file": "nivedha-x-ajit-052.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-53.jpg",
+     "file": "nivedha-x-ajit-053.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-54.jpg",
+     "file": "nivedha-x-ajit-054.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-55.jpg",
+     "file": "nivedha-x-ajit-055.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-56.jpg",
+     "file": "nivedha-x-ajit-056.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-57.jpg",
+     "file": "nivedha-x-ajit-057.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-58.jpg",
+     "file": "nivedha-x-ajit-058.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-59.jpg",
+     "file": "nivedha-x-ajit-059.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-6.jpg",
+     "file": "nivedha-x-ajit-060.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-061.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-062.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-063.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-064.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-065.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-60.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-61.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-62.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-63.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-64.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "n-x-a-tmc-65.jpg",
+     "file": "nivedha-x-ajit-066.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-66.jpg",
+     "file": "nivedha-x-ajit-067.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-67.jpg",
+     "file": "nivedha-x-ajit-068.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-68.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-69.jpg",
+     "file": "nivedha-x-ajit-069.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-7.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-70.jpg",
+     "file": "nivedha-x-ajit-070.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-71.jpg",
+     "file": "nivedha-x-ajit-071.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-72.jpg",
+     "file": "nivedha-x-ajit-072.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-73.jpg",
+     "file": "nivedha-x-ajit-073.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-74.jpg",
+     "file": "nivedha-x-ajit-074.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-75.jpg",
+     "file": "nivedha-x-ajit-075.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-76.jpg",
+     "file": "nivedha-x-ajit-076.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-77.jpg",
+     "file": "nivedha-x-ajit-077.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-78.jpg",
+     "file": "nivedha-x-ajit-078.jpg",
      "ratio": 1.4999
     },
     {
-     "file": "n-x-a-tmc-79.jpg",
+     "file": "nivedha-x-ajit-079.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-8.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "n-x-a-tmc-80.jpg",
+     "file": "nivedha-x-ajit-080.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-81.jpg",
+     "file": "nivedha-x-ajit-081.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-82.jpg",
+     "file": "nivedha-x-ajit-082.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-83.jpg",
+     "file": "nivedha-x-ajit-083.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-84.jpg",
+     "file": "nivedha-x-ajit-084.jpg",
      "ratio": 1.5
     },
     {
-     "file": "n-x-a-tmc-85.jpg",
+     "file": "nivedha-x-ajit-085.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-86.jpg",
+     "file": "nivedha-x-ajit-086.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-87.jpg",
+     "file": "nivedha-x-ajit-087.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-88.jpg",
+     "file": "nivedha-x-ajit-088.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-89.jpg",
+     "file": "nivedha-x-ajit-089.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-9.jpg",
+     "file": "nivedha-x-ajit-090.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-90.jpg",
+     "file": "nivedha-x-ajit-091.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-91.jpg",
+     "file": "nivedha-x-ajit-092.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-92.jpg",
+     "file": "nivedha-x-ajit-093.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-93.jpg",
+     "file": "nivedha-x-ajit-094.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-94.jpg",
+     "file": "nivedha-x-ajit-095.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-95.jpg",
+     "file": "nivedha-x-ajit-096.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-96.jpg",
+     "file": "nivedha-x-ajit-097.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-97.jpg",
+     "file": "nivedha-x-ajit-098.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-98.jpg",
+     "file": "nivedha-x-ajit-099.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "n-x-a-tmc-99.jpg",
-     "ratio": 0.6667
-    }
-   ],
-   "genre": "Tamil Wedding"
-  },
-  {
-   "slug": "shreya-x-rikhabh",
-   "title": "Shreya & Rikhabh",
-   "cover": "tmc-rik-shr02914.jpg",
-   "photos": [
-    {
-     "file": "tmc-rik-shr.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02455.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02460.jpg",
+     "file": "nivedha-x-ajit-100.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "tmc-rik-shr02461.jpg",
+     "file": "nivedha-x-ajit-101.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "tmc-rik-shr02480.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02483.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02494.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02496.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02502.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02503.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02519.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02523.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02530.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02531.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02535.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02544.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "tmc-rik-shr02557.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02575.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02595.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02598.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02616.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02617.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02625.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02636.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "tmc-rik-shr02648.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02655.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02661.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02669.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02678.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02682.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02687.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02689.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02700.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02708.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02712.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02713.jpg",
-     "ratio": 1.7778
-    },
-    {
-     "file": "tmc-rik-shr02723.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02735.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02739.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02753.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02766.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02771.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02772.jpg",
-     "ratio": 1.7778
-    },
-    {
-     "file": "tmc-rik-shr02777.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02783.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02800.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02805.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02809.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02833.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02840.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02850.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02867.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02881.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02890.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "tmc-rik-shr02894.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02897.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02903.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02909.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02911.jpg",
-     "ratio": 1.5004
-    },
-    {
-     "file": "tmc-rik-shr02914.jpg",
-     "ratio": 0.6667
-    }
-   ],
-   "genre": "Portraiture"
-  },
-  {
-   "slug": "jayashree-x-rajesh",
-   "title": "Jayashree & Rajesh",
-   "cover": "jayashree-rajesh-outdoor-62.jpg",
-   "photos": [
-    {
-     "file": "jayashree-rajesh-outdoor-10.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-100.jpg",
+     "file": "nivedha-x-ajit-102.jpg",
      "ratio": 1.5
     },
     {
-     "file": "jayashree-rajesh-outdoor-101.jpg",
+     "file": "nivedha-x-ajit-103.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-104.jpg",
      "ratio": 1.5
     },
     {
-     "file": "jayashree-rajesh-outdoor-102.jpg",
+     "file": "nivedha-x-ajit-105.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "jayashree-rajesh-outdoor-103.jpg",
+     "file": "nivedha-x-ajit-106.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "jayashree-rajesh-outdoor-104.jpg",
+     "file": "nivedha-x-ajit-107.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "jayashree-rajesh-outdoor-105.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-106.jpg",
+     "file": "nivedha-x-ajit-108.jpg",
      "ratio": 1.5
     },
     {
-     "file": "jayashree-rajesh-outdoor-107.jpg",
+     "file": "nivedha-x-ajit-109.jpg",
      "ratio": 1.5
     },
     {
-     "file": "jayashree-rajesh-outdoor-108.jpg",
+     "file": "nivedha-x-ajit-110.jpg",
      "ratio": 1.5
     },
     {
-     "file": "jayashree-rajesh-outdoor-109.jpg",
+     "file": "nivedha-x-ajit-111.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "jayashree-rajesh-outdoor-11.jpg",
+     "file": "nivedha-x-ajit-112.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "jayashree-rajesh-outdoor-110.jpg",
+     "file": "nivedha-x-ajit-113.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "jayashree-rajesh-outdoor-111.jpg",
+     "file": "nivedha-x-ajit-114.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-115.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-116.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-117.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-118.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-119.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "nivedha-x-ajit-120.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "nivedha-x-ajit-121.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-122.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-123.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-124.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-125.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-126.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-127.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-128.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-129.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-130.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-131.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-132.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-133.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-134.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-135.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-136.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-137.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-138.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-139.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-140.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-141.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-142.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-143.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-144.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-145.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-146.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-147.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-148.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-149.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-150.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-151.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "nivedha-x-ajit-152.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-153.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-154.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-155.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "nivedha-x-ajit-156.jpg",
      "ratio": 0.6666
     },
     {
-     "file": "jayashree-rajesh-outdoor-112.jpg",
-     "ratio": 1.5001
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-113.jpg",
-     "ratio": 1.5002
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-114.jpg",
-     "ratio": 1.5002
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-115.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-116.jpg",
-     "ratio": 1.5002
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-117.jpg",
-     "ratio": 1.4998
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-118.jpg",
+     "file": "nivedha-x-ajit-157.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "jayashree-rajesh-outdoor-119.jpg",
+     "file": "nivedha-x-ajit-158.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "jayashree-rajesh-outdoor-12.jpg",
+     "file": "nivedha-x-ajit-159.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "jayashree-rajesh-outdoor-120.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-121.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-122.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-123.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-124.jpg",
-     "ratio": 1.5001
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-125.jpg",
-     "ratio": 1.5001
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-126.jpg",
-     "ratio": 1.5001
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-127.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-128.jpg",
-     "ratio": 1.5001
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-129.jpg",
-     "ratio": 1.5001
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-13.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-130.jpg",
-     "ratio": 1.5001
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-131.jpg",
-     "ratio": 1.5001
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-132.jpg",
-     "ratio": 1.5001
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-133.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-134.jpg",
-     "ratio": 0.6663
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-135.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-136.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-137.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-138.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-139.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-14.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-140.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-141.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-142.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-143.jpg",
+     "file": "nivedha-x-ajit-160.jpg",
      "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-144.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-145.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-146.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-147.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-148.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-149.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-15.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-150.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-151.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-16.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-17.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-18.jpg",
-     "ratio": 0.6659
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-19.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-2.jpg",
-     "ratio": 1.5001
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-20.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-21.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-22.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-23.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-24.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-25.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-26.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-27.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-28.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-29.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-3.jpg",
-     "ratio": 1.7779
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-30.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-31.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-32.jpg",
-     "ratio": 1.4999
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-33.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-34.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-35.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-36.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-37.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-38.jpg",
-     "ratio": 0.6666
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-39.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-4.jpg",
-     "ratio": 0.6662
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-40.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-41.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-42.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-43.jpg",
-     "ratio": 1.4999
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-44.jpg",
-     "ratio": 1.4999
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-45.jpg",
-     "ratio": 1.4999
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-46.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-47.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-48.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-49.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-5.jpg",
-     "ratio": 1.5001
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-50.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-51.jpg",
-     "ratio": 1.4999
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-52.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-53.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-54.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-55.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-56.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-57.jpg",
-     "ratio": 1.4999
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-58.jpg",
-     "ratio": 1.4999
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-59.jpg",
-     "ratio": 0.6659
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-6.jpg",
-     "ratio": 1.5001
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-60.jpg",
-     "ratio": 0.6659
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-61.jpg",
-     "ratio": 0.6659
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-62.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-63.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-64.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-65.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-66.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-67.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-68.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-69.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-7.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-70.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-71.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-72.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-73.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-74.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-75.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-76.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-77.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-78.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-79.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-8.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-80.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-81.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-82.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-83.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-84.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-85.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-86.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-87.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-88.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-89.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-9.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-90.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-91.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-92.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-93.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-94.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-95.jpg",
-     "ratio": 1.5001
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-96.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-97.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-98.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor-99.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "jayashree-rajesh-outdoor.jpg",
-     "ratio": 1.5
     }
-   ],
-   "genre": "Portraiture"
+   ]
   },
   {
    "slug": "shruti-x-yogesh",
    "title": "Shruti & Yogesh",
-   "cover": "vk-shr-yog-9042.jpg",
+   "genre": "Tamil Wedding",
+   "cover": "/assets/img/covers/shruti-x-yogesh.jpg",
+   "hero": "shruti-x-yogesh-029.jpg",
    "photos": [
     {
-     "file": "vk-shr-yog-10064.jpg",
+     "file": "shruti-x-yogesh-001.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-10080.jpg",
+     "file": "shruti-x-yogesh-002.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-10090.jpg",
+     "file": "shruti-x-yogesh-003.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-004.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-005.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-006.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-007.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-10114.jpg",
+     "file": "shruti-x-yogesh-008.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-10186.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-10193.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-10591.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-10596.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-10613.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-10717.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-11475.jpg",
+     "file": "shruti-x-yogesh-009.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-11480.jpg",
+     "file": "shruti-x-yogesh-010.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-011.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-11484.jpg",
+     "file": "shruti-x-yogesh-012.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-11490.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-11573.jpg",
+     "file": "shruti-x-yogesh-013.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-11593.jpg",
+     "file": "shruti-x-yogesh-014.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-015.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-11611.jpg",
+     "file": "shruti-x-yogesh-016.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-7263.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-7273.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-7277.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-7280.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-7284.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-7296.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-7363.jpg",
+     "file": "shruti-x-yogesh-017.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-7399.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-7407.jpg",
+     "file": "shruti-x-yogesh-018.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-7412.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-7417.jpg",
+     "file": "shruti-x-yogesh-019.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-7439.jpg",
+     "file": "shruti-x-yogesh-020.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-7461.jpg",
+     "file": "shruti-x-yogesh-021.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-7476.jpg",
+     "file": "shruti-x-yogesh-022.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-7489.jpg",
+     "file": "shruti-x-yogesh-023.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-7502.jpg",
+     "file": "shruti-x-yogesh-024.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-7508.jpg",
+     "file": "shruti-x-yogesh-025.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-7513.jpg",
+     "file": "shruti-x-yogesh-026.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-027.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-028.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-029.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-7546.jpg",
+     "file": "shruti-x-yogesh-030.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-031.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-032.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-033.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-034.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-035.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-7553.jpg",
+     "file": "shruti-x-yogesh-036.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-037.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-7610.jpg",
+     "file": "shruti-x-yogesh-038.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-039.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-040.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-041.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-042.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-043.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-044.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-7638.jpg",
+     "file": "shruti-x-yogesh-045.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-7705.jpg",
+     "file": "shruti-x-yogesh-046.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-047.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-048.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-7849.jpg",
+     "file": "shruti-x-yogesh-049.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-7877.jpg",
+     "file": "shruti-x-yogesh-050.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-051.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-052.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-053.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-054.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-055.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-056.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-057.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-058.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-059.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-7900.jpg",
+     "file": "shruti-x-yogesh-060.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-7969.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8032.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8043.jpg",
+     "file": "shruti-x-yogesh-061.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-8062.jpg",
+     "file": "shruti-x-yogesh-062.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-8077.jpg",
+     "file": "shruti-x-yogesh-063.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-8087.jpg",
+     "file": "shruti-x-yogesh-064.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-8168.jpg",
+     "file": "shruti-x-yogesh-065.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-8177.jpg",
+     "file": "shruti-x-yogesh-066.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-8200.jpg",
+     "file": "shruti-x-yogesh-067.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-068.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-069.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-070.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-071.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-072.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-073.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-8220.jpg",
+     "file": "shruti-x-yogesh-074.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-8226.jpg",
+     "file": "shruti-x-yogesh-075.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-076.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-077.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-078.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-079.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-080.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-081.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-082.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-083.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-084.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-085.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-086.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-087.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-088.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-089.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-090.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-091.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-092.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-093.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-094.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-095.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-096.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-097.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-098.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-099.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-100.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-101.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-102.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-103.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-104.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-105.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-106.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-107.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-108.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-109.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-110.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-111.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-112.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-113.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-114.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-8291.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8310.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8321.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8327.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8372.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8374.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8432.jpg",
+     "file": "shruti-x-yogesh-115.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-8483.jpg",
+     "file": "shruti-x-yogesh-116.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-8490.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8525.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8582.jpg",
+     "file": "shruti-x-yogesh-117.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-8594.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8596.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8614.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8643.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8675.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8694.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8700.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8730.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8734.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8746.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-8762.jpg",
+     "file": "shruti-x-yogesh-118.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-8766.jpg",
+     "file": "shruti-x-yogesh-119.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-8817.jpg",
+     "file": "shruti-x-yogesh-120.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "shruti-x-yogesh-121.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-8833.jpg",
+     "file": "shruti-x-yogesh-122.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-8835.jpg",
+     "file": "shruti-x-yogesh-123.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-8874.jpg",
+     "file": "shruti-x-yogesh-124.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-8879.jpg",
+     "file": "shruti-x-yogesh-125.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-9024.jpg",
+     "file": "shruti-x-yogesh-126.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-9042.jpg",
+     "file": "shruti-x-yogesh-127.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-9068.jpg",
+     "file": "shruti-x-yogesh-128.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-9090.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9106.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9123.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9133.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9150.jpg",
+     "file": "shruti-x-yogesh-129.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-9182.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9190.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9206.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9226.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9230.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9237.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9244.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9247.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9248.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9256.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9271.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9306.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9331.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9335.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9345.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9420.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9425.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9433.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9448.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9484.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9519.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9532.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9536.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9550.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9553.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9559.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9587.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9603.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9653.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9665.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9714.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9744.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9778.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9788.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9797.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9810.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9844.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9855.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9861.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9882.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "vk-shr-yog-9936.jpg",
+     "file": "shruti-x-yogesh-130.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-9944.jpg",
+     "file": "shruti-x-yogesh-131.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-9973.jpg",
+     "file": "shruti-x-yogesh-132.jpg",
      "ratio": 1.5
     },
     {
-     "file": "vk-shr-yog-9978.jpg",
+     "file": "shruti-x-yogesh-133.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "vk-shr-yog-9984.jpg",
+     "file": "shruti-x-yogesh-134.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "shruti-x-yogesh-135.jpg",
+     "ratio": 1.5
+    }
+   ]
+  },
+  {
+   "slug": "amrutha-x-krish",
+   "title": "Amrutha & Krish",
+   "genre": "Sri Lankan Wedding",
+   "cover": "/assets/img/covers/amrutha-x-krish.jpg",
+   "hero": "amrutha-x-krish-085.jpg",
+   "photos": [
+    {
+     "file": "amrutha-x-krish-001.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-002.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-003.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-004.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "amrutha-x-krish-005.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-006.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-007.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-008.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-009.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-010.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-011.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-012.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-013.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-014.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-015.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-016.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-017.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-018.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-019.jpg",
+     "ratio": 0.667
+    },
+    {
+     "file": "amrutha-x-krish-020.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-021.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-022.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-023.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-024.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-025.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-026.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-027.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "amrutha-x-krish-028.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "amrutha-x-krish-029.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "amrutha-x-krish-030.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "amrutha-x-krish-031.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-032.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "amrutha-x-krish-033.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-034.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "amrutha-x-krish-035.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-036.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-037.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-038.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-039.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-040.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-041.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-042.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-043.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-044.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-045.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-046.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-047.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-048.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-049.jpg",
+     "ratio": 0.6665
+    },
+    {
+     "file": "amrutha-x-krish-050.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-051.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-052.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-053.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "amrutha-x-krish-054.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-055.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-056.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "amrutha-x-krish-057.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-058.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-059.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-060.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "amrutha-x-krish-061.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-062.jpg",
+     "ratio": 0.6671
+    },
+    {
+     "file": "amrutha-x-krish-063.jpg",
+     "ratio": 0.6671
+    },
+    {
+     "file": "amrutha-x-krish-064.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-065.jpg",
+     "ratio": 1.4991
+    },
+    {
+     "file": "amrutha-x-krish-066.jpg",
+     "ratio": 1.4997
+    },
+    {
+     "file": "amrutha-x-krish-067.jpg",
+     "ratio": 1.4997
+    },
+    {
+     "file": "amrutha-x-krish-068.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-069.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-070.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-071.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-072.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-073.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-074.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-075.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-076.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-077.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-078.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-079.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-080.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-081.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-082.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-083.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-084.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-085.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-086.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-087.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-088.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-089.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-090.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-091.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-092.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-093.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-094.jpg",
+     "ratio": 0.6665
+    },
+    {
+     "file": "amrutha-x-krish-095.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-096.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-097.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-098.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-099.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-100.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-101.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-102.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-103.jpg",
+     "ratio": 0.6663
+    },
+    {
+     "file": "amrutha-x-krish-104.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-105.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-106.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-107.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-108.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-109.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-110.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-111.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-112.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "amrutha-x-krish-113.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "amrutha-x-krish-114.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "amrutha-x-krish-115.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-116.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "amrutha-x-krish-117.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-118.jpg",
+     "ratio": 1.4999
+    },
+    {
+     "file": "amrutha-x-krish-119.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-120.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-121.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-122.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-123.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-124.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-125.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-126.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "amrutha-x-krish-127.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "amrutha-x-krish-128.jpg",
+     "ratio": 1.5001
+    },
+    {
+     "file": "amrutha-x-krish-129.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-130.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-131.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-132.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-133.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-134.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-135.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-136.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-137.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-138.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-139.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-140.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-141.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-142.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-143.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "amrutha-x-krish-144.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "amrutha-x-krish-145.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-146.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-147.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "amrutha-x-krish-148.jpg",
+     "ratio": 0.6663
+    },
+    {
+     "file": "amrutha-x-krish-149.jpg",
+     "ratio": 0.6663
+    },
+    {
+     "file": "amrutha-x-krish-150.jpg",
+     "ratio": 0.6664
+    },
+    {
+     "file": "amrutha-x-krish-151.jpg",
      "ratio": 0.6667
     }
-   ],
-   "genre": "Tamil Wedding"
+   ]
   },
   {
    "slug": "sheena-x-daniel",
    "title": "Sheena & Daniel",
-   "cover": "sheena-daniel-outdoor-100.jpg",
+   "genre": "Portraiture",
+   "cover": "/assets/img/covers/sheena-x-daniel.jpg",
+   "hero": "sheena-x-daniel-022.jpg",
    "photos": [
     {
-     "file": "sheena-daniel-outdoor-100.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "sheena-daniel-outdoor-101.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "sheena-daniel-outdoor-109.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-11.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "sheena-daniel-outdoor-111.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-117.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-126.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-127.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-13.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-132.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "sheena-daniel-outdoor-133.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-134.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-135.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-136.jpg",
-     "ratio": 1.7777
-    },
-    {
-     "file": "sheena-daniel-outdoor-14.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-142.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-143.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "sheena-daniel-outdoor-16.jpg",
-     "ratio": 0.6666
-    },
-    {
-     "file": "sheena-daniel-outdoor-17.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-18.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-19.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-2.jpg",
+     "file": "sheena-x-daniel-001.jpg",
      "ratio": 1.4998
     },
     {
-     "file": "sheena-daniel-outdoor-22.jpg",
+     "file": "sheena-x-daniel-002.jpg",
      "ratio": 1.5
     },
     {
-     "file": "sheena-daniel-outdoor-23.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "sheena-daniel-outdoor-25.jpg",
+     "file": "sheena-x-daniel-003.jpg",
      "ratio": 1.5
     },
     {
-     "file": "sheena-daniel-outdoor-27.jpg",
+     "file": "sheena-x-daniel-004.jpg",
      "ratio": 1.5
     },
     {
-     "file": "sheena-daniel-outdoor-28.jpg",
+     "file": "sheena-x-daniel-005.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sheena-x-daniel-006.jpg",
      "ratio": 1.5
     },
     {
-     "file": "sheena-daniel-outdoor-29.jpg",
+     "file": "sheena-x-daniel-007.jpg",
      "ratio": 1.5
     },
     {
-     "file": "sheena-daniel-outdoor-30.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "sheena-daniel-outdoor-35.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "sheena-daniel-outdoor-38.jpg",
-     "ratio": 1.4998
-    },
-    {
-     "file": "sheena-daniel-outdoor-4.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-49.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "sheena-daniel-outdoor-51.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "sheena-daniel-outdoor-52.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "sheena-daniel-outdoor-54.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "sheena-daniel-outdoor-59.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "sheena-daniel-outdoor-60.jpg",
-     "ratio": 0.6667
-    },
-    {
-     "file": "sheena-daniel-outdoor-64.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-66.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-71.jpg",
+     "file": "sheena-x-daniel-008.jpg",
      "ratio": 0.6666
     },
     {
-     "file": "sheena-daniel-outdoor-73.jpg",
+     "file": "sheena-x-daniel-009.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-010.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-011.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-012.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-013.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sheena-x-daniel-014.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-015.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-016.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-017.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-018.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sheena-x-daniel-019.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sheena-x-daniel-020.jpg",
+     "ratio": 1.4998
+    },
+    {
+     "file": "sheena-x-daniel-021.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sheena-x-daniel-022.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sheena-x-daniel-023.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sheena-x-daniel-024.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sheena-x-daniel-025.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sheena-x-daniel-026.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sheena-x-daniel-027.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-028.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-029.jpg",
+     "ratio": 0.6666
+    },
+    {
+     "file": "sheena-x-daniel-030.jpg",
      "ratio": 1.5001
     },
     {
-     "file": "sheena-daniel-outdoor-8.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-80.jpg",
+     "file": "sheena-x-daniel-031.jpg",
      "ratio": 0.6666
     },
     {
-     "file": "sheena-daniel-outdoor-81.jpg",
+     "file": "sheena-x-daniel-032.jpg",
      "ratio": 1.5
     },
     {
-     "file": "sheena-daniel-outdoor-84.jpg",
+     "file": "sheena-x-daniel-033.jpg",
      "ratio": 1.5
     },
     {
-     "file": "sheena-daniel-outdoor-85.jpg",
+     "file": "sheena-x-daniel-034.jpg",
      "ratio": 1.4999
     },
     {
-     "file": "sheena-daniel-outdoor-89.jpg",
+     "file": "sheena-x-daniel-035.jpg",
      "ratio": 1.4999
     },
     {
-     "file": "sheena-daniel-outdoor-9.jpg",
-     "ratio": 1.5
-    },
-    {
-     "file": "sheena-daniel-outdoor-93.jpg",
+     "file": "sheena-x-daniel-036.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "sheena-daniel-outdoor-95.jpg",
+     "file": "sheena-x-daniel-037.jpg",
      "ratio": 0.6667
     },
     {
-     "file": "sheena-daniel-outdoor-98.jpg",
+     "file": "sheena-x-daniel-038.jpg",
      "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-039.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sheena-x-daniel-040.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sheena-x-daniel-041.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-042.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-043.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-044.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-045.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-046.jpg",
+     "ratio": 0.6667
+    },
+    {
+     "file": "sheena-x-daniel-047.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-048.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-049.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-050.jpg",
+     "ratio": 1.7777
+    },
+    {
+     "file": "sheena-x-daniel-051.jpg",
+     "ratio": 1.5
+    },
+    {
+     "file": "sheena-x-daniel-052.jpg",
+     "ratio": 0.6667
     }
-   ],
-   "genre": "Portraiture"
+   ]
   }
  ]
 }

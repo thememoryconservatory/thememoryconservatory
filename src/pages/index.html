@@ -31,7 +31,7 @@
              This static fallback shows only when JavaScript is unavailable. -->
         <noscript>
           <div class="hero__slide is-active">
-            <img class="hero__img" src="https://tmc-gallery-6jk.pages.dev/jayashree-x-rajesh/full/jayashree-rajesh-outdoor-145.jpg" alt="">
+            <img class="hero__img" src="/assets/img/slideshow/slide-1.jpg" alt="">
           </div>
         </noscript>
       </div>
@@ -107,8 +107,8 @@
       <div class="about__grid">
 
         <figure class="about__figure about__figure--right reveal">
-          <img src="https://tmc-gallery-6jk.pages.dev/nivedha-x-ajit/full/n-x-a-tmc-1.jpg"
-               alt="A quiet moment between the couple before the ceremony"
+          <img src="/assets/img/hero/intro-right.jpg"
+               alt="A couple standing among tall leaves beneath palm trees"
                loading="lazy" decoding="async">
         </figure>
 
@@ -117,13 +117,13 @@
                throughout, italic gilt on the emphasis, and a single explicit
                break so it always sets as two lines. -->
           <h2 class="section__title about__title">
-            Some days become memories.<br>Some memories become <em>heirlooms</em>.
+            Some days become memories.<br> <span class="nowrap">Some memories become <em>heirlooms</em>.</span>
           </h2>
         </header>
 
         <figure class="about__figure about__figure--left reveal">
-          <img src="https://tmc-gallery-6jk.pages.dev/sharmilan-x-thiviia/full/s-x-t-tmc-13.jpg"
-               alt="The groom kissing the bride on the forehead"
+          <img src="/assets/img/hero/intro-left.jpg"
+               alt="The couple walking arm in arm down a hotel corridor"
                loading="lazy" decoding="async">
         </figure>
 
@@ -141,8 +141,9 @@
             carrying the weight of everything that came before and everything
             that followed. Kept close, revisited often, and eventually handed
             on, they become more than photographs.
-            <strong>They give permanence to what was always passing.</strong>
           </p>
+          <!-- Its own line, at the client's request. -->
+          <p><strong>They give permanence to what was always passing.</strong></p>
         </div>
 
       </div>
@@ -157,75 +158,76 @@
          cells. Empty cells, not gutters, make the white space — so the images
          carry no border of their own.
 
-         There are more photographs than cells. The surplus are not dropped:
-         main.js swaps one cell at a time for a photograph that is not
-         currently on screen, so the whole set is seen over time.
+         Fixed placement. The client's second iteration dropped the rotation
+         ("the photos change randomly one by one") in favour of the earlier
+         behaviour: the field fades in as one on scroll, and each photograph
+         zooms gently on hover. Every cell has a thin black stroke, per the
+         mockup.
          ================================================================== -->
     <section class="section section--white collage-section">
-      <div class="collage" data-collage
-           data-pool='[{"src":"/assets/img/collage/collage-1.jpg","alt":"A couple standing forehead to forehead beneath trees"},{"src":"/assets/img/collage/collage-2.jpg","alt":"Guests throwing a garland during the ceremony"},{"src":"/assets/img/collage/collage-3.jpg","alt":"A couple facing each other, both in gold"},{"src":"/assets/img/collage/collage-4.jpg","alt":"The couple leaving the church among their guests"},{"src":"/assets/img/collage/collage-5.jpg","alt":"A couple on a white staircase"},{"src":"/assets/img/collage/collage-6.jpg","alt":"A couple on a staircase beneath a chandelier"},{"src":"/assets/img/collage/collage-7.jpg","alt":"A couple holding their cat"},{"src":"/assets/img/collage/collage-8.jpg","alt":"A couple walking together, the groom in black tie"},{"src":"/assets/img/collage/collage-9.jpg","alt":"A couple among flowers in a garden"},{"src":"/assets/img/collage/collage-10.jpg","alt":"A couple in a darkened lounge beside a piano"},{"src":"/assets/img/collage/collage-11.jpg","alt":"A couple embracing in a field of tall grass"},{"src":"/assets/img/collage/collage-12.jpg","alt":"A portrait against deep red drapes"},{"src":"/assets/img/collage/collage-13.jpg","alt":"A portrait seated against a brick wall"},{"src":"/assets/img/collage/collage-14.jpg","alt":"A couple lying together on the grass"},{"src":"/assets/img/collage/collage-15.jpg","alt":"Garlands exchanged above the crowd"},{"src":"/assets/img/collage/collage-16.jpg","alt":"Bride and groom in flower garlands"},{"src":"/assets/img/collage/chad-jahnavi-109.jpg","alt":"A couple in a blue doorway, the groom laughing"},{"src":"/assets/img/collage/orange-couple.jpg","alt":"A couple in orange, walking together"}]'>
-        <figure class="collage__cell" style="--col:2;--row:1">
-          <img data-collage-img src="/assets/img/collage/collage-1.jpg" alt="A couple standing forehead to forehead beneath trees"
+      <div class="collage reveal">
+        <figure class="collage__cell" style="--col:2;--row:1;--focal:50% 50%">
+          <img src="/assets/img/collage/collage-1.jpg" alt="A couple standing forehead to forehead beneath trees"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:4;--row:1">
-          <img data-collage-img src="/assets/img/collage/collage-11.jpg" alt="A couple embracing in a field of tall grass"
+        <figure class="collage__cell" style="--col:4;--row:1;--focal:50% 50%">
+          <img src="/assets/img/collage/collage-11.jpg" alt="A couple embracing in a field of tall grass"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:6;--row:1">
-          <img data-collage-img src="/assets/img/collage/collage-5.jpg" alt="A couple on a white staircase"
+        <figure class="collage__cell" style="--col:6;--row:1;--focal:50% 97%">
+          <img src="/assets/img/collage/collage-5.jpg" alt="A couple on a white staircase"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:1;--row:2">
-          <img data-collage-img src="/assets/img/collage/collage-8.jpg" alt="A couple walking together, the groom in black tie"
+        <figure class="collage__cell" style="--col:1;--row:2;--focal:50% 41%">
+          <img src="/assets/img/collage/collage-8.jpg" alt="A couple walking together, the groom in black tie"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:3;--row:2">
-          <img data-collage-img src="/assets/img/collage/collage-3.jpg" alt="A couple facing each other, both in gold"
+        <figure class="collage__cell" style="--col:3;--row:2;--focal:50% 43%">
+          <img src="/assets/img/collage/collage-3.jpg" alt="A couple facing each other, both in gold"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:5;--row:2">
-          <img data-collage-img src="/assets/img/collage/collage-16.jpg" alt="Bride and groom in flower garlands"
+        <figure class="collage__cell" style="--col:5;--row:2;--zoom:1.19;--zoom-origin:2% 0%">
+          <img src="/assets/img/collage/collage-16.jpg" alt="Bride and groom in flower garlands"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:7;--row:2">
-          <img data-collage-img src="/assets/img/collage/collage-4.jpg" alt="The couple leaving the church among their guests"
+        <figure class="collage__cell" style="--col:7;--row:2;--focal:50% 69%">
+          <img src="/assets/img/collage/collage-4.jpg" alt="The couple leaving the church among their guests"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:2;--row:3">
-          <img data-collage-img src="/assets/img/collage/collage-2.jpg" alt="Guests throwing a garland during the ceremony"
+        <figure class="collage__cell" style="--col:2;--row:3;--focal:50% 50%">
+          <img src="/assets/img/collage/collage-15.jpg" alt="Garlands exchanged above the crowd"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:6;--row:3">
-          <img data-collage-img src="/assets/img/collage/collage-6.jpg" alt="A couple on a staircase beneath a chandelier"
+        <figure class="collage__cell" style="--col:6;--row:3;--focal:50% 36%">
+          <img src="/assets/img/collage/collage-6.jpg" alt="A couple on a staircase beneath a chandelier"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:1;--row:4">
-          <img data-collage-img src="/assets/img/collage/collage-10.jpg" alt="A couple in a darkened lounge beside a piano"
+        <figure class="collage__cell" style="--col:1;--row:4;--focal:50% 50%">
+          <img src="/assets/img/collage/collage-10.jpg" alt="A couple in a darkened lounge beside a piano"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:3;--row:4">
-          <img data-collage-img src="/assets/img/collage/chad-jahnavi-109.jpg" alt="A couple in a blue doorway, the groom laughing"
+        <figure class="collage__cell" style="--col:3;--row:4;--focal:50% 50%">
+          <img src="/assets/img/collage/chad-jahnavi-109.jpg" alt="A couple in a blue doorway, the groom laughing"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:5;--row:4">
-          <img data-collage-img src="/assets/img/collage/collage-14.jpg" alt="A couple lying together on the grass"
+        <figure class="collage__cell" style="--col:5;--row:4;--focal:50% 50%">
+          <img src="/assets/img/collage/collage-14.jpg" alt="A couple lying together on the grass"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:7;--row:4">
-          <img data-collage-img src="/assets/img/collage/collage-15.jpg" alt="Garlands exchanged above the crowd"
+        <figure class="collage__cell" style="--col:7;--row:4;--focal:50% 50%">
+          <img src="/assets/img/collage/collage-2.jpg" alt="Guests throwing a garland during the ceremony"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:2;--row:5">
-          <img data-collage-img src="/assets/img/collage/collage-7.jpg" alt="A couple holding their cat"
+        <figure class="collage__cell" style="--col:2;--row:5;--focal:50% 27%">
+          <img src="/assets/img/collage/collage-7.jpg" alt="A couple holding their cat"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:4;--row:5">
-          <img data-collage-img src="/assets/img/collage/orange-couple.jpg" alt="A couple in orange, walking together"
+        <figure class="collage__cell" style="--col:4;--row:5;--focal:50% 78%">
+          <img src="/assets/img/collage/orange-couple.jpg" alt="A couple in orange, walking together"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:6;--row:5">
-          <img data-collage-img src="/assets/img/collage/collage-9.jpg" alt="A couple among flowers in a garden"
+        <figure class="collage__cell" style="--col:6;--row:5;--focal:50% 50%">
+          <img src="/assets/img/collage/collage-9.jpg" alt="A couple among flowers in a garden"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
 
@@ -249,32 +251,35 @@
         </div>
 
         <div class="work-grid work-grid--three" style="margin-top:clamp(2.5rem,5vw,4rem)">
-          <a class="work-card reveal" href="/gallery/sharmilan-x-thiviia">
-            <img src="https://tmc-gallery-6jk.pages.dev/sharmilan-x-thiviia/full/s-x-t-tmc-31.jpg"
-                 alt="A couple close together, foreheads almost touching" loading="lazy" decoding="async">
+          <!-- The client's list and thumbnails, second iteration. -->
+          <a class="work-card reveal" href="/gallery/prajna-x-tejas">
+            <img src="/assets/img/covers/prajna-x-tejas.jpg"
+                 alt="The couple standing together in traditional dress" loading="lazy" decoding="async">
             <span class="work-card__veil" aria-hidden="true"></span>
             <span class="work-card__caption">
-              <span class="work-card__place">Sharmilan &amp; Thiviia</span>
-              <span class="work-card__meta">Portraiture</span>
-            </span>
-          </a>
-
-          <a class="work-card reveal" href="/gallery/nivedha-x-ajit" style="--reveal-delay:100ms">
-            <img src="https://tmc-gallery-6jk.pages.dev/nivedha-x-ajit/full/n-x-a-tmc-82.jpg"
-                 alt="Flower garlands held during the ceremony" loading="lazy" decoding="async">
-            <span class="work-card__veil" aria-hidden="true"></span>
-            <span class="work-card__caption">
-              <span class="work-card__place">Nivedha &amp; Ajit</span>
+              <span class="work-card__place">Prajna &amp; Tejas</span>
               <span class="work-card__meta">Tamil Wedding</span>
             </span>
           </a>
 
-          <a class="work-card reveal" href="/gallery/shreya-x-rikhabh" style="--reveal-delay:200ms">
-            <img src="https://tmc-gallery-6jk.pages.dev/shreya-x-rikhabh/full/tmc-rik-shr02894.jpg"
-                 alt="A couple embracing in a field at dusk" loading="lazy" decoding="async">
+          <!-- The client's list and thumbnails, second iteration. -->
+          <a class="work-card reveal" href="/gallery/frankline-x-akshay" style="--reveal-delay:100ms">
+            <img src="/assets/img/covers/frankline-x-akshay.jpg"
+                 alt="The couple walking hand in hand, the groom in black tie" loading="lazy" decoding="async">
             <span class="work-card__veil" aria-hidden="true"></span>
             <span class="work-card__caption">
-              <span class="work-card__place">Shreya &amp; Rikhabh</span>
+              <span class="work-card__place">Frankline &amp; Akshay</span>
+              <span class="work-card__meta">Christian Wedding</span>
+            </span>
+          </a>
+
+          <!-- The client's list and thumbnails, second iteration. -->
+          <a class="work-card reveal" href="/gallery/sharmilan-x-thiviia" style="--reveal-delay:200ms">
+            <img src="/assets/img/covers/sharmilan-x-thiviia.jpg"
+                 alt="The couple seated by a window" loading="lazy" decoding="async">
+            <span class="work-card__veil" aria-hidden="true"></span>
+            <span class="work-card__caption">
+              <span class="work-card__place">Thiviia &amp; Sharmilan</span>
               <span class="work-card__meta">Portraiture</span>
             </span>
           </a>
@@ -335,11 +340,11 @@
 
           <li class="process-step reveal">
             <p class="process-step__num">04</p>
-            <h3 class="process-step__title">You&rsquo;re On Board</h3>
+            <h3 class="process-step__title">The Big Day</h3>
             <p class="process-step__body">
-              We&rsquo;ll be there to photograph your wedding as it
-              unfolds&mdash;capturing the celebrations, emotions, people, and all the
-              little moments in between.
+              We&rsquo;ll be there to photograph your wedding as it unfolds:
+              capturing the celebrations, emotions, people and all the little
+              moments in between.
             </p>
           </li>
 
@@ -370,7 +375,7 @@
          CLOSING CALL TO ACTION
          ================================================================== -->
     <section class="section cta">
-      <img class="cta__bg" src="https://tmc-gallery-6jk.pages.dev/jayashree-x-rajesh/full/jayashree-rajesh-outdoor-23.jpg" alt=""
+      <img class="cta__bg" src="/assets/img/hero/tell-us.jpg" alt=""
            loading="lazy" decoding="async" aria-hidden="true">
       <div class="shell cta__inner">
         <p class="eyebrow eyebrow--ruled eyebrow--centred reveal">Enquiries</p>

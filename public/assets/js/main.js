@@ -217,51 +217,11 @@ function initTestimonials() {
 
     update();
 
-    /* --- The full review, in a modal --------------------------------------
-       One dialog per section, filled from whichever card was clicked, rather
-       than nine dialogs in the markup: the reviews then exist once.
-       -------------------------------------------------------------------- */
-
-    const dialog = root.querySelector('[data-testimonial-dialog]');
-
-    if (dialog && typeof dialog.showModal === 'function') {
-      const dialogBody = dialog.querySelector('[data-testimonial-dialog-body]');
-      const dialogBy = dialog.querySelector('[data-testimonial-dialog-by]');
-
-      cards.forEach((card) => {
-        const trigger = card.querySelector('[data-testimonial-open]');
-        if (!trigger) return;
-
-        trigger.addEventListener('click', () => {
-          // textContent, never innerHTML: the review is copied as text so
-          // nothing in it can be interpreted as markup.
-          dialogBody.textContent = card.querySelector('.testimonial__body').textContent.trim();
-          dialogBy.textContent = card.querySelector('.testimonial__by').textContent.trim();
-          dialog.showModal();
-        });
-      });
-
-      dialog.querySelector('[data-testimonial-close]')
-        ?.addEventListener('click', () => dialog.close());
-
-      // Clicking the backdrop closes it. The backdrop is not a separate
-      // element, so the test is whether the click landed outside the dialog's
-      // own box rather than on some child of it.
-      dialog.addEventListener('click', (event) => {
-        if (event.target !== dialog) return;
-        const box = dialog.getBoundingClientRect();
-        const outside =
-          event.clientX < box.left || event.clientX > box.right ||
-          event.clientY < box.top || event.clientY > box.bottom;
-        if (outside) dialog.close();
-      });
-    }
-
     /* --- Autoplay ---------------------------------------------------------
        Advances a page every 6s and wraps at the end. Paused whenever someone
        is actually looking at or using it, which is more cases than just hover:
-       a pointer inside the track, keyboard focus within it, an open dialog, a
-       touch in progress, the tab in the background, or the section scrolled
+       a pointer inside the track, keyboard focus within it, a touch in
+       progress, the tab in the background, or the section scrolled
        off screen. Autoplay that fights the reader is worse than none.
        -------------------------------------------------------------------- */
 
@@ -316,13 +276,6 @@ function initTestimonials() {
     track.addEventListener('touchstart', () => hold('touch'), { passive: true });
     track.addEventListener('touchend', () => release('touch'), { passive: true });
 
-    const dlg = root.querySelector('[data-testimonial-dialog]');
-    if (dlg) {
-      dlg.addEventListener('close', () => release('dialog'));
-      root.querySelectorAll('[data-testimonial-open]')
-        .forEach((b) => b.addEventListener('click', () => hold('dialog')));
-    }
-
     // Nothing should be moving in a section nobody is looking at.
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(
@@ -356,141 +309,104 @@ function initLightbox() {
 
   const image = dialog.querySelector('[data-lightbox-img]');
   const close = dialog.querySelector('[data-lightbox-close]');
+  const prev = dialog.querySelector('[data-lightbox-prev]');
+  const next = dialog.querySelector('[data-lightbox-next]');
+  const count = dialog.querySelector('[data-lightbox-count]');
   if (!image) return;
 
-  // Bumped on every open and on close, so a full-size file that finishes
+  // Every photograph on the page, in page order — the order the client
+  // curated — so the arrows walk the wedding's timeline.
+  const buttons = [...document.querySelectorAll('[data-full]')];
+  let index = -1;
+
+  // Bumped on every show and on close, so a full-size file that finishes
   // downloading after the viewer has moved on cannot write itself into the
   // frame — which otherwise leaves the previous photograph loaded and flashes
   // it on the next open.
   let generation = 0;
 
-  const open = (button) => {
+  // Full-size files already fetched (or in flight). Kept so that stepping
+  // back and forth never downloads the same 2560px file twice.
+  const cache = new Map();
+  const load = (src) => {
+    if (!cache.has(src)) {
+      const img = new Image();
+      img.decoding = 'async';
+      img.src = src;
+      cache.set(src, img);
+    }
+    return cache.get(src);
+  };
+
+  const show = (i) => {
+    index = (i + buttons.length) % buttons.length;
+    const button = buttons[index];
     const src = button.dataset.full;
-    if (!src) return;
     const thumbnail = button.querySelector('img');
     const mine = ++generation;
 
-    // Show the thumbnail immediately, upscaled, so the frame is never empty
-    // while the full-size file travels. It is swapped the moment that lands.
-    if (thumbnail) {
-      image.src = thumbnail.currentSrc || thumbnail.src;
-      image.alt = thumbnail.alt || '';
+    const full = load(src);
+    if (full.complete && full.naturalWidth) {
+      // Already here — straight to full size, no thumbnail flash.
+      image.src = src;
+    } else {
+      // Show the thumbnail immediately, upscaled, so the frame is never empty
+      // while the full-size file travels. It is swapped the moment that lands.
+      if (thumbnail) image.src = thumbnail.currentSrc || thumbnail.src;
+      full.addEventListener('load', () => { if (mine === generation) image.src = src; }, { once: true });
     }
+    image.alt = thumbnail ? thumbnail.alt : '';
+    if (count) count.textContent = `${index + 1} / ${buttons.length}`;
 
-    const fullSize = new Image();
-    fullSize.onload = () => { if (mine === generation) image.src = src; };
-    fullSize.src = src;
-
-    dialog.showModal();
+    // Fetch the neighbours now, so the next arrow press is instant. This is
+    // what makes it feel like a photo viewer rather than a page of links.
+    load(buttons[(index + 1) % buttons.length].dataset.full);
+    load(buttons[(index - 1 + buttons.length) % buttons.length].dataset.full);
   };
 
-  document.querySelectorAll('[data-full]').forEach((button) => {
-    button.addEventListener('click', () => open(button));
+  buttons.forEach((button, i) => {
+    button.addEventListener('click', () => {
+      show(i);
+      dialog.showModal();
+    });
   });
 
   if (close) close.addEventListener('click', () => dialog.close());
+  if (prev) prev.addEventListener('click', () => show(index - 1));
+  if (next) next.addEventListener('click', () => show(index + 1));
+
+  // Left and right arrow keys, like any photo viewer. Esc is the dialog's own.
+  dialog.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight') { event.preventDefault(); show(index + 1); }
+    if (event.key === 'ArrowLeft')  { event.preventDefault(); show(index - 1); }
+  });
+
+  // Swipe on a phone: a mostly-horizontal drag of 40px or more.
+  let touchX = null;
+  let touchY = null;
+  dialog.addEventListener('touchstart', (event) => {
+    touchX = event.touches[0].clientX;
+    touchY = event.touches[0].clientY;
+  }, { passive: true });
+  dialog.addEventListener('touchend', (event) => {
+    if (touchX === null) return;
+    const dx = event.changedTouches[0].clientX - touchX;
+    const dy = event.changedTouches[0].clientY - touchY;
+    touchX = null;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) show(index + (dx < 0 ? 1 : -1));
+  }, { passive: true });
 
   // Clicking the backdrop closes it. The dialog fills the whole viewport, so
-  // "did they miss the image?" is the hit test — anything outside the <img>.
+  // "did they miss the image and the controls?" is the hit test.
   dialog.addEventListener('click', (event) => {
-    if (event.target === image || event.target.closest('[data-lightbox-close]')) return;
+    if (event.target === image || event.target.closest('button')) return;
     dialog.close();
   });
 
-  // Drop the source on close so a large photograph is not held in memory, and
-  // so the next open never flashes the previous one.
+  // Drop the source on close so the next open never flashes the previous one.
   dialog.addEventListener('close', () => {
     generation += 1;
     image.removeAttribute('src');
-  });
-}
-
-
-/* -----------------------------------------------------------------------------
-   HOME COLLAGE
-
-   The client sent more photographs than the mockup has cells. Rather than drop
-   the surplus, one cell at a time crossfades to a photograph that is not
-   currently on screen, so the whole set is seen over time.
-
-   Three things stop it running when it would only waste work or annoy:
-   reduced-motion preference, a hidden tab, and the collage being scrolled out
-   of view.
-   -------------------------------------------------------------------------- */
-
-const COLLAGE_INTERVAL = 3000;   // the client asked for three seconds
-const COLLAGE_FADE = 800;        // must match the img transition in input.css
-
-function initCollage() {
-  const root = document.querySelector('[data-collage]');
-  if (!root) return;
-
-  const cells = [...root.querySelectorAll('[data-collage-img]')];
-  let pool = [];
-  try {
-    pool = JSON.parse(root.dataset.pool || '[]');
-  } catch {
-    return;                      // malformed data is not worth throwing over
-  }
-
-  // With no spare photographs there is nothing to rotate to.
-  if (!cells.length || pool.length <= cells.length) return;
-
-  const motionOK = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!motionOK) return;
-
-  const onScreen = new Set(cells.map((img) => img.getAttribute('src')));
-  let timer = null;
-  let visible = false;
-
-  const swap = () => {
-    const spares = pool.filter((p) => !onScreen.has(p.src));
-    if (!spares.length) return;
-
-    const cell = cells[Math.floor(Math.random() * cells.length)];
-    const next = spares[Math.floor(Math.random() * spares.length)];
-    const current = cell.getAttribute('src');
-    if (current === next.src) return;
-
-    // Fetch the replacement BEFORE fading, so the cell never sits empty
-    // waiting for it on a slow connection.
-    const preload = new Image();
-    preload.onload = () => {
-      cell.dataset.swapping = 'true';
-      setTimeout(() => {
-        cell.src = next.src;
-        cell.alt = next.alt;
-        onScreen.delete(current);
-        onScreen.add(next.src);
-        // Next frame, so the browser paints the new source while still
-        // transparent and the fade back in is of the new photograph.
-        requestAnimationFrame(() => { cell.dataset.swapping = 'false'; });
-      }, COLLAGE_FADE);
-    };
-    preload.src = next.src;
-  };
-
-  const start = () => {
-    if (timer || !visible || document.hidden) return;
-    timer = setInterval(swap, COLLAGE_INTERVAL);
-  };
-  const stop = () => {
-    clearInterval(timer);
-    timer = null;
-  };
-
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver((entries) => {
-      visible = entries[0].isIntersecting;
-      visible ? start() : stop();
-    }, { threshold: 0.15 }).observe(root);
-  } else {
-    visible = true;
-    start();
-  }
-
-  document.addEventListener('visibilitychange', () => {
-    document.hidden ? stop() : start();
   });
 }
 
@@ -513,5 +429,4 @@ initReveals();
 initTestimonials();
 initWhatsApp();
 initLightbox();
-initCollage();
 initYear();

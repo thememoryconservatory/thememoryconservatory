@@ -93,11 +93,15 @@ export const preferences = {
        do not want and leave one behind. Nothing else needs changing.
 
        Paths are relative to the site root, i.e. files inside public/. */
-    imageSrcListForCarousel: [                                   // TODO:CLIENT
-      'https://tmc-gallery-6jk.pages.dev/jayashree-x-rajesh/full/jayashree-rajesh-outdoor-145.jpg',
-      'https://tmc-gallery-6jk.pages.dev/jayashree-x-rajesh/full/jayashree-rajesh-outdoor-132.jpg',
-      'https://tmc-gallery-6jk.pages.dev/sheena-x-daniel/full/sheena-daniel-outdoor-17.jpg',
-      'https://tmc-gallery-6jk.pages.dev/nivedha-x-ajit/full/n-x-a-tmc-13.jpg',
+    // The client's seven, in the order of their file names (second iteration).
+    imageSrcListForCarousel: [
+      '/assets/img/slideshow/slide-1.jpg',
+      '/assets/img/slideshow/slide-2.jpg',
+      '/assets/img/slideshow/slide-3.jpg',
+      '/assets/img/slideshow/slide-4.jpg',
+      '/assets/img/slideshow/slide-5.jpg',
+      '/assets/img/slideshow/slide-6.jpg',
+      '/assets/img/slideshow/slide-7.jpg',
     ],
 
     /* -------------------------------------------------------------------------

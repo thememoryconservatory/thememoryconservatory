@@ -19,7 +19,8 @@
  * The photographs themselves live on Cloudflare Pages, not in this repo. Two
  * sizes are published: `thumb` (600px) for the grids and `full` (2560px) for
  * the lightbox. `baseUrl` in the data file is the only place that address
- * appears, so moving hosts is a one-line change.
+ * appears, so moving hosts is a one-line change. The gallery-index cards use
+ * the client's chosen covers, which live in this repo (public/assets/img/covers).
  */
 
 const fs = require('fs');
@@ -49,11 +50,22 @@ function spoken(title) {
 function thumb(base, slug, file) { return `${base}/${slug}/thumb/${file}`; }
 function full(base, slug, file) { return `${base}/${slug}/full/${file}`; }
 
+/**
+ * `cover` and `hero` in the data file are either a photograph in that
+ * wedding's set on the CDN (a bare filename) or a site path ("/assets/...")
+ * for an image that is not part of the set — the client chose some covers
+ * that are not in the gallery itself.
+ */
+function image(base, slug, value) {
+  return value.startsWith('/') ? value : full(base, slug, value);
+}
+
 /* -----------------------------------------------------------------------------
    THE LIGHTBOX
 
    One <dialog> per page, filled by main.js from whichever thumbnail was
-   clicked — so the 2560px sources appear once in the markup (on the buttons)
+   clicked, with previous/next buttons and the arrow keys to move through the
+   wedding like a slideshow — so the 2560px sources appear once in the markup (on the buttons)
    rather than a second time here.
 
    Native <dialog> + showModal() gives the focus trap, the inert background,
@@ -67,7 +79,18 @@ function lightbox() {
             <path d="M3 3l10 10M13 3L3 13" stroke-linecap="round"/>
           </svg>
         </button>
+        <button class="lightbox__nav lightbox__nav--prev" type="button" data-lightbox-prev aria-label="Previous photograph">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <path d="M10 2 4 8l6 6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
         <img class="lightbox__img" data-lightbox-img alt="">
+        <button class="lightbox__nav lightbox__nav--next" type="button" data-lightbox-next aria-label="Next photograph">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+            <path d="m6 2 6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <p class="lightbox__count" data-lightbox-count aria-live="polite"></p>
       </dialog>`;
 }
 
@@ -77,20 +100,18 @@ function lightbox() {
 function indexPage(data) {
   const { baseUrl, weddings } = data;
   const total = weddings.reduce((n, w) => n + w.photos.length, 0);
-  const lead = weddings[0];
 
   const cards = weddings.map((w, i) => `        <a class="gallery-card reveal" href="/gallery/${w.slug}"${
     i ? ` style="--reveal-delay:${i * 80}ms"` : ''}>
           <span class="gallery-card__frame">
-            <img src="${thumb(baseUrl, w.slug, w.cover)}"
+            <img src="${image(baseUrl, w.slug, w.cover)}"
                  alt="${esc(spoken(w.title))} on their wedding day"
                  loading="${i < 2 ? 'eager' : 'lazy'}" decoding="async"
                  sizes="(max-width: 48rem) 100vw, (max-width: 68rem) 50vw, 33vw">
-            <span class="gallery-card__veil" aria-hidden="true"></span>
           </span>
           <span class="gallery-card__body">
             <span class="gallery-card__title">${esc(w.title)}</span>
-            <span class="gallery-card__meta">${esc(w.genre)} &middot; ${w.photos.length} photographs</span>
+            <span class="gallery-card__meta">${esc(w.genre)}</span>
           </span>
         </a>`).join('\n\n');
 
@@ -112,7 +133,7 @@ ${GENERATED_NOTE}
   <main id="main">
 
     <section class="page-hero" aria-label="Gallery">
-      <img class="page-hero__img" src="${full(baseUrl, lead.slug, lead.cover)}"
+      <img class="page-hero__img" src="/assets/img/hero/gallery.jpg"
            alt="" style="--focal:50% 45%" fetchpriority="high" decoding="async">
 
       <div class="page-hero__scrim" aria-hidden="true"></div>
@@ -157,7 +178,7 @@ ${cards}
    -------------------------------------------------------------------------- */
 function weddingPage(data, wedding, position) {
   const { baseUrl, weddings } = data;
-  const { slug, title, cover, photos } = wedding;
+  const { slug, title, hero, photos } = wedding;
   const name = spoken(title);
   const next = weddings[(position + 1) % weddings.length];
 
@@ -190,8 +211,8 @@ ${GENERATED_NOTE}
   <main id="main">
 
     <section class="page-hero page-hero--short" aria-label="${esc(title)}">
-      <img class="page-hero__img" src="${full(baseUrl, slug, cover)}"
-           alt="" style="--focal:50% 40%" fetchpriority="high" decoding="async">
+      <img class="page-hero__img" src="${image(baseUrl, slug, hero)}"
+           alt="" style="--focal:50% 30%" fetchpriority="high" decoding="async">
 
       <div class="page-hero__scrim" aria-hidden="true"></div>
       <div class="hero__grain" aria-hidden="true"></div>
@@ -215,7 +236,7 @@ ${tiles}
 ${lightbox()}
 
         <p class="gallery-next reveal">
-          <a class="btn btn-outline" href="/gallery/${next.slug}">Next wedding: ${esc(next.title)}</a>
+          <a class="btn btn-outline" href="/gallery/${next.slug}">Next Gallery: ${esc(next.title)}</a>
         </p>
       </div>
     </section>
@@ -237,6 +258,14 @@ ${lightbox()}
 function build() {
   const started = Date.now();
   const data = JSON.parse(fs.readFileSync(DATA, 'utf8'));
+
+  // Local review only: GALLERY_BASE_URL=http://localhost:3100 points the pages
+  // at a local copy of the photographs before they are uploaded. Netlify never
+  // sets it, so a deploy always uses baseUrl from the data file.
+  if (process.env.GALLERY_BASE_URL) {
+    data.baseUrl = process.env.GALLERY_BASE_URL.replace(/\/$/, '');
+    console.log(`  gallery  LOCAL REVIEW — photographs from ${data.baseUrl}`);
+  }
 
   // Generated output only — safe to clear, and it drops pages for weddings
   // that have been removed from the data file.

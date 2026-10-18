@@ -26,6 +26,14 @@
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+# Film Souvenirs is switched off until the film photographs arrive (client's
+# second iteration). Temporary (302) so the URL can come back later without
+# browsers having cached a permanent move.
+[[redirects]]
+  from = "/film-souvenirs"
+  to = "/"
+  status = 302
+
 # ---------------------------------------------------------------------------
 # PRE-LAUNCH ONLY — REMOVE THIS BLOCK BEFORE GOING LIVE
 # ---------------------------------------------------------------------------

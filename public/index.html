@@ -18,7 +18,7 @@
   <meta property="og:site_name" content="The Memory Conservatory">
   <meta property="og:title" content="Wedding Photography in Chennai — The Memory Conservatory">
   <meta property="og:description" content="The Memory Conservatory — wedding photography from Chennai, across South India and beyond. Weddings preserved as heirlooms, not just photographed.">
-  <meta property="og:image" content="https://tmc-gallery-6jk.pages.dev/jayashree-x-rajesh/full/jayashree-rajesh-outdoor-145.jpg"><!-- TODO:CLIENT -->
+  <meta property="og:image" content="https://thememoryconservatory.com/assets/img/slideshow/slide-1.jpg"><!-- TODO:CLIENT -->
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Self-hosted fonts: preloaded so the display face is ready before first
@@ -55,17 +55,16 @@
       </a>
 
       <nav class="site-nav" data-nav-active="home" aria-label="Primary">
-        <!-- The six pages the client's corrections document retains. The Process
-             and Testimonials are sections of the home page now, not pages and not
-             nav items — the document is explicit that they "doesn't require
-             separate pages". -->
+        <!-- The five pages the client's second iteration retains: Home, Gallery,
+             About Us, FAQs, Enquire Now. Film Souvenirs is switched off until the
+             film photographs are back from the lab — its source is parked in
+             src/drafts/ so it is not built. -->
         <div class="nav-desktop">
           <a class="nav-desktop__link" data-nav="home"    href="/">Home</a>
           <a class="nav-desktop__link" data-nav="gallery" href="/gallery">Gallery</a>
-          <a class="nav-desktop__link" data-nav="film"    href="/film-souvenirs">Film Souvenirs</a>
           <a class="nav-desktop__link" data-nav="about"   href="/about">About Us</a>
           <a class="nav-desktop__link" data-nav="faq"     href="/faq">FAQs</a>
-          <a class="btn btn-outline" href="/contact">Enquire Now</a>
+          <a class="btn btn-blue" href="/contact">Enquire Now</a>
         </div>
 
         <!-- The label is an attribute, not a child element: the bars are targeted
@@ -85,10 +84,9 @@
     <ul class="nav-mobile__list">
       <li><a class="nav-mobile__link" href="/"><span class="nav-mobile__index">01</span>Home</a></li>
       <li><a class="nav-mobile__link" href="/gallery"><span class="nav-mobile__index">02</span>Gallery</a></li>
-      <li><a class="nav-mobile__link" href="/film-souvenirs"><span class="nav-mobile__index">03</span>Film Souvenirs</a></li>
-      <li><a class="nav-mobile__link" href="/about"><span class="nav-mobile__index">04</span>About Us</a></li>
-      <li><a class="nav-mobile__link" href="/faq"><span class="nav-mobile__index">05</span>FAQs</a></li>
-      <li><a class="nav-mobile__link" href="/contact"><span class="nav-mobile__index">06</span>Enquire Now</a></li>
+      <li><a class="nav-mobile__link" href="/about"><span class="nav-mobile__index">03</span>About Us</a></li>
+      <li><a class="nav-mobile__link" href="/faq"><span class="nav-mobile__index">04</span>FAQs</a></li>
+      <li><a class="nav-mobile__link" href="/contact"><span class="nav-mobile__index">05</span>Enquire Now</a></li>
     </ul>
     <div class="nav-mobile__foot">
       <p>Chennai, Tamil Nadu &middot; available across South India and beyond</p>
@@ -114,7 +112,7 @@
              This static fallback shows only when JavaScript is unavailable. -->
         <noscript>
           <div class="hero__slide is-active">
-            <img class="hero__img" src="https://tmc-gallery-6jk.pages.dev/jayashree-x-rajesh/full/jayashree-rajesh-outdoor-145.jpg" alt="">
+            <img class="hero__img" src="/assets/img/slideshow/slide-1.jpg" alt="">
           </div>
         </noscript>
       </div>
@@ -190,8 +188,8 @@
       <div class="about__grid">
 
         <figure class="about__figure about__figure--right reveal">
-          <img src="https://tmc-gallery-6jk.pages.dev/nivedha-x-ajit/full/n-x-a-tmc-1.jpg"
-               alt="A quiet moment between the couple before the ceremony"
+          <img src="/assets/img/hero/intro-right.jpg"
+               alt="A couple standing among tall leaves beneath palm trees"
                loading="lazy" decoding="async">
         </figure>
 
@@ -200,13 +198,13 @@
                throughout, italic gilt on the emphasis, and a single explicit
                break so it always sets as two lines. -->
           <h2 class="section__title about__title">
-            Some days become memories.<br>Some memories become <em>heirlooms</em>.
+            Some days become memories.<br> <span class="nowrap">Some memories become <em>heirlooms</em>.</span>
           </h2>
         </header>
 
         <figure class="about__figure about__figure--left reveal">
-          <img src="https://tmc-gallery-6jk.pages.dev/sharmilan-x-thiviia/full/s-x-t-tmc-13.jpg"
-               alt="The groom kissing the bride on the forehead"
+          <img src="/assets/img/hero/intro-left.jpg"
+               alt="The couple walking arm in arm down a hotel corridor"
                loading="lazy" decoding="async">
         </figure>
 
@@ -224,8 +222,9 @@
             carrying the weight of everything that came before and everything
             that followed. Kept close, revisited often, and eventually handed
             on, they become more than photographs.
-            <strong>They give permanence to what was always passing.</strong>
           </p>
+          <!-- Its own line, at the client's request. -->
+          <p><strong>They give permanence to what was always passing.</strong></p>
         </div>
 
       </div>
@@ -240,75 +239,76 @@
          cells. Empty cells, not gutters, make the white space — so the images
          carry no border of their own.
 
-         There are more photographs than cells. The surplus are not dropped:
-         main.js swaps one cell at a time for a photograph that is not
-         currently on screen, so the whole set is seen over time.
+         Fixed placement. The client's second iteration dropped the rotation
+         ("the photos change randomly one by one") in favour of the earlier
+         behaviour: the field fades in as one on scroll, and each photograph
+         zooms gently on hover. Every cell has a thin black stroke, per the
+         mockup.
          ================================================================== -->
     <section class="section section--white collage-section">
-      <div class="collage" data-collage
-           data-pool='[{"src":"/assets/img/collage/collage-1.jpg","alt":"A couple standing forehead to forehead beneath trees"},{"src":"/assets/img/collage/collage-2.jpg","alt":"Guests throwing a garland during the ceremony"},{"src":"/assets/img/collage/collage-3.jpg","alt":"A couple facing each other, both in gold"},{"src":"/assets/img/collage/collage-4.jpg","alt":"The couple leaving the church among their guests"},{"src":"/assets/img/collage/collage-5.jpg","alt":"A couple on a white staircase"},{"src":"/assets/img/collage/collage-6.jpg","alt":"A couple on a staircase beneath a chandelier"},{"src":"/assets/img/collage/collage-7.jpg","alt":"A couple holding their cat"},{"src":"/assets/img/collage/collage-8.jpg","alt":"A couple walking together, the groom in black tie"},{"src":"/assets/img/collage/collage-9.jpg","alt":"A couple among flowers in a garden"},{"src":"/assets/img/collage/collage-10.jpg","alt":"A couple in a darkened lounge beside a piano"},{"src":"/assets/img/collage/collage-11.jpg","alt":"A couple embracing in a field of tall grass"},{"src":"/assets/img/collage/collage-12.jpg","alt":"A portrait against deep red drapes"},{"src":"/assets/img/collage/collage-13.jpg","alt":"A portrait seated against a brick wall"},{"src":"/assets/img/collage/collage-14.jpg","alt":"A couple lying together on the grass"},{"src":"/assets/img/collage/collage-15.jpg","alt":"Garlands exchanged above the crowd"},{"src":"/assets/img/collage/collage-16.jpg","alt":"Bride and groom in flower garlands"},{"src":"/assets/img/collage/chad-jahnavi-109.jpg","alt":"A couple in a blue doorway, the groom laughing"},{"src":"/assets/img/collage/orange-couple.jpg","alt":"A couple in orange, walking together"}]'>
-        <figure class="collage__cell" style="--col:2;--row:1">
-          <img data-collage-img src="/assets/img/collage/collage-1.jpg" alt="A couple standing forehead to forehead beneath trees"
+      <div class="collage reveal">
+        <figure class="collage__cell" style="--col:2;--row:1;--focal:50% 50%">
+          <img src="/assets/img/collage/collage-1.jpg" alt="A couple standing forehead to forehead beneath trees"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:4;--row:1">
-          <img data-collage-img src="/assets/img/collage/collage-11.jpg" alt="A couple embracing in a field of tall grass"
+        <figure class="collage__cell" style="--col:4;--row:1;--focal:50% 50%">
+          <img src="/assets/img/collage/collage-11.jpg" alt="A couple embracing in a field of tall grass"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:6;--row:1">
-          <img data-collage-img src="/assets/img/collage/collage-5.jpg" alt="A couple on a white staircase"
+        <figure class="collage__cell" style="--col:6;--row:1;--focal:50% 97%">
+          <img src="/assets/img/collage/collage-5.jpg" alt="A couple on a white staircase"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:1;--row:2">
-          <img data-collage-img src="/assets/img/collage/collage-8.jpg" alt="A couple walking together, the groom in black tie"
+        <figure class="collage__cell" style="--col:1;--row:2;--focal:50% 41%">
+          <img src="/assets/img/collage/collage-8.jpg" alt="A couple walking together, the groom in black tie"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:3;--row:2">
-          <img data-collage-img src="/assets/img/collage/collage-3.jpg" alt="A couple facing each other, both in gold"
+        <figure class="collage__cell" style="--col:3;--row:2;--focal:50% 43%">
+          <img src="/assets/img/collage/collage-3.jpg" alt="A couple facing each other, both in gold"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:5;--row:2">
-          <img data-collage-img src="/assets/img/collage/collage-16.jpg" alt="Bride and groom in flower garlands"
+        <figure class="collage__cell" style="--col:5;--row:2;--zoom:1.19;--zoom-origin:2% 0%">
+          <img src="/assets/img/collage/collage-16.jpg" alt="Bride and groom in flower garlands"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:7;--row:2">
-          <img data-collage-img src="/assets/img/collage/collage-4.jpg" alt="The couple leaving the church among their guests"
+        <figure class="collage__cell" style="--col:7;--row:2;--focal:50% 69%">
+          <img src="/assets/img/collage/collage-4.jpg" alt="The couple leaving the church among their guests"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:2;--row:3">
-          <img data-collage-img src="/assets/img/collage/collage-2.jpg" alt="Guests throwing a garland during the ceremony"
+        <figure class="collage__cell" style="--col:2;--row:3;--focal:50% 50%">
+          <img src="/assets/img/collage/collage-15.jpg" alt="Garlands exchanged above the crowd"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:6;--row:3">
-          <img data-collage-img src="/assets/img/collage/collage-6.jpg" alt="A couple on a staircase beneath a chandelier"
+        <figure class="collage__cell" style="--col:6;--row:3;--focal:50% 36%">
+          <img src="/assets/img/collage/collage-6.jpg" alt="A couple on a staircase beneath a chandelier"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:1;--row:4">
-          <img data-collage-img src="/assets/img/collage/collage-10.jpg" alt="A couple in a darkened lounge beside a piano"
+        <figure class="collage__cell" style="--col:1;--row:4;--focal:50% 50%">
+          <img src="/assets/img/collage/collage-10.jpg" alt="A couple in a darkened lounge beside a piano"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:3;--row:4">
-          <img data-collage-img src="/assets/img/collage/chad-jahnavi-109.jpg" alt="A couple in a blue doorway, the groom laughing"
+        <figure class="collage__cell" style="--col:3;--row:4;--focal:50% 50%">
+          <img src="/assets/img/collage/chad-jahnavi-109.jpg" alt="A couple in a blue doorway, the groom laughing"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:5;--row:4">
-          <img data-collage-img src="/assets/img/collage/collage-14.jpg" alt="A couple lying together on the grass"
+        <figure class="collage__cell" style="--col:5;--row:4;--focal:50% 50%">
+          <img src="/assets/img/collage/collage-14.jpg" alt="A couple lying together on the grass"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:7;--row:4">
-          <img data-collage-img src="/assets/img/collage/collage-15.jpg" alt="Garlands exchanged above the crowd"
+        <figure class="collage__cell" style="--col:7;--row:4;--focal:50% 50%">
+          <img src="/assets/img/collage/collage-2.jpg" alt="Guests throwing a garland during the ceremony"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:2;--row:5">
-          <img data-collage-img src="/assets/img/collage/collage-7.jpg" alt="A couple holding their cat"
+        <figure class="collage__cell" style="--col:2;--row:5;--focal:50% 27%">
+          <img src="/assets/img/collage/collage-7.jpg" alt="A couple holding their cat"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:4;--row:5">
-          <img data-collage-img src="/assets/img/collage/orange-couple.jpg" alt="A couple in orange, walking together"
+        <figure class="collage__cell" style="--col:4;--row:5;--focal:50% 78%">
+          <img src="/assets/img/collage/orange-couple.jpg" alt="A couple in orange, walking together"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
-        <figure class="collage__cell" style="--col:6;--row:5">
-          <img data-collage-img src="/assets/img/collage/collage-9.jpg" alt="A couple among flowers in a garden"
+        <figure class="collage__cell" style="--col:6;--row:5;--focal:50% 50%">
+          <img src="/assets/img/collage/collage-9.jpg" alt="A couple among flowers in a garden"
                loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
         </figure>
 
@@ -332,32 +332,35 @@
         </div>
 
         <div class="work-grid work-grid--three" style="margin-top:clamp(2.5rem,5vw,4rem)">
-          <a class="work-card reveal" href="/gallery/sharmilan-x-thiviia">
-            <img src="https://tmc-gallery-6jk.pages.dev/sharmilan-x-thiviia/full/s-x-t-tmc-31.jpg"
-                 alt="A couple close together, foreheads almost touching" loading="lazy" decoding="async">
+          <!-- The client's list and thumbnails, second iteration. -->
+          <a class="work-card reveal" href="/gallery/prajna-x-tejas">
+            <img src="/assets/img/covers/prajna-x-tejas.jpg"
+                 alt="The couple standing together in traditional dress" loading="lazy" decoding="async">
             <span class="work-card__veil" aria-hidden="true"></span>
             <span class="work-card__caption">
-              <span class="work-card__place">Sharmilan &amp; Thiviia</span>
-              <span class="work-card__meta">Portraiture</span>
-            </span>
-          </a>
-
-          <a class="work-card reveal" href="/gallery/nivedha-x-ajit" style="--reveal-delay:100ms">
-            <img src="https://tmc-gallery-6jk.pages.dev/nivedha-x-ajit/full/n-x-a-tmc-82.jpg"
-                 alt="Flower garlands held during the ceremony" loading="lazy" decoding="async">
-            <span class="work-card__veil" aria-hidden="true"></span>
-            <span class="work-card__caption">
-              <span class="work-card__place">Nivedha &amp; Ajit</span>
+              <span class="work-card__place">Prajna &amp; Tejas</span>
               <span class="work-card__meta">Tamil Wedding</span>
             </span>
           </a>
 
-          <a class="work-card reveal" href="/gallery/shreya-x-rikhabh" style="--reveal-delay:200ms">
-            <img src="https://tmc-gallery-6jk.pages.dev/shreya-x-rikhabh/full/tmc-rik-shr02894.jpg"
-                 alt="A couple embracing in a field at dusk" loading="lazy" decoding="async">
+          <!-- The client's list and thumbnails, second iteration. -->
+          <a class="work-card reveal" href="/gallery/frankline-x-akshay" style="--reveal-delay:100ms">
+            <img src="/assets/img/covers/frankline-x-akshay.jpg"
+                 alt="The couple walking hand in hand, the groom in black tie" loading="lazy" decoding="async">
             <span class="work-card__veil" aria-hidden="true"></span>
             <span class="work-card__caption">
-              <span class="work-card__place">Shreya &amp; Rikhabh</span>
+              <span class="work-card__place">Frankline &amp; Akshay</span>
+              <span class="work-card__meta">Christian Wedding</span>
+            </span>
+          </a>
+
+          <!-- The client's list and thumbnails, second iteration. -->
+          <a class="work-card reveal" href="/gallery/sharmilan-x-thiviia" style="--reveal-delay:200ms">
+            <img src="/assets/img/covers/sharmilan-x-thiviia.jpg"
+                 alt="The couple seated by a window" loading="lazy" decoding="async">
+            <span class="work-card__veil" aria-hidden="true"></span>
+            <span class="work-card__caption">
+              <span class="work-card__place">Thiviia &amp; Sharmilan</span>
               <span class="work-card__meta">Portraiture</span>
             </span>
           </a>
@@ -418,11 +421,11 @@
 
           <li class="process-step reveal">
             <p class="process-step__num">04</p>
-            <h3 class="process-step__title">You&rsquo;re On Board</h3>
+            <h3 class="process-step__title">The Big Day</h3>
             <p class="process-step__body">
-              We&rsquo;ll be there to photograph your wedding as it
-              unfolds&mdash;capturing the celebrations, emotions, people, and all the
-              little moments in between.
+              We&rsquo;ll be there to photograph your wedding as it unfolds:
+              capturing the celebrations, emotions, people and all the little
+              moments in between.
             </p>
           </li>
 
@@ -455,9 +458,12 @@
          Every review below is the client's own, verbatim. Mechanical corrections
          only — see PRELAUNCH-CHECKLIST.md for the list.
 
+         Second iteration: Deep Blue ground, Soft Cream type, each review boxed and
+         shown in full — no "Read full review" pop-up. All nine, paged sideways.
+
          Usage, on its own line:   @include testimonials   (wrapped in an HTML comment)
     -->
-    <section class="section section--cream" id="testimonials">
+    <section class="section section--blue" id="testimonials">
       <div class="shell">
 
         <div style="max-width:var(--container-prose)" class="reveal">
@@ -474,11 +480,6 @@
                tabindex="0" role="group" aria-label="Client testimonials, scrollable">
 
             <blockquote class="testimonial">
-              <!-- A real button, not a click handler on the blockquote: this is
-                   what gives keyboard focus, Enter/Space and an announced label. -->
-              <button class="testimonial__open" type="button" data-testimonial-open>
-                <span class="sr-only">Read the full review from Hema Gowri</span>
-              </button>
               <p class="testimonial__mark" aria-hidden="true">&ldquo;</p>
               <p class="testimonial__body">
                 I booked The Memory Conservatory team for my wedding. Super friendly
@@ -489,14 +490,8 @@
                 emotional and beautiful, especially thanks to Narayanaswamy and team.
               </p>
               <footer class="testimonial__by">Hema Gowri</footer>
-              <p class="testimonial__cue" aria-hidden="true">Read full review</p>
             </blockquote>
             <blockquote class="testimonial">
-              <!-- A real button, not a click handler on the blockquote: this is
-                   what gives keyboard focus, Enter/Space and an announced label. -->
-              <button class="testimonial__open" type="button" data-testimonial-open>
-                <span class="sr-only">Read the full review from Divya</span>
-              </button>
               <p class="testimonial__mark" aria-hidden="true">&ldquo;</p>
               <p class="testimonial__body">
                 Extremely talented and no nonsense person who will deliver exactly to
@@ -508,14 +503,8 @@
                 Professionalism at its best.
               </p>
               <footer class="testimonial__by">Divya</footer>
-              <p class="testimonial__cue" aria-hidden="true">Read full review</p>
             </blockquote>
             <blockquote class="testimonial">
-              <!-- A real button, not a click handler on the blockquote: this is
-                   what gives keyboard focus, Enter/Space and an announced label. -->
-              <button class="testimonial__open" type="button" data-testimonial-open>
-                <span class="sr-only">Read the full review from Aakash</span>
-              </button>
               <p class="testimonial__mark" aria-hidden="true">&ldquo;</p>
               <p class="testimonial__body">
                 We had the pleasure of working with The Memory Conservatory for our
@@ -527,14 +516,8 @@
                 recommended!
               </p>
               <footer class="testimonial__by">Aakash</footer>
-              <p class="testimonial__cue" aria-hidden="true">Read full review</p>
             </blockquote>
             <blockquote class="testimonial">
-              <!-- A real button, not a click handler on the blockquote: this is
-                   what gives keyboard focus, Enter/Space and an announced label. -->
-              <button class="testimonial__open" type="button" data-testimonial-open>
-                <span class="sr-only">Read the full review from Thiviia</span>
-              </button>
               <p class="testimonial__mark" aria-hidden="true">&ldquo;</p>
               <p class="testimonial__body">
                 We flew in from Canada, and Narayana was incredibly accommodating with
@@ -548,14 +531,8 @@
                 an amazing experience and couldn&rsquo;t be happier with the results!
               </p>
               <footer class="testimonial__by">Thiviia</footer>
-              <p class="testimonial__cue" aria-hidden="true">Read full review</p>
             </blockquote>
             <blockquote class="testimonial">
-              <!-- A real button, not a click handler on the blockquote: this is
-                   what gives keyboard focus, Enter/Space and an announced label. -->
-              <button class="testimonial__open" type="button" data-testimonial-open>
-                <span class="sr-only">Read the full review from Priyanka</span>
-              </button>
               <p class="testimonial__mark" aria-hidden="true">&ldquo;</p>
               <p class="testimonial__body">
                 I booked Narayana Swamy to cover photos and videos for my engagement in
@@ -567,14 +544,8 @@
                 team for all your special events, including weddings.
               </p>
               <footer class="testimonial__by">Priyanka</footer>
-              <p class="testimonial__cue" aria-hidden="true">Read full review</p>
             </blockquote>
             <blockquote class="testimonial">
-              <!-- A real button, not a click handler on the blockquote: this is
-                   what gives keyboard focus, Enter/Space and an announced label. -->
-              <button class="testimonial__open" type="button" data-testimonial-open>
-                <span class="sr-only">Read the full review from Niveditha</span>
-              </button>
               <p class="testimonial__mark" aria-hidden="true">&ldquo;</p>
               <p class="testimonial__body">
                 We never had any big expectations with the wedding photography&hellip;
@@ -594,14 +565,8 @@
                 need&hellip;
               </p>
               <footer class="testimonial__by">Niveditha</footer>
-              <p class="testimonial__cue" aria-hidden="true">Read full review</p>
             </blockquote>
             <blockquote class="testimonial">
-              <!-- A real button, not a click handler on the blockquote: this is
-                   what gives keyboard focus, Enter/Space and an announced label. -->
-              <button class="testimonial__open" type="button" data-testimonial-open>
-                <span class="sr-only">Read the full review from Tejas</span>
-              </button>
               <p class="testimonial__mark" aria-hidden="true">&ldquo;</p>
               <p class="testimonial__body">
                 There&rsquo;s something special about looking back at photographs and
@@ -612,14 +577,8 @@
                 photographed. I would highly recommend it!
               </p>
               <footer class="testimonial__by">Tejas</footer>
-              <p class="testimonial__cue" aria-hidden="true">Read full review</p>
             </blockquote>
             <blockquote class="testimonial">
-              <!-- A real button, not a click handler on the blockquote: this is
-                   what gives keyboard focus, Enter/Space and an announced label. -->
-              <button class="testimonial__open" type="button" data-testimonial-open>
-                <span class="sr-only">Read the full review from Tarun</span>
-              </button>
               <p class="testimonial__mark" aria-hidden="true">&ldquo;</p>
               <p class="testimonial__body">
                 The TMC team has done a stellar job with the photography for our event!
@@ -629,14 +588,8 @@
                 timelines. All in all, I would definitely recommend it!
               </p>
               <footer class="testimonial__by">Tarun</footer>
-              <p class="testimonial__cue" aria-hidden="true">Read full review</p>
             </blockquote>
             <blockquote class="testimonial">
-              <!-- A real button, not a click handler on the blockquote: this is
-                   what gives keyboard focus, Enter/Space and an announced label. -->
-              <button class="testimonial__open" type="button" data-testimonial-open>
-                <span class="sr-only">Read the full review from Shanmuga Raja</span>
-              </button>
               <p class="testimonial__mark" aria-hidden="true">&ldquo;</p>
               <p class="testimonial__body">
                 Narayana Swamy is a multi-talented, warm and professional gem. A
@@ -646,26 +599,9 @@
                 special moments.
               </p>
               <footer class="testimonial__by">Shanmuga Raja</footer>
-              <p class="testimonial__cue" aria-hidden="true">Read full review</p>
             </blockquote>
 
           </div>
-
-          <!-- The full review. Native <dialog>: showModal() supplies the focus
-               trap, the inert background, Esc-to-close and focus return, all of
-               which a hand-rolled div gets wrong. Filled by main.js from whichever
-               card was clicked, so the reviews are never duplicated in the markup. -->
-          <dialog class="testimonial-dialog" data-testimonial-dialog aria-label="Full review">
-            <button class="testimonial-dialog__close" type="button"
-                    data-testimonial-close aria-label="Close">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
-                <path d="M3 3l10 10M13 3L3 13" stroke-linecap="round"/>
-              </svg>
-            </button>
-            <p class="testimonial-dialog__mark" aria-hidden="true">&ldquo;</p>
-            <div class="testimonial-dialog__body" data-testimonial-dialog-body></div>
-            <p class="testimonial-dialog__by" data-testimonial-dialog-by></p>
-          </dialog>
 
           <!-- Enhancement only. Without main.js the track is still a working
                horizontal scroller, so these are hidden until they are wired up. -->
@@ -698,7 +634,7 @@
          CLOSING CALL TO ACTION
          ================================================================== -->
     <section class="section cta">
-      <img class="cta__bg" src="https://tmc-gallery-6jk.pages.dev/jayashree-x-rajesh/full/jayashree-rajesh-outdoor-23.jpg" alt=""
+      <img class="cta__bg" src="/assets/img/hero/tell-us.jpg" alt=""
            loading="lazy" decoding="async" aria-hidden="true">
       <div class="shell cta__inner">
         <p class="eyebrow eyebrow--ruled eyebrow--centred reveal">Enquiries</p>
@@ -719,10 +655,10 @@
   </main>
 
   <!-- =========================================================================
-       PROVISIONAL FOOTER
-       A working placeholder so pages do not end abruptly. The full footer is its
-       own build step in the plan; when it is built, this file is replaced
-       wholesale and every page picks it up with no other change.
+       FOOTER
+       Deep Blue ground, Soft Cream type — the client's second iteration asked
+       for it "swapped back to blue background and soft cream text" so the
+       footer reads differently from the cream header.
        ====================================================================== -->
   <footer class="site-footer">
     <div class="shell">
@@ -730,16 +666,17 @@
       <div class="site-footer__top">
         <div>
           <a class="brand brand--footer" href="/" aria-label="The Memory Conservatory — home">
-            <img class="brand__logo" src="/assets/brand/wordmark-blue.png"
+            <!-- The cream cut of the official logo, for the Deep Blue ground. -->
+            <img class="brand__logo" src="/assets/brand/wordmark-cream.png"
                  alt="The Memory Conservatory" width="900" height="217">
           </a>
 
-          <p style="margin-top:1.5rem; max-width:44ch;">
+          <p class="site-footer__about">
             An evolving collective centred on observation, authenticity and the
             quiet permanence of memory. Documenting weddings across India and
             wherever your love story takes us.
           </p>
-          <a class="whatsapp-inline" data-whatsapp data-enabled="false" href="#" rel="noopener">
+          <a class="btn btn-blue whatsapp-inline" data-whatsapp data-enabled="false" href="#" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
             Message on WhatsApp
           </a>
@@ -749,7 +686,6 @@
           <h2 class="site-footer__heading">Explore</h2>
           <ul class="site-footer__list">
             <li><a href="/gallery">Gallery</a></li>
-            <li><a href="/film-souvenirs">Film Souvenirs</a></li>
             <li><a href="/about">About Us</a></li>
             <li><a href="/faq">FAQs</a></li>
             <li><a href="/contact">Enquire Now</a></li>
@@ -762,8 +698,13 @@
             <!-- Real details, from the client's brand guidelines. -->
             <li><a href="mailto:thememoryconservatory@gmail.com">thememoryconservatory@gmail.com</a></li>
             <li><a href="tel:+918438533169">+91 84385 33169</a></li>
-            <li style="margin-top:.5rem;"><a class="link-gilt" href="https://www.instagram.com/thememoryconservatory/" target="_blank" rel="noopener">Instagram</a></li>
-            <li style="margin-top:.5rem;">Made in Madras, India.</li>
+            <li>
+              <a class="site-footer__social" href="https://www.instagram.com/thememoryconservatory/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>
+                <span><span class="sr-only">Instagram: </span>@thememoryconservatory</span>
+              </a>
+            </li>
+            <li class="site-footer__made">Made in Madras, India.</li>
           </ul>
         </div>
       </div>
