@@ -166,70 +166,75 @@
          ================================================================== -->
     <section class="section section--white collage-section">
       <div class="collage reveal">
-        <figure class="collage__cell" style="--col:2;--row:1;--focal:50% 50%">
-          <img src="/assets/img/collage/collage-1.jpg" alt="A couple standing forehead to forehead beneath trees"
-               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
-        </figure>
-        <figure class="collage__cell" style="--col:4;--row:1;--focal:50% 50%">
-          <img src="/assets/img/collage/collage-11.jpg" alt="A couple embracing in a field of tall grass"
-               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
-        </figure>
-        <figure class="collage__cell" style="--col:6;--row:1;--focal:50% 97%">
-          <img src="/assets/img/collage/collage-5.jpg" alt="A couple on a white staircase"
-               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
-        </figure>
-        <figure class="collage__cell" style="--col:1;--row:2;--focal:50% 41%">
-          <img src="/assets/img/collage/collage-8.jpg" alt="A couple walking together, the groom in black tie"
-               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
-        </figure>
-        <figure class="collage__cell" style="--col:3;--row:2;--focal:50% 43%">
-          <img src="/assets/img/collage/collage-3.jpg" alt="A couple facing each other, both in gold"
-               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
-        </figure>
-        <figure class="collage__cell" style="--col:5;--row:2;--zoom:1.19;--zoom-origin:2% 0%">
-          <img src="/assets/img/collage/collage-16.jpg" alt="Bride and groom in flower garlands"
-               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
-        </figure>
-        <figure class="collage__cell" style="--col:7;--row:2;--focal:50% 69%">
-          <img src="/assets/img/collage/collage-4.jpg" alt="The couple leaving the church among their guests"
-               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
-        </figure>
-        <figure class="collage__cell" style="--col:2;--row:3;--focal:50% 50%">
-          <img src="/assets/img/collage/collage-15.jpg" alt="Garlands exchanged above the crowd"
-               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
-        </figure>
-        <figure class="collage__cell" style="--col:6;--row:3;--focal:50% 36%">
-          <img src="/assets/img/collage/collage-6.jpg" alt="A couple on a staircase beneath a chandelier"
-               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
-        </figure>
-        <figure class="collage__cell" style="--col:1;--row:4;--focal:50% 50%">
-          <img src="/assets/img/collage/collage-10.jpg" alt="A couple in a darkened lounge beside a piano"
-               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
-        </figure>
-        <figure class="collage__cell" style="--col:3;--row:4;--focal:50% 50%">
-          <img src="/assets/img/collage/chad-jahnavi-109.jpg" alt="A couple in a blue doorway, the groom laughing"
-               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
-        </figure>
-        <figure class="collage__cell" style="--col:5;--row:4;--focal:50% 50%">
-          <img src="/assets/img/collage/collage-14.jpg" alt="A couple lying together on the grass"
-               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
-        </figure>
-        <figure class="collage__cell" style="--col:7;--row:4;--focal:50% 50%">
-          <img src="/assets/img/collage/collage-2.jpg" alt="Guests throwing a garland during the ceremony"
-               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
-        </figure>
-        <figure class="collage__cell" style="--col:2;--row:5;--focal:50% 27%">
-          <img src="/assets/img/collage/collage-7.jpg" alt="A couple holding their cat"
-               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
-        </figure>
-        <figure class="collage__cell" style="--col:4;--row:5;--focal:50% 78%">
-          <img src="/assets/img/collage/orange-couple.jpg" alt="A couple in orange, walking together"
-               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
-        </figure>
-        <figure class="collage__cell" style="--col:6;--row:5;--focal:50% 50%">
-          <img src="/assets/img/collage/collage-9.jpg" alt="A couple among flowers in a garden"
-               loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
-        </figure>
+        <!-- The sixteen photographs. display: contents, so each cell is a grid
+             item of .collage: placed by --col/--row on desktop, and on narrow
+             screens split eight / lockup / eight (see input.css). -->
+        <div class="collage__photos">
+          <figure class="collage__cell" style="--col:2;--row:1;--focal:50% 50%">
+            <img src="/assets/img/collage/collage-1.jpg" alt="A couple standing forehead to forehead beneath trees"
+                 loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+          </figure>
+          <figure class="collage__cell" style="--col:4;--row:1;--focal:50% 50%">
+            <img src="/assets/img/collage/collage-11.jpg" alt="A couple embracing in a field of tall grass"
+                 loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+          </figure>
+          <figure class="collage__cell" style="--col:6;--row:1;--focal:50% 97%">
+            <img src="/assets/img/collage/collage-5.jpg" alt="A couple on a white staircase"
+                 loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+          </figure>
+          <figure class="collage__cell" style="--col:1;--row:2;--focal:50% 41%">
+            <img src="/assets/img/collage/collage-8.jpg" alt="A couple walking together, the groom in black tie"
+                 loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+          </figure>
+          <figure class="collage__cell" style="--col:3;--row:2;--focal:50% 43%">
+            <img src="/assets/img/collage/collage-3.jpg" alt="A couple facing each other, both in gold"
+                 loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+          </figure>
+          <figure class="collage__cell" style="--col:5;--row:2;--zoom:1.19;--zoom-origin:2% 0%">
+            <img src="/assets/img/collage/collage-16.jpg" alt="Bride and groom in flower garlands"
+                 loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+          </figure>
+          <figure class="collage__cell" style="--col:7;--row:2;--focal:50% 69%">
+            <img src="/assets/img/collage/collage-4.jpg" alt="The couple leaving the church among their guests"
+                 loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+          </figure>
+          <figure class="collage__cell" style="--col:2;--row:3;--focal:50% 50%">
+            <img src="/assets/img/collage/collage-15.jpg" alt="Garlands exchanged above the crowd"
+                 loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+          </figure>
+          <figure class="collage__cell" style="--col:6;--row:3;--focal:50% 36%">
+            <img src="/assets/img/collage/collage-6.jpg" alt="A couple on a staircase beneath a chandelier"
+                 loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+          </figure>
+          <figure class="collage__cell" style="--col:1;--row:4;--focal:50% 50%">
+            <img src="/assets/img/collage/collage-10.jpg" alt="A couple in a darkened lounge beside a piano"
+                 loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+          </figure>
+          <figure class="collage__cell" style="--col:3;--row:4;--focal:50% 50%">
+            <img src="/assets/img/collage/chad-jahnavi-109.jpg" alt="A couple in a blue doorway, the groom laughing"
+                 loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+          </figure>
+          <figure class="collage__cell" style="--col:5;--row:4;--focal:50% 50%">
+            <img src="/assets/img/collage/collage-14.jpg" alt="A couple lying together on the grass"
+                 loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+          </figure>
+          <figure class="collage__cell" style="--col:7;--row:4;--focal:50% 50%">
+            <img src="/assets/img/collage/collage-2.jpg" alt="Guests throwing a garland during the ceremony"
+                 loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+          </figure>
+          <figure class="collage__cell" style="--col:2;--row:5;--focal:50% 27%">
+            <img src="/assets/img/collage/collage-7.jpg" alt="A couple holding their cat"
+                 loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+          </figure>
+          <figure class="collage__cell" style="--col:4;--row:5;--focal:50% 78%">
+            <img src="/assets/img/collage/orange-couple.jpg" alt="A couple in orange, walking together"
+                 loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+          </figure>
+          <figure class="collage__cell" style="--col:6;--row:5;--focal:50% 50%">
+            <img src="/assets/img/collage/collage-9.jpg" alt="A couple among flowers in a garden"
+                 loading="lazy" decoding="async" sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 15vw">
+          </figure>
+        </div>
 
         <p class="collage__tagline">
           <img src="/assets/brand/preserving-love-black.png"
@@ -382,7 +387,7 @@
         <h2 class="section__title reveal" style="color:var(--color-white)">
           Tell us about <em>your day</em>
         </h2>
-        <p class="lede reveal" style="margin:1.5rem auto 0; color:color-mix(in srgb, var(--color-white) 78%, transparent)">
+        <p class="lede reveal" style="margin:1.5rem auto 0; color:color-mix(in srgb, var(--color-white) 90%, transparent)">
           <!-- TODO:CLIENT this line is ours. -->
           Tell us your dates and a little about the day you have in mind. We
           reply to every enquiry within 48 hours.

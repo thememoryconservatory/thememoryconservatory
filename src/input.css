@@ -803,16 +803,6 @@
   .nav-mobile__link:hover,
   .nav-mobile__link:focus-visible { color: var(--color-cream); padding-left: 0.75rem; }
 
-  .nav-mobile__index {
-    font-family: var(--font-sans);
-    font-size: 0.6875rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    color: var(--color-cream);
-    margin-right: 0.875rem;
-    vertical-align: 0.55em;
-  }
-
   .nav-mobile__foot {
     margin-top: clamp(2rem, 6vh, 4rem);
     padding-top: 1.75rem;
@@ -1381,6 +1371,15 @@
      see --color-gold for the contrast trade-off that comes with it. */
   .section__title em { font-style: italic; color: var(--color-gold-ink); }
 
+  /* A section heading set in Sorts Mill Goudy instead of Hanken Grotesk, where
+     the client has asked for the serif (e.g. "A place for memories to endure"
+     on About). Goudy has one weight, and takes its natural spacing. */
+  .section__title--serif {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
   /* ...except where a .section__title is laid over a photograph or the Deep
      Blue band, which want the bright gold back. */
   .cta .section__title em,
@@ -1427,16 +1426,17 @@
   }
 
   /* --- Images --------------------------------------------------------------
-     Black and white, as in the reference. Removing the filter is a one-line
-     change if the client's own work should carry its colour here.
+     In colour, uncropped, at their own portrait shape (the client's two
+     "Intro Para" photographs are both 2:3). The client asked for portrait on
+     every screen — the phone layout had been cropping one of them to a 4:3
+     landscape strip — and for colour rather than black and white.
      --------------------------------------------------------------------- */
   .about__figure { margin: 0; }
 
   .about__figure img {
+    display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(1) contrast(1.06);
+    height: auto;
   }
 
   /* --- Headline -----------------------------------------------------------
@@ -1448,7 +1448,15 @@
      It read as two competing sizes rather than one sentence — and the caps
      hid a missing space between the emphasis and the word after it.
      --------------------------------------------------------------------- */
-  .about__title { margin-top: 0; }
+  /* Sorts Mill Goudy, at the client's request — the one section heading on
+     the page set in the serif. Goudy has a single weight (400), and it wants
+     its natural spacing rather than the tightening the sans headings take. */
+  .about__title {
+    margin-top: 0;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    letter-spacing: 0;
+  }
 
   /* The forced break gives exactly two lines from 768px up. On a phone there
      is no width for two lines at this size, and holding the break just splits
@@ -1492,8 +1500,6 @@
   .about__body          { grid-column: 2 / 14; order: 3; margin-top: clamp(1.5rem, 3vw, 2rem); }
   .about__figure--left  { grid-column: 2 / 14; order: 4; margin-top: clamp(2rem, 5vw, 3rem); }
 
-  .about__figure--right img { aspect-ratio: 4 / 3; }
-  .about__figure--left img  { aspect-ratio: 4 / 5; }
 
   /* ---------- The spread proper ------------------------------------------ */
 
@@ -1515,14 +1521,13 @@
        keep its own aspect ratio. */
     /* All three on one plane — the client's second iteration asked for the two
        photographs level with each other rather than staggered. Same top edge,
-       same 4:5 frame, the text between them. */
+       same portrait frame, the text between them. */
     .about__figure--left  { grid-column: 2 / 6;   grid-row: 2; }
     .about__body          { grid-column: 6 / 10;  grid-row: 2; }
     .about__figure--right { grid-column: 10 / 14; grid-row: 2; }
     .about__figure,
     .about__body { margin-top: clamp(2.5rem, 5vw, 4rem); }
 
-    .about__figure img { aspect-ratio: 4 / 5; height: auto; }
   }
 
   /* --- The Archive: full-bleed square tile grid ---------------------------
@@ -1729,23 +1734,51 @@
 
   /* --- Closing call to action ------------------------------------------------ */
 
+  /* The photograph at full strength, in its own colour. It used to sit at 28%
+     opacity on Deep Blue, which tinted the whole band blue — the client asked
+     for that removed ("no blue gradient on any photos"). */
   .cta {
     position: relative;
     overflow: hidden;
-    background: var(--color-blue);
+    background: var(--color-black-ink);    /* only while the photo loads */
     isolation: isolate;
+    /* Extra room under the button: the couple stand in the lower part of the
+       photograph, and without this the centred button sat right on them —
+       on a phone it covered them completely. The content now ends above the
+       band the couple occupy, at every width. */
+    padding-bottom: calc(clamp(4.5rem, 3rem + 7vw, 11rem) + var(--cta-clear, 7rem));
   }
 
   .cta__bg {
     position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: -2;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 38%;
-    opacity: 0.28;
-    filter: grayscale(0.35);
+    /* Anchored on the couple. In "Tell us about your wedding" they stand small
+       at about 42% across and 77-90% down the frame, so the crop is taken from
+       there: wide screens keep the lower part of the photograph, and narrow
+       ones keep its centre-left — they stay in view at every width. */
+    object-position: 42% 84%;
+  }
+
+  /* A neutral shade, not a tint, so the white heading and text read clearly:
+     the top half of this photograph is mostly bright sky. Black only darkens;
+     it does not colour the photograph the way the old blue did. */
+  .cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    /* Heavier behind the words, lighter at the foot where the couple stand,
+       so they are not lost in shadow. Measured so the 78%-white paragraph
+       clears 4.5:1 against the brightest sky behind it. */
+    background: linear-gradient(to bottom,
+      color-mix(in srgb, var(--color-black-ink) var(--cta-shade, 58%), transparent) 0%,
+      color-mix(in srgb, var(--color-black-ink) var(--cta-shade, 58%), transparent) 62%,
+      color-mix(in srgb, var(--color-black-ink) 18%, transparent) 100%);
+    pointer-events: none;
   }
 
   .cta__inner { text-align: center; }
@@ -2083,8 +2116,12 @@
 
   .contact-card__list a:hover { border-bottom-color: var(--color-blue); }
 
+  /* Sorts Mill Goudy and centred, at the client's request — the one line in
+     the card not set in Hanken Grotesk. */
   .contact-card__note {
     margin-top: 1.75rem;
+    font-family: var(--font-sans);
+    text-align: center;
     font-size: var(--text-small);
     line-height: var(--text-small--line-height);
     /* 85%, not 72%: at 15px this needs 4.5:1 and 72% measured 3.96. */
@@ -2528,11 +2565,12 @@
 
 
   /* =============================================================================
-     TESTIMONIALS — one review at a time, photograph beside a boxed panel
+     TESTIMONIALS — one review at a time, in a boxed panel
      -----------------------------------------------------------------------------
      Modelled on the reference the client chose (michaelcassara.me), set in the
-     brand: Deep Blue ground, Soft Cream type (7.6:1), Sorts Mill Goudy for the
-     review, Hanken Grotesk for the name and the controls.
+     brand: Deep Blue ground, Soft Cream type (7.6:1), the review in Sorts Mill
+     Goudy italic within double quotes, Hanken Grotesk for the name and the
+     controls. No photographs — removed at the client's request.
 
      Every slide sits in the SAME grid cell, so the stage is always as tall as
      the longest review. Nothing jumps when the slide changes, and — unlike the
@@ -2540,19 +2578,21 @@
      of the client's nine is shown whole.
      ========================================================================== */
 
-  .reviews { margin-top: clamp(2.5rem, 5vw, 4rem); }
+  /* Capped and centred: without the photograph a full-width box would leave
+     the review floating in a very wide frame. */
+  .reviews {
+    max-width: 60rem;
+    margin: clamp(2.5rem, 5vw, 4rem) auto 0;
+  }
 
   .reviews__stage { display: grid; }
 
   .review {
     grid-area: 1 / 1;
     margin: 0;
-    display: grid;
-    /* Stacked on a phone: the photograph keeps its own height and the panel
-       takes the rest, so every slide's box is the same size (that of the
-       longest review) instead of a gap opening under the photograph. */
-    grid-template-rows: auto 1fr;
-    gap: clamp(0.75rem, 1.5vw, 1.25rem);
+    /* The panel fills the slide, and the slide is as tall as the longest
+       review — so every box is the same size. */
+    display: flex;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.6s var(--ease-conservatory), visibility 0s linear 0.6s;
@@ -2564,35 +2604,9 @@
     transition: opacity 0.6s var(--ease-conservatory), visibility 0s;
   }
 
-  /* Photograph above the panel on a phone; beside it, a third of the width,
-     from tablet up — the reference's proportion. */
-  @media (min-width: 48rem) {
-    .review { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); grid-template-rows: auto; }
-  }
-
-  .review__photo {
-    position: relative;
-    overflow: hidden;
-    aspect-ratio: 4 / 3;
-    background: color-mix(in srgb, var(--color-cream) 12%, var(--color-blue));
-  }
-
-  @media (min-width: 48rem) {
-    /* Stretch to the panel's height, whatever the review's length. */
-    .review__photo { aspect-ratio: auto; min-height: 22rem; }
-  }
-
-  .review__photo img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 35%;
-  }
-
   /* The box the client asked for: a cream hairline on the blue ground. */
   .review__panel {
+    flex: 1;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -2604,13 +2618,6 @@
     text-align: center;
   }
 
-  /* On a phone the box is as tall as the longest review, which can be twice a
-     short one. Starting the text at the top keeps a short review directly
-     under its photograph rather than floating mid-box. */
-  @media (max-width: 47.999rem) {
-    .review__panel { justify-content: flex-start; }
-  }
-
   .review__label {
     font-family: var(--font-sans);
     font-style: italic;
@@ -2619,10 +2626,13 @@
     color: color-mix(in srgb, var(--color-cream) 85%, transparent);
   }
 
+  /* Italic, within double quotes (the quotes are in the markup, so they are
+     part of the text, not decoration that a screen reader skips). */
   .review__body {
     margin-top: clamp(1.25rem, 2.5vw, 1.75rem);
     max-width: 38rem;
     font-family: var(--font-sans);
+    font-style: italic;
     font-size: clamp(0.9688rem, 0.92rem + 0.2vw, 1.0625rem);
     line-height: 1.8;
     color: var(--color-cream);
@@ -2656,11 +2666,6 @@
   }
 
   .reviews__nav[hidden] { display: none; }
-
-  @media (min-width: 48rem) {
-    /* Under the panel, not under the photograph — as in the reference. */
-    .reviews__nav { margin-left: calc((100% + clamp(0.75rem, 1.5vw, 1.25rem)) / 3); }
-  }
 
   .reviews__arrow {
     display: inline-flex;
@@ -2911,7 +2916,6 @@
 
   .collage__tagline {
     grid-column: 1 / -1;
-    order: 4;                       /* part-way down on the narrow layouts */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2927,10 +2931,32 @@
     display: block;
   }
 
+  /* The photographs' wrapper. No box of its own on desktop, so every cell is
+     placed straight into the .collage grid by its --col/--row, exactly as the
+     mockup draws it. */
+  .collage__photos { display: contents; }
+
+  /* --- Phones and tablets: eight photographs, the lockup, eight more --------
+     The client's correction: below the desktop layout the collage is simply
+     the first eight photographs, then "Preserving love, frame by frame" on a
+     row of its own, then the other eight. Sixteen divides evenly at both
+     narrow widths: 2 across (4 rows above, 4 below) on a phone, 4 across
+     (2 rows above, 2 below) on a tablet.
+
+     Done with `order` rather than by moving markup, so the desktop grid —
+     where every cell is placed by --col/--row — is untouched.
+     ----------------------------------------------------------------------- */
+  @media (max-width: 61.999rem) {
+    .collage__tagline { order: 1; }
+    .collage__cell:nth-child(n + 9) { order: 2; }
+  }
+
   /* --- Breakpoints -------------------------------------------------------- */
 
+  /* Four across on a tablet, not three: sixteen photographs in three columns
+     leaves a last row of one photograph and two holes. */
   @media (min-width: 36rem) {
-    .collage { grid-template-columns: repeat(3, 1fr); }
+    .collage { grid-template-columns: repeat(4, 1fr); }
   }
 
   @media (min-width: 62rem) {
@@ -2947,28 +2973,38 @@
       grid-row: 3;
       order: 0;
 
-      /* Pinned to exactly one row's height. Without this the lockup sets the
-         row from its own intrinsic height and row 3 grew to 265px against the
-         other rows' 103px — the "huge gap" through the middle of the grid.
+      /* Exactly one row tall, in every browser. The lockup must contribute
+         NOTHING to the row's height: rows 1-5 are sized by the photographs
+         (7:5 cells), and the lockup simply fills the space it is given.
 
-         Three cells wide by one row tall, where each cell is 7:5, works out
-         at 3 / (5/7) = 21/5. */
-      aspect-ratio: 21 / 5;
-      /* The padding is what sizes the lockup. Set between the original (too
-         large, per the client) and the first reduction (a little too small). */
-      padding: clamp(0.6rem, 1.5vw, 1.5rem) clamp(1rem, 2.75vw, 2.75rem);
+         An earlier version pinned the box with aspect-ratio: 21/5 and capped
+         the image at max-height: 100%. Chrome resolved that percentage against
+         the box; Safari did not — it treated the height as unknown, let the
+         PNG's own height size the row, and row 3 grew from 147px to 223px,
+         opening a gap above row 4 (measured in WebKit at 1440px). Taking the
+         image out of flow removes the question entirely. */
+      position: relative;
+      align-self: stretch;
+      min-height: 0;
+      padding: 0;
+      /* The breathing room round the lockup — this is what sizes it. Set
+         between the original (too large, per the client) and the first
+         reduction (a little too small). */
+      --pad-y: clamp(0.6rem, 1.5vw, 1.5rem);
+      --pad-x: clamp(1rem, 2.75vw, 2.75rem);
     }
 
-    /* Fill the cell. The lockup is height-limited here, so the only way to
-       set it bigger is to give it the whole row — which is why the supplied
-       PNG was trimmed of its transparent margins first: the artwork occupied
-       just 27% of that file, so most of what was being scaled was empty
-       space. Trimmed, the same box holds visibly larger type. */
+    /* Fills the box inside that padding and scales to fit, whichever of
+       width or height runs out first. The supplied PNG was trimmed of its
+       transparent margins: the artwork occupied just 27% of that file, so
+       most of what was being scaled was empty space. */
     .collage__tagline img {
-      width: auto;
-      height: auto;
-      max-width: 100%;
-      max-height: 100%;
+      position: absolute;
+      top: var(--pad-y);
+      left: var(--pad-x);
+      width: calc(100% - 2 * var(--pad-x));
+      height: calc(100% - 2 * var(--pad-y));
+      max-width: none;
       object-fit: contain;
     }
   }
@@ -3190,6 +3226,7 @@
      full-size image sit exactly on top of one another. */
   .lightbox__frame {
     position: relative;
+    z-index: 1;                            /* under the controls — see below */
     margin-inline: auto;
     aspect-ratio: var(--ratio, 1.5);
     width: min(100%, calc(92vh * var(--ratio, 1.5)));
@@ -3307,6 +3344,15 @@
 
 
 
+  /* The controls always sit above the photograph. On a phone the frame spans
+     nearly the full width, so it reaches under the side arrows — and because
+     the close button and the previous arrow come BEFORE the frame in the
+     markup, the photograph painted over them (the previous arrow was hidden
+     behind it). An explicit order removes the dependence on markup order. */
+  .lightbox__close,
+  .lightbox__nav,
+  .lightbox__count { z-index: 2; }
+
   /* Stop the page behind scrolling while the lightbox is open. */
   body:has(.lightbox[open]) { overflow: hidden; }
 
@@ -3337,8 +3383,7 @@
   .process-step__body,
   .lede,
   .hero__lede,
-  .faq-item__body p,
-  .contact-card__note {
+  .faq-item__body p {
     text-align: justify;
     text-align-last: left;
     hyphens: auto;

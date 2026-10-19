@@ -143,8 +143,8 @@ function initWhatsApp() {
 /* -----------------------------------------------------------------------------
    TESTIMONIALS — one review at a time
 
-   After the reference the client chose: a photograph and a boxed review, with
-   arrows and a counter. No autoplay — the reference has none, and a review
+   After the reference the client chose: a boxed review with arrows and a
+   counter. No autoplay — the reference has none, and a review
    that moves while someone is reading it is worse than one that waits.
 
    All the slides share one grid cell (see input.css), so this only has to say
@@ -164,14 +164,6 @@ function initTestimonials() {
     const total = nav.querySelector('[data-reviews-total]');
     let index = 0;
 
-    // Fetch a slide's photograph ahead of time, so it is already there when
-    // the slide fades in. Only the neighbours: nine full-size photographs up
-    // front would be a poor trade on a phone.
-    const warm = (i) => {
-      const img = slides[(i + slides.length) % slides.length].querySelector('img');
-      if (img) img.loading = 'eager';
-    };
-
     const show = (i) => {
       index = (i + slides.length) % slides.length;
       slides.forEach((slide, k) => {
@@ -181,8 +173,6 @@ function initTestimonials() {
         slide.setAttribute('aria-hidden', String(!on));
       });
       if (current) current.textContent = String(index + 1);
-      warm(index + 1);
-      warm(index - 1);
     };
 
     if (total) total.textContent = String(slides.length);
