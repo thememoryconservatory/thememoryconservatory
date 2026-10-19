@@ -92,9 +92,8 @@ function expand(html, depth, warnings) {
 
      - <link rel="canonical"> and og:url, from the page's own path
      - the business, as schema.org structured data (every page)
-     - FAQPage structured data on /faq, read from the page's own questions and
-       answers — so it can never drift from what visitors see
-     - noindex on the thank-you page, which should never appear in search
+     - noindex on every page except the four the client wants in search
+       (Home, Gallery, About, Enquire) — see INDEXED_PAGES
 
    The keyword research behind the titles and descriptions is the client's
    ("Keywords TMC Website.docx"); the business data below stays factual —
@@ -102,7 +101,14 @@ function expand(html, depth, warnings) {
    -------------------------------------------------------------------------- */
 
 const SITE = 'https://thememoryconservatory.com';
-const NOINDEX_PAGES = new Set(['thank-you.html']);
+/* The only pages search engines may show — the client's instruction. Every
+   other page (FAQs, thank-you, the individual wedding galleries) is sent
+   "noindex, follow": kept out of results, but its links are still followed,
+   so it passes visitors' paths on to the four pages that should rank.
+   Deliberately NOT blocked in robots.txt: a crawler that is barred from a
+   page cannot read its noindex, and may still list the bare URL. */
+const INDEXED_PAGES = new Set(['index.html', 'about.html', 'contact.html', 'gallery/index.html']);
+const isIndexed = (page) => INDEXED_PAGES.has(page.split(path.sep).join('/'));
 
 const BUSINESS = {
   '@context': 'https://schema.org',
@@ -144,39 +150,9 @@ function urlPath(page) {
   return p.replace(/\.html$/, '');
 }
 
-const ENTITIES = {
-  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', rsquo: '’', lsquo: '‘',
-  rdquo: '”', ldquo: '“', mdash: '—', ndash: '–', hellip: '…', middot: '·', times: '×',
-};
-
-/** Visible text of an HTML fragment, for structured data (tags stripped, entities decoded). */
-function plainText(html) {
-  return html
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/&#(\d+);/g, (_m, n) => String.fromCodePoint(Number(n)))
-    .replace(/&#x([0-9a-f]+);/gi, (_m, n) => String.fromCodePoint(parseInt(n, 16)))
-    .replace(/&([a-z]+);/gi, (m, n) => ENTITIES[n.toLowerCase()] ?? m)
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
 /** JSON for inside <script>: "</" is escaped so the text can never close the tag. */
 function jsonLd(data) {
   return `<script type="application/ld+json">${JSON.stringify(data).replace(/<\//g, '<\\/')}</script>`;
-}
-
-function faqData(html) {
-  const items = [...html.matchAll(/<details class="faq-item"[^>]*>\s*<summary>([\s\S]*?)<\/summary>\s*<div class="faq-item__body">([\s\S]*?)<\/div>\s*<\/details>/g)];
-  if (!items.length) return null;
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: items.map(([, q, a]) => ({
-      '@type': 'Question',
-      name: plainText(q),
-      acceptedAnswer: { '@type': 'Answer', text: plainText(a) },
-    })),
-  };
 }
 
 function seoTags(page, html) {
@@ -185,10 +161,8 @@ function seoTags(page, html) {
     `<link rel="canonical" href="${url}">`,
     `<meta property="og:url" content="${url}">`,
   ];
-  if (NOINDEX_PAGES.has(page)) tags.push('<meta name="robots" content="noindex, follow">');
+  if (!isIndexed(page)) tags.push('<meta name="robots" content="noindex, follow">');
   tags.push(jsonLd(BUSINESS));
-  const faq = faqData(html);
-  if (faq) tags.push(jsonLd(faq));
   return tags;
 }
 
@@ -198,11 +172,11 @@ function applySeo(page, html) {
     seoTags(page, html).map((t) => indent + t).join('\n'));
 }
 
-/** sitemap.xml: every built page except the ones kept out of search. */
+/** sitemap.xml: only the pages search engines may show. */
 function writeSitemap(pages) {
   const today = new Date().toISOString().slice(0, 10);
   const urls = pages
-    .filter((p) => !NOINDEX_PAGES.has(p))
+    .filter(isIndexed)
     .map((p) => `  <url>\n    <loc>${SITE}${urlPath(p)}</loc>\n    <lastmod>${today}</lastmod>\n  </url>`);
   fs.writeFileSync(
     path.join(OUT_DIR, 'sitemap.xml'),
