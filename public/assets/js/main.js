@@ -141,154 +141,78 @@ function initWhatsApp() {
 
 
 /* -----------------------------------------------------------------------------
-   TESTIMONIALS — paging the scroll-snap track
+   TESTIMONIALS — one review at a time
 
-   The track is a real overflow container with CSS scroll-snap, so swiping,
-   trackpad flicks and keyboard scrolling all work before this file loads. All
-   this adds is a pair of arrows and a page counter, which is why the nav is
-   `hidden` in the markup and only revealed here: an arrow that does nothing
-   because a script failed is worse than no arrow.
+   After the reference the client chose: a photograph and a boxed review, with
+   arrows and a counter. No autoplay — the reference has none, and a review
+   that moves while someone is reading it is worse than one that waits.
+
+   All the slides share one grid cell (see input.css), so this only has to say
+   which one is active. Inactive slides are made inert, so keyboard focus and
+   screen readers only ever meet the review on screen.
    -------------------------------------------------------------------------- */
 
 function initTestimonials() {
-  document.querySelectorAll('[data-testimonials]').forEach((root) => {
-    const track = root.querySelector('[data-testimonial-track]');
-    const nav = root.querySelector('[data-testimonial-nav]');
-    if (!track || !nav) return;
+  document.querySelectorAll('[data-reviews]').forEach((root) => {
+    const slides = [...root.querySelectorAll('[data-review]')];
+    const nav = root.querySelector('[data-reviews-nav]');
+    if (slides.length < 2 || !nav) return;
 
-    const cards = [...track.querySelectorAll('.testimonial')];
-    const prev = nav.querySelector('[data-testimonial-prev]');
-    const next = nav.querySelector('[data-testimonial-next]');
-    const current = nav.querySelector('[data-testimonial-current]');
-    const total = nav.querySelector('[data-testimonial-total]');
+    const prev = nav.querySelector('[data-reviews-prev]');
+    const next = nav.querySelector('[data-reviews-next]');
+    const current = nav.querySelector('[data-reviews-current]');
+    const total = nav.querySelector('[data-reviews-total]');
+    let index = 0;
 
-    // How many cards fit, measured rather than assumed, so this stays correct
-    // at every breakpoint and the moment the phone is rotated.
-    //
-    // A page is NOT track.clientWidth. Three columns plus the two gaps between
-    // them come to about 36px more than the visible width, so counting pages
-    // off clientWidth reported nine reviews as four pages rather than three.
-    // Measuring one card and one gap gives the true stride.
-    const gap = () => parseFloat(getComputedStyle(track).columnGap) || 0;
-    const cardWidth = () => cards[0].getBoundingClientRect().width;
+    // Fetch a slide's photograph ahead of time, so it is already there when
+    // the slide fades in. Only the neighbours: nine full-size photographs up
+    // front would be a poor trade on a phone.
+    const warm = (i) => {
+      const img = slides[(i + slides.length) % slides.length].querySelector('img');
+      if (img) img.loading = 'eager';
+    };
 
-    const perPage = () =>
-      Math.max(1, Math.round((track.clientWidth + gap()) / (cardWidth() + gap())));
+    const show = (i) => {
+      index = (i + slides.length) % slides.length;
+      slides.forEach((slide, k) => {
+        const on = k === index;
+        slide.toggleAttribute('data-active', on);
+        slide.inert = !on;
+        slide.setAttribute('aria-hidden', String(!on));
+      });
+      if (current) current.textContent = String(index + 1);
+      warm(index + 1);
+      warm(index - 1);
+    };
 
-    const pageStride = () => perPage() * (cardWidth() + gap());
-    const maxScroll = () => track.scrollWidth - track.clientWidth;
+    if (total) total.textContent = String(slides.length);
+    prev.addEventListener('click', () => show(index - 1));
+    next.addEventListener('click', () => show(index + 1));
 
-    // Nothing to page through — one screenful holds everything.
-    if (maxScroll() < 4) return;
+    // Arrow keys while anything in the testimonials has focus.
+    root.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight') { event.preventDefault(); show(index + 1); }
+      if (event.key === 'ArrowLeft')  { event.preventDefault(); show(index - 1); }
+    });
+
+    // Swipe on a phone: a mostly-horizontal drag of 40px or more.
+    let x0 = null;
+    let y0 = null;
+    const stage = root.querySelector('[data-reviews-stage]');
+    stage.addEventListener('touchstart', (e) => {
+      x0 = e.touches[0].clientX;
+      y0 = e.touches[0].clientY;
+    }, { passive: true });
+    stage.addEventListener('touchend', (e) => {
+      if (x0 === null) return;
+      const dx = e.changedTouches[0].clientX - x0;
+      const dy = e.changedTouches[0].clientY - y0;
+      x0 = null;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) show(index + (dx < 0 ? 1 : -1));
+    }, { passive: true });
 
     nav.hidden = false;
-
-    const update = () => {
-      const max = maxScroll();
-      // 4px of slack: fractional layout widths mean scrollLeft rarely lands
-      // exactly on 0 or on max, and a strict compare leaves the arrow at the
-      // end of the run permanently enabled.
-      prev.disabled = track.scrollLeft <= 4;
-      next.disabled = track.scrollLeft >= max - 4;
-
-      if (current && total) {
-        const pages = Math.max(1, Math.ceil(cards.length / perPage()));
-        total.textContent = String(pages);
-        current.textContent = String(
-          Math.min(pages, Math.round(track.scrollLeft / pageStride()) + 1)
-        );
-      }
-    };
-
-    const page = (direction) => {
-      track.scrollBy({
-        left: direction * pageStride(),
-        behavior: prefersReducedMotion ? 'auto' : 'smooth'
-      });
-    };
-
-    prev.addEventListener('click', () => page(-1));
-    next.addEventListener('click', () => page(1));
-
-    // Passive: this only reads scroll position and never calls
-    // preventDefault, so the browser must not wait on it to scroll.
-    track.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', update);
-
-    update();
-
-    /* --- Autoplay ---------------------------------------------------------
-       Advances a page every 6s and wraps at the end. Paused whenever someone
-       is actually looking at or using it, which is more cases than just hover:
-       a pointer inside the track, keyboard focus within it, a touch in
-       progress, the tab in the background, or the section scrolled
-       off screen. Autoplay that fights the reader is worse than none.
-       -------------------------------------------------------------------- */
-
-    if (prefersReducedMotion) return;
-
-    const INTERVAL = 6000;
-    let timer = null;
-    let onScreen = true;
-
-    // A Set of named reasons, not a counter. A counter has to be incremented
-    // and decremented in perfectly matched pairs, and these events do not pair
-    // up: `mouseenter` fires once but `focusin` fires on every move within the
-    // section, so a counter drifts upward and the carousel stops for good.
-    // Named reasons are idempotent — holding "hover" twice is still one hold.
-    const holds = new Set();
-    const hold = (reason) => holds.add(reason);
-    const release = (reason) => holds.delete(reason);
-
-    const tick = () => {
-      if (holds.size || !onScreen || document.hidden) return;
-      // Wrap rather than stop: this is an ambient loop, not a wizard.
-      if (track.scrollLeft >= maxScroll() - 4) {
-        track.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        page(1);
-      }
-    };
-
-    const start = () => { if (!timer) timer = setInterval(tick, INTERVAL); };
-    const stop = () => { clearInterval(timer); timer = null; };
-
-    root.addEventListener('mouseenter', () => hold('hover'));
-    root.addEventListener('mouseleave', () => release('hover'));
-
-    // :focus-visible, not plain focus. Clicking a card with a mouse leaves the
-    // browser focus sitting on that card's button; treating that as "someone is
-    // keyboard-navigating here" pinned the carousel permanently once a reader
-    // had opened and closed a single review. Only keyboard focus should pause.
-    root.addEventListener('focusin', (event) => {
-      if (event.target.matches(':focus-visible')) hold('focus');
-    });
-
-    root.addEventListener('focusout', () => {
-      // At focusout the next element has not been focused yet, so the check has
-      // to wait a turn before asking whether focus is still inside.
-      setTimeout(() => {
-        if (!root.querySelector(':focus-visible')) release('focus');
-      }, 0);
-    });
-
-    // A finger on the track counts as reading it.
-    track.addEventListener('touchstart', () => hold('touch'), { passive: true });
-    track.addEventListener('touchend', () => release('touch'), { passive: true });
-
-    // Nothing should be moving in a section nobody is looking at.
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(
-        ([entry]) => { onScreen = entry.isIntersecting; },
-        { threshold: 0.2 }
-      ).observe(root);
-    }
-
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) stop(); else start();
-    });
-
-    start();
+    show(0);
   });
 }
 

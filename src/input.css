@@ -725,7 +725,10 @@
     background: transparent;
     border: 0;
     cursor: pointer;
-    color: var(--color-white);
+    /* Deep Blue, the same blue as the logo beside it. The header is Soft Cream
+       in every state (it stays above the open menu panel too), and white bars
+       on cream measured 1.2:1 — all but invisible. Blue is 7.5:1. */
+    color: var(--color-blue);
   }
 
   @media (min-width: 64rem) { .nav-toggle { display: none; } }
@@ -1382,6 +1385,8 @@
      Blue band, which want the bright gold back. */
   .cta .section__title em,
   .section--blue .section__title em { color: var(--color-gold); }
+  /* Headings on the blue band take Soft Cream, like the rest of its type. */
+  .section--blue .section__title { color: var(--color-cream); }
 
   .lede {
     font-size: var(--text-lede);
@@ -2523,254 +2528,171 @@
 
 
   /* =============================================================================
-     TESTIMONIALS — three across, paged left and right
+     TESTIMONIALS — one review at a time, photograph beside a boxed panel
      -----------------------------------------------------------------------------
-     Built on CSS scroll-snap over a real overflow container, not a JS slider.
-     That buys three things for free: touch swipe and trackpad flick on every
-     device, keyboard scrolling once the track is focusable, and a component
-     that still works — as a plain horizontal scroller — if main.js never runs.
-     The arrows only call scrollBy(); they are an enhancement, not the mechanism.
+     Modelled on the reference the client chose (michaelcassara.me), set in the
+     brand: Deep Blue ground, Soft Cream type (7.6:1), Sorts Mill Goudy for the
+     review, Hanken Grotesk for the name and the controls.
 
-     Three across on desktop, two on a tablet, one on a phone. Nine reviews
-     therefore page as 3 x 3, 5 x 2 (last page short), or 9 x 1.
+     Every slide sits in the SAME grid cell, so the stage is always as tall as
+     the longest review. Nothing jumps when the slide changes, and — unlike the
+     reference, whose fixed-height box cuts its longer reviews off — the longest
+     of the client's nine is shown whole.
      ========================================================================== */
 
-  .testimonials { position: relative; }
+  .reviews { margin-top: clamp(2.5rem, 5vw, 4rem); }
 
-  .testimonial-track {
+  .reviews__stage { display: grid; }
+
+  .review {
+    grid-area: 1 / 1;
+    margin: 0;
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 100%;
-    gap: clamp(1.75rem, 3vw, 3rem);
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    margin-top: clamp(2.5rem, 5vw, 4rem);
-    /* Room for the focus ring, which would otherwise be clipped by overflow. */
-    padding: 0.25rem;
-    /* A thin visible scrollbar as well as the arrows: the client noted the
-       reviews were hard to find without one. */
-    scrollbar-width: thin;
-    scrollbar-color: color-mix(in srgb, var(--color-cream) 55%, transparent) transparent;
-    padding-bottom: 1.25rem;
-    /* main.js sets an explicit height to match the tallest card on screen.
-       hidden, not the computed `auto`, so a sub-pixel overshoot mid-transition
-       cannot introduce a second scroll axis. */
-    overflow-y: hidden;
-    transition: height 0.45s var(--ease-conservatory);
+    /* Stacked on a phone: the photograph keeps its own height and the panel
+       takes the rest, so every slide's box is the same size (that of the
+       longest review) instead of a gap opening under the photograph. */
+    grid-template-rows: auto 1fr;
+    gap: clamp(0.75rem, 1.5vw, 1.25rem);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.6s var(--ease-conservatory), visibility 0s linear 0.6s;
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .testimonial-track { transition: none; }
+  .review[data-active] {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.6s var(--ease-conservatory), visibility 0s;
   }
 
-  .testimonial-track::-webkit-scrollbar { height: 6px; }
-  .testimonial-track::-webkit-scrollbar-thumb {
-    background: color-mix(in srgb, var(--color-cream) 55%, transparent);
-    border-radius: 3px;
+  /* Photograph above the panel on a phone; beside it, a third of the width,
+     from tablet up — the reference's proportion. */
+  @media (min-width: 48rem) {
+    .review { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); grid-template-rows: auto; }
+  }
+
+  .review__photo {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: color-mix(in srgb, var(--color-cream) 12%, var(--color-blue));
   }
 
   @media (min-width: 48rem) {
-    .testimonial-track { grid-auto-columns: calc((100% - clamp(1.75rem, 3vw, 3rem)) / 2); }
+    /* Stretch to the panel's height, whatever the review's length. */
+    .review__photo { aspect-ratio: auto; min-height: 22rem; }
   }
 
-  @media (min-width: 62rem) {
-    .testimonial-track { grid-auto-columns: calc((100% - 2 * clamp(1.75rem, 3vw, 3rem)) / 3); }
+  .review__photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 35%;
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    .testimonial-track { scroll-behavior: auto; }
-  }
-
-  /* --- A single review ------------------------------------------------------
-     Every card is the same height. These quotes run from roughly 50 to 200
-     words, so the body is clamped to a fixed number of lines and the full text
-     lives in the dialog that opens on click. stretch, not start: the grid row
-     is as tall as the tallest card, and stretching every card to it is what
-     makes the set uniform rather than ragged.
-     ----------------------------------------------------------------------- */
-
-  /* Boxed, on a ground of their own — the client asked to "box up the
-     individual reviews" and give the section a background colour. The rule
-     that used to sit above each review is now the edge of its box. */
-  .testimonial {
-    position: relative;                 /* anchors .testimonial__open */
-    scroll-snap-align: start;
-    align-self: stretch;
+  /* The box the client asked for: a cream hairline on the blue ground. */
+  .review__panel {
+    margin: 0;
     display: flex;
     flex-direction: column;
-    padding: clamp(1.5rem, 3vw, 2.25rem);
-    background: var(--color-white);
-    border: 1px solid color-mix(in srgb, var(--color-blue) 16%, transparent);
-    transition: border-color 0.4s var(--ease-conservatory),
-                box-shadow 0.4s var(--ease-conservatory);
+    align-items: center;
+    justify-content: center;
+    padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 6vw, 5.5rem);
+    border: 1px solid color-mix(in srgb, var(--color-cream) 40%, transparent);
+    color: var(--color-cream);
+    text-align: center;
   }
 
-  .testimonial:hover {
-    border-color: color-mix(in srgb, var(--color-blue) 32%, transparent);
-    box-shadow: 0 1rem 2.5rem color-mix(in srgb, var(--color-blue) 10%, transparent);
+  /* On a phone the box is as tall as the longest review, which can be twice a
+     short one. Starting the text at the top keeps a short review directly
+     under its photograph rather than floating mid-box. */
+  @media (max-width: 47.999rem) {
+    .review__panel { justify-content: flex-start; }
   }
 
-  .testimonial__mark {
-    font-family: var(--font-display);
-    font-size: 2.5rem;
-    line-height: 0.8;
-    /* Decorative and aria-hidden, so WCAG does not require contrast here — but
-       at 45% it measured 2.2:1 and read as a smudge rather than a quote mark.
-       62% clears 3:1 and looks deliberate. */
-    color: color-mix(in srgb, var(--color-blue) 62%, transparent);
-  }
-
-  .testimonial__body {
-    margin-top: 0.75rem;
-    /* A step below body copy. The client asked for whole reviews rather than
-       truncated ones, "even if the font size needs to be reduced" — this is
-       what buys the room for the longest of the nine. */
-    font-size: 0.9375rem;
-    line-height: 1.8;
-    color: color-mix(in srgb, var(--color-blue) 84%, transparent);
-    text-align: justify;
-    /* Justification in a ~400px column has to stretch the spaces to fill each
-       line, and without hyphenation a single long word ("accommodating",
-       "photographers") opens gaps wide enough to form rivers down the column.
-       Letting the browser hyphenate keeps the spacing even. It needs the lang
-       attribute on <html>, which is set. */
-    hyphens: auto;
-  }
-
-  /* Pushes the name to the foot of the card, so the names line up across a row
-     even when one review is four lines shorter than its neighbour. */
-  .testimonial__by {
-    margin-top: auto;
-    padding-top: 1.5rem;
-    font-family: var(--font-display);
-    font-size: var(--text-subtitle);
-    line-height: var(--text-subtitle--line-height);
-    font-weight: 400;
+  .review__label {
+    font-family: var(--font-sans);
     font-style: italic;
-    letter-spacing: 0;
-    text-transform: none;
-    color: var(--color-gold-ink);
+    font-size: var(--text-subtitle);
+    line-height: 1;
+    color: color-mix(in srgb, var(--color-cream) 85%, transparent);
   }
 
-  /* On the Soft Cream band the hairline needs to be blue; cream on cream is
-     invisible, the same trap the .statement rule documents. */
-  /* Second iteration: the section sits on Deep Blue with Soft Cream type, and
-     each review is boxed in a cream hairline on the blue ground. */
-  .section--blue .testimonial {
-    background: transparent;
-    border-color: color-mix(in srgb, var(--color-cream) 45%, transparent);
+  .review__body {
+    margin-top: clamp(1.25rem, 2.5vw, 1.75rem);
+    max-width: 38rem;
+    font-family: var(--font-sans);
+    font-size: clamp(0.9688rem, 0.92rem + 0.2vw, 1.0625rem);
+    line-height: 1.8;
+    color: var(--color-cream);
+    /* Justified, per the client's rule for paragraphs; the last line is
+       centred so the block still sits centred like the reference. */
+    text-align: justify;
+    text-align-last: center;
+    hyphens: auto;
+    -webkit-hyphens: auto;
   }
 
-  .section--blue .testimonial:hover {
-    border-color: var(--color-cream);
-    box-shadow: none;
+  .review__by {
+    margin-top: clamp(1.5rem, 3vw, 2.25rem);
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(1.375rem, 1.1rem + 1vw, 2rem);
+    line-height: 1.15;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-cream);
   }
 
-  .section--blue .testimonial__mark { color: color-mix(in srgb, var(--color-cream) 70%, transparent); }
-  .section--blue .testimonial__body { color: var(--color-cream); }
-  /* Cream, not gold: the bright gold measures 3.7:1 on Deep Blue, short of
-     the 4.5:1 this italic needs at its size. */
-  .section--blue .testimonial__by   { color: var(--color-cream); }
-  .section--blue .section__title    { color: var(--color-cream); }
+  /* --- Controls: long thin arrows either side of a counter ----------------- */
 
-  /* --- Paging controls ------------------------------------------------------
-     "Scroll on both sides": one arrow each side of the band. On a phone they
-     drop below the track, because a 44px target overlapping the text is worse
-     than no target at all — and a phone has swipe anyway.
-     ----------------------------------------------------------------------- */
-
-  .testimonials__nav {
+  .reviews__nav {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    margin-top: clamp(1.75rem, 3vw, 2.5rem);
+    justify-content: center;
+    gap: clamp(1.5rem, 6vw, 4.5rem);
+    margin-top: clamp(1.25rem, 2.5vw, 1.75rem);
   }
 
-  .testimonials__arrow {
+  .reviews__nav[hidden] { display: none; }
+
+  @media (min-width: 48rem) {
+    /* Under the panel, not under the photograph — as in the reference. */
+    .reviews__nav { margin-left: calc((100% + clamp(0.75rem, 1.5vw, 1.25rem)) / 3); }
+  }
+
+  .reviews__arrow {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    /* 44px, the minimum comfortable touch target. */
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 50%;
-    background: transparent;
-    color: var(--color-blue);
-    border: 1px solid color-mix(in srgb, var(--color-blue) 32%, transparent);
-    cursor: pointer;
-    transition: background-color 0.35s var(--ease-conservatory),
-                border-color 0.35s var(--ease-conservatory),
-                color 0.35s var(--ease-conservatory),
-                opacity 0.35s var(--ease-conservatory);
-  }
-
-  .testimonials__arrow svg { width: 1rem; height: 1rem; }
-
-  .testimonials__arrow:hover:not(:disabled) {
-    background-color: var(--color-blue);
-    border-color: var(--color-blue);
-    color: var(--color-white);
-  }
-
-  /* Disabled rather than hidden: an arrow that vanishes at the end of the run
-     shifts the pair sideways and the other arrow moves out from under the
-     cursor mid-click. */
-  .testimonials__arrow:disabled { opacity: 0.3; cursor: default; }
-
-  .section--blue .testimonials__arrow {
+    width: 3.5rem;
+    height: 2.75rem;                     /* 44px touch target */
+    padding: 0;
+    background: none;
+    border: 0;
     color: var(--color-cream);
-    border-color: color-mix(in srgb, var(--color-cream) 40%, transparent);
+    cursor: pointer;
+    transition: transform 0.35s var(--ease-conservatory), color 0.35s var(--ease-conservatory);
   }
 
-  .section--blue .testimonials__arrow:hover:not(:disabled) {
-    background-color: var(--color-cream);
-    border-color: var(--color-cream);
-    color: var(--color-blue);
+  .reviews__arrow svg { width: 2.5rem; height: auto; }
+  .reviews__arrow[data-reviews-prev]:hover { transform: translateX(-0.3rem); }
+  .reviews__arrow[data-reviews-next]:hover { transform: translateX(0.3rem); }
+
+  .reviews__count {
+    margin: 0;
+    min-width: 3.5rem;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: var(--text-small);
+    letter-spacing: 0.12em;
+    color: color-mix(in srgb, var(--color-cream) 90%, transparent);
   }
 
-  .testimonials__count {
-    margin-left: 0.5rem;
-    font-family: var(--font-sans);
-    font-size: var(--text-eyebrow);
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    color: color-mix(in srgb, var(--color-blue) 78%, transparent);
+  @media (prefers-reduced-motion: reduce) {
+    .review, .review[data-active] { transition: none; }
   }
-
-  .section--blue .testimonials__count { color: color-mix(in srgb, var(--color-cream) 90%, transparent); }
-
-  /* From tablet up the arrows flank the band, which is what "scroll on both
-     sides" asks for. They sit in the page gutter beside the track. */
-  @media (min-width: 62rem) {
-    .testimonials__nav {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      margin-top: 0;
-      transform: translateY(-50%);
-      justify-content: space-between;
-      pointer-events: none;               /* only the buttons are clickable */
-      z-index: 2;
-    }
-
-    .testimonials__arrow { pointer-events: auto; }
-
-    .testimonials__arrow--prev { margin-left: calc(-1 * clamp(1rem, 3vw, 3.5rem)); }
-    .testimonials__arrow--next { margin-right: calc(-1 * clamp(1rem, 3vw, 3.5rem)); }
-
-    /* The counter belongs under the track once the arrows have moved out. */
-    .testimonials__count {
-      position: absolute;
-      left: 50%;
-      top: calc(50% + 0.5px);
-      transform: translate(-50%, -50%);
-      display: none;
-    }
-  }
-
 
   /* =============================================================================
      FOOTER
@@ -3378,8 +3300,7 @@
   .lede,
   .hero__lede,
   .faq-item__body p,
-  .contact-card__note,
-  .testimonial__body {
+  .contact-card__note {
     text-align: justify;
     text-align-last: left;
     hyphens: auto;
