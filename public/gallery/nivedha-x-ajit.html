@@ -1731,7 +1731,13 @@
             <path d="M10 2 4 8l6 6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
-        <img class="lightbox__img" data-lightbox-img alt="">
+        <!-- The thumbnail, blurred, holds the frame at the photograph's exact
+             proportions while the full-size file loads; the full-size image
+             then fades in over it. -->
+        <div class="lightbox__frame" data-lightbox-frame>
+          <img class="lightbox__thumb" data-lightbox-thumb alt="" aria-hidden="true">
+          <img class="lightbox__img" data-lightbox-img alt="">
+        </div>
         <button class="lightbox__nav lightbox__nav--next" type="button" data-lightbox-next aria-label="Next photograph">
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
             <path d="m6 2 6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/>

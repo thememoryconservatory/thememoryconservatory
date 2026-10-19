@@ -232,11 +232,13 @@ function initLightbox() {
   if (!dialog) return;
 
   const image = dialog.querySelector('[data-lightbox-img]');
+  const thumb = dialog.querySelector('[data-lightbox-thumb]');
+  const frame = dialog.querySelector('[data-lightbox-frame]');
   const close = dialog.querySelector('[data-lightbox-close]');
   const prev = dialog.querySelector('[data-lightbox-prev]');
   const next = dialog.querySelector('[data-lightbox-next]');
   const count = dialog.querySelector('[data-lightbox-count]');
-  if (!image) return;
+  if (!image || !thumb || !frame) return;
 
   // Every photograph on the page, in page order — the order the client
   // curated — so the arrows walk the wedding's timeline.
@@ -262,24 +264,54 @@ function initLightbox() {
     return cache.get(src);
   };
 
+  /* The flow the client asked for: the thumbnail opens at once, blurred, and
+     the full-size photograph fades in over it when it arrives. A photograph
+     already in memory skips the blur and appears straight away, so stepping
+     through with the arrows stays instant. */
   const show = (i) => {
     index = (i + buttons.length) % buttons.length;
     const button = buttons[index];
     const src = button.dataset.full;
-    const thumbnail = button.querySelector('img');
+    const small = button.querySelector('img');
     const mine = ++generation;
+
+    // Shape the frame from the manifest ratio before anything loads.
+    const ratio = button.closest('.shot')?.style.getPropertyValue('--ratio') || '1.5';
+    frame.style.setProperty('--ratio', ratio);
+
+    thumb.src = small ? (small.currentSrc || small.src) : '';
+    image.alt = small ? small.alt : '';
+    image.removeAttribute('data-loaded');
+    image.removeAttribute('data-instant');
+    image.removeAttribute('src');
+
+    const reveal = (instant) => {
+      if (mine !== generation) return;            // the viewer has moved on
+      image.src = src;
+      image.toggleAttribute('data-instant', instant);
+      // Decode first, so the fade shows the whole photograph, never a part —
+      // but never wait on it for more than 300ms: decode() can stay pending
+      // indefinitely in some browsers, which would leave the photograph
+      // hidden behind the blur for good.
+      const decoded = image.decode ? image.decode().catch(() => {}) : Promise.resolve();
+      const ready = Promise.race([decoded, new Promise((r) => setTimeout(r, 300))]);
+      ready.then(() => {
+        if (mine !== generation) return;
+        // Commit the hidden state before showing, so the fade always runs.
+        // A forced layout rather than requestAnimationFrame, which browsers
+        // pause in a background tab and would leave the photograph hidden.
+        void image.offsetWidth;
+        image.setAttribute('data-loaded', '');
+      });
+    };
 
     const full = load(src);
     if (full.complete && full.naturalWidth) {
-      // Already here — straight to full size, no thumbnail flash.
-      image.src = src;
+      reveal(true);
     } else {
-      // Show the thumbnail immediately, upscaled, so the frame is never empty
-      // while the full-size file travels. It is swapped the moment that lands.
-      if (thumbnail) image.src = thumbnail.currentSrc || thumbnail.src;
-      full.addEventListener('load', () => { if (mine === generation) image.src = src; }, { once: true });
+      full.addEventListener('load', () => reveal(false), { once: true });
     }
-    image.alt = thumbnail ? thumbnail.alt : '';
+
     if (count) count.textContent = `${index + 1} / ${buttons.length}`;
 
     // Fetch the neighbours now, so the next arrow press is instant. This is
@@ -321,9 +353,9 @@ function initLightbox() {
   }, { passive: true });
 
   // Clicking the backdrop closes it. The dialog fills the whole viewport, so
-  // "did they miss the image and the controls?" is the hit test.
+  // "did they miss the photograph and the controls?" is the hit test.
   dialog.addEventListener('click', (event) => {
-    if (event.target === image || event.target.closest('button')) return;
+    if (event.target.closest('[data-lightbox-frame]') || event.target.closest('button')) return;
     dialog.close();
   });
 
@@ -331,6 +363,8 @@ function initLightbox() {
   dialog.addEventListener('close', () => {
     generation += 1;
     image.removeAttribute('src');
+    image.removeAttribute('data-loaded');
+    thumb.removeAttribute('src');
   });
 }
 

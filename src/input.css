@@ -3184,13 +3184,51 @@
     background: color-mix(in srgb, var(--color-black-ink) 92%, transparent);
   }
 
-  .lightbox__img {
-    display: block;
-    max-width: 100%;
-    max-height: 92vh;
+  /* The frame is sized from the photograph's own ratio (set by main.js from
+     the manifest), not from whichever image happens to be inside it. So it is
+     the right shape from the first frame, and the blurred thumbnail and the
+     full-size image sit exactly on top of one another. */
+  .lightbox__frame {
+    position: relative;
     margin-inline: auto;
-    object-fit: contain;
-    box-shadow: 0 2rem 5rem color-mix(in srgb, #000 45%, transparent);
+    aspect-ratio: var(--ratio, 1.5);
+    width: min(100%, calc(92vh * var(--ratio, 1.5)));
+    overflow: hidden;                      /* clips the blur's soft edge */
+    background: color-mix(in srgb, var(--color-white) 6%, transparent);
+    box-shadow: 0 2rem 5rem color-mix(in srgb, var(--color-black-ink) 45%, transparent);
+  }
+
+  .lightbox__thumb,
+  .lightbox__img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                     /* same ratio as the frame: no crop */
+    display: block;
+  }
+
+  /* The 600px thumbnail, blurred, while the full-size file travels. Scaled up
+     a touch so the blur does not pull a light halo in from the edges. */
+  .lightbox__thumb {
+    filter: blur(14px);
+    transform: scale(1.06);
+  }
+
+  /* The full-size photograph fades in over it once it has loaded AND decoded,
+     so it appears whole rather than painting in strips. */
+  .lightbox__img {
+    opacity: 0;
+    transition: opacity 0.6s var(--ease-conservatory);
+  }
+
+  .lightbox__img[data-loaded] { opacity: 1; }
+
+  /* Already in memory (the neighbours are preloaded): no blur, no fade. */
+  .lightbox__img[data-instant] { transition: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lightbox__img { transition: none; }
   }
 
   /* Fixed to the viewport, not the dialog. A <dialog> paints in the top layer,
