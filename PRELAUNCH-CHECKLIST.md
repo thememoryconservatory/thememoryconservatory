@@ -35,7 +35,7 @@ in place.
       very one sided and long because of the text length") and for suggestions.
       Not yet done — see the response for the three options put to them.
 
-- [ ] **Remove the `noindex` header.** `netlify.toml` ends with a
+- [x] **Remove the `noindex` header.** *(Done 19 Oct 2026.)* `netlify.toml` ends with a
       PRE-LAUNCH ONLY block sending `X-Robots-Tag: noindex, nofollow` on
       every page, so the draft stays out of Google while the client
       reviews it. **Delete that block before launch** — left in, the

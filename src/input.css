@@ -2374,6 +2374,31 @@
     gap: 1.25rem 2rem;
   }
 
+  /* "Email and phone number are mandatory." A full-width row directly under
+     the Email and Phone fields. The palette has no red, so it is set in the
+     brand: Deep Blue type on a Soft Cream box with a bronze edge (7.6:1).
+     Not a counted question, so it takes no bullet. */
+  .form__alert {
+    grid-column: 1 / -1;
+    counter-increment: none;
+    margin: 0;
+    padding: 0.875rem 1.125rem;
+    background: var(--color-cream);
+    border-left: 3px solid var(--color-gold-ink);
+    color: var(--color-blue);
+    font-family: var(--font-display);
+    font-size: var(--text-small);
+    line-height: var(--text-small--line-height);
+  }
+
+  .form__alert[hidden] { display: none; }
+
+  /* The empty mandatory field, marked while the message is showing. */
+  .field__input[data-missing] {
+    border-bottom-color: var(--color-gold-ink);
+    box-shadow: 0 1px 0 0 var(--color-gold-ink);
+  }
+
   /* A phone is the one place a half-width submit button reads as unfinished. */
   @media (max-width: 29.999rem) {
     .form__foot .btn { width: 100%; }

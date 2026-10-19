@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- @include head title="Enquiry Form" description="Tell us about your wedding. Share your plans with The Memory Conservatory and we will be in touch within 48 hours to talk about your vision and check availability." -->
+  <!-- @include head title="Enquire Now — Wedding Photographer in Chennai" description="Check your date and get a quote for wedding photography and films in Chennai, Hyderabad, Bengaluru, Vizag and destination weddings across India." -->
 
   <noscript>
     <style>.reveal { opacity: 1 !important; transform: none !important; }</style>
@@ -97,6 +97,7 @@
       <div class="shell">
 
         <form class="form"
+              data-enquiry
               name="enquiry"
               method="POST"
               data-netlify="true"
@@ -151,6 +152,13 @@
             </div>
 
             <div class="field">
+              <label class="field__label" for="f-location">Location of the wedding</label>
+              <input class="field__input" id="f-location" name="location" type="text"
+                     placeholder="Venue, city — or the city alone" required>
+            </div>
+
+            <!-- Email and Phone share a row: both mandatory (see main.js). -->
+            <div class="field">
               <label class="field__label" for="f-email">Email</label>
               <input class="field__input" id="f-email" name="email" type="email"
                      autocomplete="email" required>
@@ -162,11 +170,13 @@
                      autocomplete="tel" required>
             </div>
 
-            <div class="field">
-              <label class="field__label" for="f-location">Location of the wedding</label>
-              <input class="field__input" id="f-location" name="location" type="text"
-                     placeholder="Venue, city — or the city alone" required>
-            </div>
+            <!-- Shown by main.js when Email or Phone is left empty on submit —
+                 both are mandatory. Placed directly under the Email and Phone
+                 rows, so it is on screen with the field that receives focus.
+                 role="alert" so a screen reader announces it at once. -->
+            <p class="form__alert field--wide" role="alert" data-form-alert hidden>
+              Email and phone number are mandatory. Please fill in both.
+            </p>
 
             <!-- Digits only. min=1 stops a zero or a negative from validating;
                  no max, because "thousands of guests" is in the client's own

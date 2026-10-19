@@ -84,6 +84,133 @@ function expand(html, depth, warnings) {
   });
 }
 
+/* -----------------------------------------------------------------------------
+   SEO — written into every page at build time
+
+   The head partial carries an `@seo` comment; it is replaced here with tags
+   that depend on the page itself, so no page has to remember to add them:
+
+     - <link rel="canonical"> and og:url, from the page's own path
+     - the business, as schema.org structured data (every page)
+     - FAQPage structured data on /faq, read from the page's own questions and
+       answers — so it can never drift from what visitors see
+     - noindex on the thank-you page, which should never appear in search
+
+   The keyword research behind the titles and descriptions is the client's
+   ("Keywords TMC Website.docx"); the business data below stays factual —
+   areas served, contact details, the kinds of coverage offered.
+   -------------------------------------------------------------------------- */
+
+const SITE = 'https://thememoryconservatory.com';
+const NOINDEX_PAGES = new Set(['thank-you.html']);
+
+const BUSINESS = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': `${SITE}/#business`,
+  name: 'The Memory Conservatory',
+  description:
+    'Candid, documentary and fine art wedding photography and wedding films from Chennai, ' +
+    'photographing Tamil, Telugu, Kannada, Christian and destination weddings across South India and India.',
+  url: `${SITE}/`,
+  logo: `${SITE}/assets/brand/favicon-512.png`,
+  image: `${SITE}/assets/img/slideshow/slide-1.jpg`,
+  email: 'thememoryconservatory@gmail.com',
+  telephone: '+91 84385 33169',
+  // City only: the street address on file may be private, so it is not published.
+  address: { '@type': 'PostalAddress', addressLocality: 'Chennai', addressRegion: 'Tamil Nadu', addressCountry: 'IN' },
+  areaServed: [
+    { '@type': 'City', name: 'Chennai' },
+    { '@type': 'City', name: 'Hyderabad' },
+    { '@type': 'City', name: 'Bengaluru' },
+    { '@type': 'City', name: 'Visakhapatnam' },
+    { '@type': 'State', name: 'Tamil Nadu' },
+    { '@type': 'Place', name: 'South India' },
+    { '@type': 'Country', name: 'India' },
+  ],
+  knowsAbout: [
+    'Wedding photography', 'Candid wedding photography', 'Documentary wedding photography',
+    'Editorial wedding photography', 'Fine art wedding photography', 'Film and analog wedding photography',
+    'Wedding cinematography', 'Pre-wedding photoshoots', 'Engagement photography',
+    'South Indian wedding photography', 'Destination wedding photography',
+  ],
+  sameAs: ['https://www.instagram.com/thememoryconservatory/'],
+};
+
+/** "about.html" -> "/about", "index.html" -> "/", "gallery/index.html" -> "/gallery/" */
+function urlPath(page) {
+  const p = '/' + page.split(path.sep).join('/');
+  if (p.endsWith('/index.html')) return p.slice(0, -'index.html'.length);
+  return p.replace(/\.html$/, '');
+}
+
+const ENTITIES = {
+  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', rsquo: '’', lsquo: '‘',
+  rdquo: '”', ldquo: '“', mdash: '—', ndash: '–', hellip: '…', middot: '·', times: '×',
+};
+
+/** Visible text of an HTML fragment, for structured data (tags stripped, entities decoded). */
+function plainText(html) {
+  return html
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&#(\d+);/g, (_m, n) => String.fromCodePoint(Number(n)))
+    .replace(/&#x([0-9a-f]+);/gi, (_m, n) => String.fromCodePoint(parseInt(n, 16)))
+    .replace(/&([a-z]+);/gi, (m, n) => ENTITIES[n.toLowerCase()] ?? m)
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/** JSON for inside <script>: "</" is escaped so the text can never close the tag. */
+function jsonLd(data) {
+  return `<script type="application/ld+json">${JSON.stringify(data).replace(/<\//g, '<\\/')}</script>`;
+}
+
+function faqData(html) {
+  const items = [...html.matchAll(/<details class="faq-item"[^>]*>\s*<summary>([\s\S]*?)<\/summary>\s*<div class="faq-item__body">([\s\S]*?)<\/div>\s*<\/details>/g)];
+  if (!items.length) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map(([, q, a]) => ({
+      '@type': 'Question',
+      name: plainText(q),
+      acceptedAnswer: { '@type': 'Answer', text: plainText(a) },
+    })),
+  };
+}
+
+function seoTags(page, html) {
+  const url = SITE + urlPath(page);
+  const tags = [
+    `<link rel="canonical" href="${url}">`,
+    `<meta property="og:url" content="${url}">`,
+  ];
+  if (NOINDEX_PAGES.has(page)) tags.push('<meta name="robots" content="noindex, follow">');
+  tags.push(jsonLd(BUSINESS));
+  const faq = faqData(html);
+  if (faq) tags.push(jsonLd(faq));
+  return tags;
+}
+
+/** Replace the head partial's @seo comment, keeping its indentation. */
+function applySeo(page, html) {
+  return html.replace(/^([ \t]*)<!-- @seo[\s\S]*?-->[ \t]*$/m, (_m, indent) =>
+    seoTags(page, html).map((t) => indent + t).join('\n'));
+}
+
+/** sitemap.xml: every built page except the ones kept out of search. */
+function writeSitemap(pages) {
+  const today = new Date().toISOString().slice(0, 10);
+  const urls = pages
+    .filter((p) => !NOINDEX_PAGES.has(p))
+    .map((p) => `  <url>\n    <loc>${SITE}${urlPath(p)}</loc>\n    <lastmod>${today}</lastmod>\n  </url>`);
+  fs.writeFileSync(
+    path.join(OUT_DIR, 'sitemap.xml'),
+    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`,
+    'utf8'
+  );
+}
+
 /** Every .html under src/pages/, as paths relative to it, deepest last. */
 function findPages(dir, prefix = '') {
   const found = [];
@@ -115,7 +242,7 @@ function buildOnce() {
 
   for (const page of pages) {
     const source = fs.readFileSync(path.join(PAGES_DIR, page), 'utf8');
-    const output = expand(source, 0, warnings);
+    const output = applySeo(page, expand(source, 0, warnings));
     const target = path.join(OUT_DIR, page);
     // Sub-directories mirror the source tree, so src/pages/gallery/x.html is
     // served at /gallery/x.
@@ -123,6 +250,8 @@ function buildOnce() {
     fs.writeFileSync(target, output, 'utf8');
     console.log(`  build  src/pages/${page}  ->  public/${page}`);
   }
+
+  writeSitemap(pages);
 
   for (const w of new Set(warnings)) console.warn(`  warn   ${w}`);
   console.log(`  done   ${pages.length} page(s) in ${Date.now() - started}ms`);

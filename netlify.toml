@@ -33,18 +33,3 @@
   from = "/film-souvenirs"
   to = "/"
   status = 302
-
-# ---------------------------------------------------------------------------
-# PRE-LAUNCH ONLY — REMOVE THIS BLOCK BEFORE GOING LIVE
-# ---------------------------------------------------------------------------
-# Keeps the draft site out of Google while the client is reviewing it. This is
-# not access control — anyone with the URL can still read the site — it only
-# tells search engines not to index or follow it.
-#
-# Leaving this in place after launch would keep the finished site invisible in
-# search results, which for a wedding studio is the whole point of having one.
-# See PRELAUNCH-CHECKLIST.md.
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Robots-Tag = "noindex, nofollow"

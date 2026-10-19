@@ -4,8 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-  <title>Enquiry Form — The Memory Conservatory</title>
-  <meta name="description" content="Tell us about your wedding. Share your plans with The Memory Conservatory and we will be in touch within 48 hours to talk about your vision and check availability.">
+  <title>Enquire Now — Wedding Photographer in Chennai — The Memory Conservatory</title>
+  <meta name="description" content="Check your date and get a quote for wedding photography and films in Chennai, Hyderabad, Bengaluru, Vizag and destination weddings across India.">
+
+  <link rel="canonical" href="https://thememoryconservatory.com/contact">
+  <meta property="og:url" content="https://thememoryconservatory.com/contact">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://thememoryconservatory.com/#business","name":"The Memory Conservatory","description":"Candid, documentary and fine art wedding photography and wedding films from Chennai, photographing Tamil, Telugu, Kannada, Christian and destination weddings across South India and India.","url":"https://thememoryconservatory.com/","logo":"https://thememoryconservatory.com/assets/brand/favicon-512.png","image":"https://thememoryconservatory.com/assets/img/slideshow/slide-1.jpg","email":"thememoryconservatory@gmail.com","telephone":"+91 84385 33169","address":{"@type":"PostalAddress","addressLocality":"Chennai","addressRegion":"Tamil Nadu","addressCountry":"IN"},"areaServed":[{"@type":"City","name":"Chennai"},{"@type":"City","name":"Hyderabad"},{"@type":"City","name":"Bengaluru"},{"@type":"City","name":"Visakhapatnam"},{"@type":"State","name":"Tamil Nadu"},{"@type":"Place","name":"South India"},{"@type":"Country","name":"India"}],"knowsAbout":["Wedding photography","Candid wedding photography","Documentary wedding photography","Editorial wedding photography","Fine art wedding photography","Film and analog wedding photography","Wedding cinematography","Pre-wedding photoshoots","Engagement photography","South Indian wedding photography","Destination wedding photography"],"sameAs":["https://www.instagram.com/thememoryconservatory/"]}</script>
 
   <!-- Icons: the client's own favicon artwork, black on white (second
        iteration). Generated from "TMC Favicon Logo" (2000px PSD). -->
@@ -18,8 +22,8 @@
   <!-- Open Graph — TODO:CLIENT replace og:image with the client's own artwork -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Memory Conservatory">
-  <meta property="og:title" content="Enquiry Form — The Memory Conservatory">
-  <meta property="og:description" content="Tell us about your wedding. Share your plans with The Memory Conservatory and we will be in touch within 48 hours to talk about your vision and check availability.">
+  <meta property="og:title" content="Enquire Now — Wedding Photographer in Chennai — The Memory Conservatory">
+  <meta property="og:description" content="Check your date and get a quote for wedding photography and films in Chennai, Hyderabad, Bengaluru, Vizag and destination weddings across India.">
   <meta property="og:image" content="https://thememoryconservatory.com/assets/img/slideshow/slide-1.jpg"><!-- TODO:CLIENT -->
   <meta name="twitter:card" content="summary_large_image">
 
@@ -180,6 +184,7 @@
       <div class="shell">
 
         <form class="form"
+              data-enquiry
               name="enquiry"
               method="POST"
               data-netlify="true"
@@ -234,6 +239,13 @@
             </div>
 
             <div class="field">
+              <label class="field__label" for="f-location">Location of the wedding</label>
+              <input class="field__input" id="f-location" name="location" type="text"
+                     placeholder="Venue, city — or the city alone" required>
+            </div>
+
+            <!-- Email and Phone share a row: both mandatory (see main.js). -->
+            <div class="field">
               <label class="field__label" for="f-email">Email</label>
               <input class="field__input" id="f-email" name="email" type="email"
                      autocomplete="email" required>
@@ -245,11 +257,13 @@
                      autocomplete="tel" required>
             </div>
 
-            <div class="field">
-              <label class="field__label" for="f-location">Location of the wedding</label>
-              <input class="field__input" id="f-location" name="location" type="text"
-                     placeholder="Venue, city — or the city alone" required>
-            </div>
+            <!-- Shown by main.js when Email or Phone is left empty on submit —
+                 both are mandatory. Placed directly under the Email and Phone
+                 rows, so it is on screen with the field that receives focus.
+                 role="alert" so a screen reader announces it at once. -->
+            <p class="form__alert field--wide" role="alert" data-form-alert hidden>
+              Email and phone number are mandatory. Please fill in both.
+            </p>
 
             <!-- Digits only. min=1 stops a zero or a negative from validating;
                  no max, because "thousands of guests" is in the client's own

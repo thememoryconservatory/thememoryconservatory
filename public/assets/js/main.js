@@ -363,6 +363,63 @@ function initLightbox() {
    FOOTER YEAR
    -------------------------------------------------------------------------- */
 
+/* -----------------------------------------------------------------------------
+   ENQUIRY FORM — email and phone are mandatory
+
+   Both fields already carry `required`, but the browser only ever reports the
+   FIRST empty field, and on this form that is the couple's names — so someone
+   could be told about the names and never about email or phone. The client
+   asked for a clear message naming both.
+
+   The check runs on the submit button's click, which happens before the
+   browser's own validation (pressing Enter in a field also "clicks" it). When
+   either is empty, submission stops, the message appears, the empty fields are
+   marked and the first gets focus. Once both are filled, the browser's normal
+   checks take over for the rest of the form.
+   -------------------------------------------------------------------------- */
+
+function initEnquiryForm() {
+  const form = document.querySelector('[data-enquiry]');
+  if (!form) return;
+
+  const email = form.querySelector('#f-email');
+  const phone = form.querySelector('#f-phone');
+  const alert = form.querySelector('[data-form-alert]');
+  const submit = form.querySelector('[type="submit"]');
+  if (!email || !phone || !alert || !submit) return;
+
+  const missing = () => [email, phone].filter((f) => !f.value.trim());
+
+  submit.addEventListener('click', (event) => {
+    const empty = missing();
+    if (!empty.length) return;                 // let the browser carry on
+
+    event.preventDefault();
+    [email, phone].forEach((f) => {
+      const isEmpty = empty.includes(f);
+      f.toggleAttribute('data-missing', isEmpty);
+      f.setAttribute('aria-invalid', String(isEmpty));
+    });
+    // Re-showing an alert that is already visible would not be announced
+    // again, so hide it for a beat first.
+    alert.hidden = true;
+    requestAnimationFrame(() => { alert.hidden = false; });
+    empty[0].focus();
+  });
+
+  // Clear the marks as soon as the person fills the field in.
+  [email, phone].forEach((f) => {
+    f.addEventListener('input', () => {
+      if (f.value.trim()) {
+        f.removeAttribute('data-missing');
+        f.removeAttribute('aria-invalid');
+      }
+      if (!missing().length) alert.hidden = true;
+    });
+  });
+}
+
+
 function initYear() {
   const year = String(new Date().getFullYear());
   document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = year; });
@@ -377,4 +434,5 @@ initReveals();
 initTestimonials();
 initWhatsApp();
 initLightbox();
+initEnquiryForm();
 initYear();

@@ -47,6 +47,12 @@ function spoken(title) {
   return title.replace(/\s*&(amp;)?\s*/i, ' and ');
 }
 
+/** The search phrase for a wedding's genre: "Tamil Wedding" -> "Tamil Wedding
+ *  Photography", "Portraiture" -> "Couple Portrait Photography". */
+function genrePhrase(genre) {
+  return genre === 'Portraiture' ? 'Couple Portrait Photography' : `${genre} Photography`;
+}
+
 function thumb(base, slug, file) { return `${base}/${slug}/thumb/${file}`; }
 function full(base, slug, file) { return `${base}/${slug}/full/${file}`; }
 
@@ -105,13 +111,12 @@ function lightbox() {
    -------------------------------------------------------------------------- */
 function indexPage(data) {
   const { baseUrl, weddings } = data;
-  const total = weddings.reduce((n, w) => n + w.photos.length, 0);
 
   const cards = weddings.map((w, i) => `        <a class="gallery-card reveal" href="/gallery/${w.slug}"${
     i ? ` style="--reveal-delay:${i * 80}ms"` : ''}>
           <span class="gallery-card__frame">
             <img src="${image(baseUrl, w.slug, w.cover)}"
-                 alt="${esc(spoken(w.title))} on their wedding day"
+                 alt="${esc(spoken(w.title))}: ${esc(genrePhrase(w.genre).toLowerCase())} by The Memory Conservatory"
                  loading="${i < 2 ? 'eager' : 'lazy'}" decoding="async"
                  sizes="(max-width: 48rem) 100vw, (max-width: 68rem) 50vw, 33vw">
           </span>
@@ -125,7 +130,7 @@ function indexPage(data) {
 <html lang="en">
 ${GENERATED_NOTE}
 <head>
-  <!-- @include head title="Gallery" description="Weddings photographed by The Memory Conservatory across Chennai, Tamil Nadu and beyond — ${total} photographs from ${weddings.length} celebrations." -->
+  <!-- @include head title="Wedding Photography Portfolio — Chennai &amp; South India" description="Our wedding photography portfolio: Tamil, Christian and Sri Lankan weddings and couple portraits from Chennai, South India and destinations across India." -->
 
   <noscript>
     <style>.reveal { opacity: 1 !important; transform: none !important; }</style>
@@ -193,7 +198,7 @@ function weddingPage(data, wedding, position) {
                     data-full="${full(baseUrl, slug, p.file)}"
                     aria-label="Open photograph ${i + 1} of ${photos.length} full size">
               <img src="${thumb(baseUrl, slug, p.file)}"
-                   alt="${esc(name)} — photograph ${i + 1}"
+                   alt="${esc(name)}, ${esc(genrePhrase(wedding.genre).toLowerCase())} — photograph ${i + 1}"
                    loading="${i < 8 ? 'eager' : 'lazy'}" decoding="async"
                    sizes="(max-width: 36rem) 50vw, (max-width: 62rem) 33vw, 25vw">
             </button>
@@ -203,7 +208,7 @@ function weddingPage(data, wedding, position) {
 <html lang="en">
 ${GENERATED_NOTE}
 <head>
-  <!-- @include head title="${esc(title)}" description="Wedding photographs of ${esc(name)} by The Memory Conservatory — ${photos.length} images from their celebration." -->
+  <!-- @include head title="${esc(title)} — ${esc(genrePhrase(wedding.genre))}" description="${esc(genrePhrase(wedding.genre))} of ${esc(name)} by The Memory Conservatory, wedding photographers in Chennai — ${photos.length} photographs in the order the day unfolded." -->
 
   <noscript>
     <style>.reveal { opacity: 1 !important; transform: none !important; }</style>
