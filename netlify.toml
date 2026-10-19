@@ -26,6 +26,17 @@
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+# Only thememoryconservatory.com should show the site. Netlify gives every
+# site a built-in *.netlify.app address that cannot be removed, so it is sent
+# permanently (301) to the real domain, path and all. Matches that exact host
+# only: the real domain, Netlify Forms and deploy previews
+# (deploy-preview-N--thememoryconservatorylive.netlify.app) are unaffected.
+[[redirects]]
+  from = "https://thememoryconservatorylive.netlify.app/*"
+  to = "https://thememoryconservatory.com/:splat"
+  status = 301
+  force = true
+
 # Film Souvenirs is switched off until the film photographs arrive (client's
 # second iteration). Temporary (302) so the URL can come back later without
 # browsers having cached a permanent move.
