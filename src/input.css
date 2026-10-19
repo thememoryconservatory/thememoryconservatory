@@ -2116,16 +2116,21 @@
 
   .contact-card__list a:hover { border-bottom-color: var(--color-blue); }
 
-  /* Sorts Mill Goudy and centred, at the client's request — the one line in
-     the card not set in Hanken Grotesk. */
-  .contact-card__note {
-    margin-top: 1.75rem;
-    font-family: var(--font-sans);
-    text-align: center;
-    font-size: var(--text-small);
-    line-height: var(--text-small--line-height);
-    /* 85%, not 72%: at 15px this needs 4.5:1 and 72% measured 3.96. */
-    color: color-mix(in srgb, var(--color-blue) 85%, transparent);
+  /* The client's line "Documenting weddings across India…", set as a title
+     on its own white band (see contact.html), in Sorts Mill Goudy
+     (.section__title--serif) with "love story" in the gilt italic every
+     heading uses for its emphasis.
+
+     Never more than two lines, as the client asked. The width is the whole
+     content column, and the size is capped by the viewport as well as by the
+     usual title size: about 5.4vw is what lets this 70-character sentence fit
+     two lines on a narrow screen. From a laptop up the normal title size
+     wins. */
+  .enquiry-tagline {
+    max-width: none;
+    margin: 0 auto;
+    font-size: min(var(--text-display), 5.4vw);
+    text-wrap: balance;
   }
 
   /* Same size as the address lines above it, at the client's request. */
@@ -2974,6 +2979,14 @@
   @media (max-width: 61.999rem) {
     .collage__tagline { order: 1; }
     .collage__cell:nth-child(n + 9) { order: 2; }
+
+    /* No wider than 80% of the screen, centred (the client's correction). The
+       row is full-bleed, so vw is the screen's own width. Capped at its
+       original 28rem too, which already applies on tablets. */
+    .collage__tagline img {
+      width: min(80vw, 28rem);
+      margin-inline: auto;
+    }
   }
 
   /* --- Breakpoints -------------------------------------------------------- */
